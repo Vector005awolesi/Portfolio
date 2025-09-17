@@ -1,0 +1,14 @@
+#node modules
+node_modules/
+#enviroment variables
+.env
+
+#temporary files
+*.log
+*.temporary
+# OS
+.DS_Store
+Thumbs.db
+#backups
+backup.html
+back-up.css

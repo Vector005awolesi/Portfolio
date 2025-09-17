@@ -1,0 +1,431 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+  transition:0.5s;
+}
+#container {
+  padding: 2% 4%;
+  height: 100vh;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  position:relative;
+  flex-direction: row;
+}
+/* NAVAGATION SECTION */
+button#theme-btn , button#theme-btn-dark {
+  border:none;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  position: relative;
+  top:30px;
+  left: 10px;
+  transition: 0.3s;
+  display:block
+}
+button#theme-btn:hover , button#theme-btn-dark{
+  scale: 1.07;
+  transition: 0.3s;
+}
+button#theme-btn:active , button#theme-btn-dark{
+  border: none;
+  scale:0.85
+}
+.fa-moon {
+  transform: scale(1.2);
+  letter-spacing: 5px;
+}
+#navagation-section {
+  display: flex;
+  gap:50px;
+  flex-direction: column;
+  text-align: center;
+}
+#navbar {
+  width: 65px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+ul#navList {
+  margin: 0;
+  padding: 0 5px ;
+}
+ul#navList li {
+  list-style-type: none;
+  margin: 10px 0;
+  text-align: center;
+}
+ul#navList li a {
+  text-decoration: none;
+  display:inline-block;
+  width:100%;
+  padding: 8px 5px;
+  font-weight: 600;
+  transition: 0.5;
+  border-radius: 10px;
+}
+
+
+
+.nav-text {
+  display: block;
+  font-size: 11px;
+}
+/* PROFILE CARD SECTION */
+#profileCardSection{
+     width:400px;
+     height:90vh;
+     border-radius: 20px;
+     position: relative;
+}
+#profileCardHead{
+    width:100%;
+    height:170px;
+    border-radius:20px 20px 0 0;
+}
+#profileCardBody{
+    padding:20px 20px;
+    text-align: center;
+}
+#profileImage{
+    width:140px;
+    height:140px;
+    border-radius: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 90px;
+    left:140px;
+}
+#myName{
+    margin-top:40px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    z-index: 1;
+}
+.profile-text-alt{
+    font-weight: 600;
+    font-size: 16px;
+}
+#socialSection{
+  padding:5px;
+}
+.social-btn{
+    border-radius:100%;
+    margin-inline: 10px;
+    width:40px;
+    height:40px;
+    font-size: 18px;
+    transition: 0.3s;
+    padding:5px
+}
+.social-btn:hover{
+    transition: 0.3s;
+}
+.social-btn:active{
+  transition: 0.3s;
+}
+.download-resume-btn{
+    padding:10px;
+    font-size: 16px;
+    transition:0.3s;
+}
+
+#downloadResumeSection{
+    margin-top:20px
+}
+.contactLinkBtn {
+    padding:10px;
+    font-size: 16px;
+    margin-inline: 10px;
+    transition:0.3s;
+}
+.contactLinkBtn:hover{
+    transition:0.3s;
+    border:none;
+}
+.contactLinkBtn:active{
+  transition:0.3s;
+}
+#mainSection{
+  padding:  40px;
+  flex-grow: 1;
+  border-radius: 20px 0 0 20px;
+  height:93vh;
+  width:500px;
+  font-size: 16px;
+  overflow-y: auto;
+}
+#mainSection::-webkit-scrollbar{
+  width:8px;
+}
+#mainSection::-webkit-scrollbar-track{
+  margin: 0 10px;
+  border-radius:0px;
+  width:10px;
+}
+#mainSection::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  height: 50px !important;
+  border:2px solid transparent;
+}
+.homeSection{
+  padding:10px 0;
+  margin:20px 0;
+}
+.header_content{
+  font-weight: bold;
+}
+
+#subheroSection{
+   display:flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap:20px;
+   flex-wrap: wrap;
+   margin:20px 0
+}
+.subhero-icon{
+  font-size: 20px;
+  padding:20px;
+ border-radius: 20px;
+ position:relative;
+ top:0px
+}
+.subhero{
+  padding: 20px;
+  border-radius: 20px;
+  flex-grow: 1;
+  display:flex;
+  gap:20px;
+  /* padding:10px */
+}
+.subsectionHeroHeaders{
+  font-weight:bold;
+  font-size: 2rem;
+}
+.subsectionHeroParagraph{
+   font-size: 14px;
+}
+.skillSection{
+  margin:30px 0
+}
+hr.classical{
+   display: inline-block;
+   width:20%;
+   position: relative;
+   top:10px
+}
+.main_subHeaders{
+   display: inline-block;
+   margin-inline: 10px;
+}
+
+#lineSkillSection{
+  padding:20px;
+  border-radius: 20px;
+  margin:10px 0
+}
+.skillLineHtml,.skillLineCss{
+   display:inline-block;
+   width:100%;
+   padding:5px;
+   border-radius: 30px;
+   position: relative;
+}
+.skillLineHtml::before{
+  position: absolute;
+  content: " ";
+  width:90%;
+  padding:5px;
+  border-radius: 30px;
+  top:0px;
+  left:0px;
+  animation: fillHtml 2.5s 1 ease-out
+}
+@keyframes fillHtml{
+from{
+  width:0%
+}
+to{
+  width:90%
+}
+}
+.skillLineCss::before{
+  position: absolute;
+  content: " ";
+  width:95%;
+  padding:5px;
+  border-radius: 30px;
+  top:0px;
+  left:0px;
+  animation: fillCss 2.5s 1 ease-out
+}
+@keyframes fillCss{
+  from{
+    width:0%
+  }
+  to{
+    width:95%
+  }
+  }
+
+.line-icon{
+  padding:15px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.skillLineTextDivider{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.lineSkillSubSection{
+  margin: 20px 0;
+}
+.skillLineText,.card-text,.barText{
+  font-weight: bold;
+}
+
+.skillLineIconText{
+  position: relative;
+  top:-15px;
+}
+#cardSkillSection{
+  margin:20px 0;
+  display:flex;
+  flex-direction: row;
+  gap:20px;
+}
+.skillCard{
+   width:200px;
+   height:150px;
+   border-radius:20px;
+   padding:10px;
+   border:none;
+   text-align: center;
+}
+.card-icon {
+  padding:15px;
+  border-radius: 10px;
+  font-size: 2.3rem;
+  margin-right: 10px;
+}
+.card-text-percentage,.bar-percentage{
+  font-weight: bold;
+}
+#barSkillSection{
+  margin:20px 0;
+  padding:10px;
+  display:flex;
+  gap:10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#uiUX,#seo{
+  width:47%;
+  padding:20px;
+  border-radius: 20px;
+}
+.bar-icon{
+  padding:15px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+.barText,.bar-percentage{
+  position:relative;
+  top:-15px;
+  margin-inline:2;
+}
+#educationBarSection,#experiences{
+  margin:20px 0;
+  position: relative;
+  display:flex;
+  flex-wrap: nowrap;
+  gap:10px;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+}
+.roadmapSection{
+  position: relative;
+}
+.roadmap-icon{
+  padding:5px;
+  border-radius: 100%;
+  font-size: 12px;
+  margin-top:10px;
+  display:inline-block;
+}
+.highSchool,.team{
+  display:block;
+  position: relative;
+}
+
+.university,.growth{
+  display:block;
+  position:relative;
+  top:160px
+}
+.personal{
+  display:block;
+  position:relative;
+  top:calc(140px * 2)
+}
+.roadmapLine{
+  width:2px;
+  position:absolute;
+  /* margin:0 0 10px 0; */
+  height:400px;
+  left:14px;
+}
+.roadmapLine2{
+  width:2px;
+  position:absolute;
+  /* margin:0 0 10px 0; */
+  height:500px;
+  left:14px;
+}
+.barSection{
+  flex-grow: 1;
+}
+.educationBar,.experienceBar{
+  width:90%;
+  padding:20px;
+  border-radius:20px;
+  margin-bottom: 20px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.badge-roadmap{
+  position:absolute;
+  right:20px;
+  font-family: inherit;
+  padding:7px;
+  top:10px
+}
+.barSectionHeader{
+   font-size: 1.2rem;
+   text-align: left;
+   line-height: 2;
+  }
+.barSectionText{
+    margin: 5px 0 0 5px;
+    text-align: left;
+    line-height: 1.5;
+}
