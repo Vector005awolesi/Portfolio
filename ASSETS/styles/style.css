@@ -451,11 +451,17 @@ hr.classical {
   height: 320px;
   border-radius: 20px;
 }
+.cardDescription{
+  text-align: center;
+  padding:20px 10px 10px 10px ;
+  opacity:0;
+  height:100%;
+  border-radius: 20px 20px 0 0;
+}
 .cardHead {
   width: 100%;
   height: 67%;
   border-radius: 20px 20px 0 0;
-  padding: 10px;
 }
 .cardBody {
   width: 100%;
@@ -480,4 +486,21 @@ hr.classical {
 .projectTitle {
   font-size: 15px;
   font-weight: 500;
+}
+.btn-description-code,.btn-description-demo{
+  border-radius: 10px;
+}
+.cardContainer:hover .cardDescription{
+  opacity:1;
+  transition:0.3s;
+  position: relative;
+}
+.project-img{
+  position:absolute;
+  top:53px;
+  left:77px;
+  max-width: 155px;
+  border-radius: 10px 10px 0 0;
+  height: 33.5%;
+  scale:2
 }

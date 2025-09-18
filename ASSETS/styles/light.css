@@ -215,6 +215,9 @@ ul#navList a:hover {
 .cardHead {
   background-color: #eaeaea;
 }
+.cardDescription{
+  color:var(--pure-white)
+}
 .cardBody {
   background-color: var(--pure-white);
 }
@@ -225,3 +228,24 @@ ul#navList a:hover {
   background-color: #f3f4f6;
   color: var(--main-text-color-light);
 }
+.btn-description-code{
+   background-color: var(--link-color);
+   color:var(--pure-white)
+}
+.btn-description-demo{
+  background-color: var(--main-color-light);
+  color:var(--pure-white) ;
+ }
+ .btn-description-demo:hover{
+  background-color: #4a8ee6;
+  color:var(--pure-white)
+}
+.btn-description-code:hover{
+  background-color: #5a5f69;
+  color:var(--pure-white)
+}
+.cardContainer:hover .cardDescription{
+  background-color: #201e1e80;
+}
+ 
+

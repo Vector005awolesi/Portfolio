@@ -232,6 +232,9 @@ hr.classical {
   background-color: var(--main-body-color-dark);
   border: thin solid #374151;
 }
+.cardDescription{
+  color:var(--pure-white)
+}
 .cardHead {
   background-color: #eaeaea;
 }
@@ -245,3 +248,23 @@ hr.classical {
   background-color: #374151;
   color: var(--main-text-color-dark);
 }
+.btn-description-code{
+  background-color: #6b7280;
+  color:var(--pure-white)
+}
+.btn-description-demo{
+ background-color: var(--main-color-light) ;
+ color:var(--pure-white) ;
+}
+.btn-description-demo:hover{
+  background-color: #4a8ee6;
+  color:var(--pure-white)
+}
+.btn-description-code:hover{
+  background-color: #5a5f69;
+  color:var(--pure-white)
+}
+.cardContainer:hover .cardDescription{
+  background-color: #201e1e80;
+}
+ 
