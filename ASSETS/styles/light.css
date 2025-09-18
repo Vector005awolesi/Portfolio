@@ -245,7 +245,7 @@ ul#navList a:hover {
   color:var(--pure-white)
 }
 .cardContainer:hover .cardDescription{
-  background-color: #201e1e80;
+  background-color: #201e1ec0;
 }
  
 

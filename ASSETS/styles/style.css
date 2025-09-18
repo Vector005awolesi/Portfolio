@@ -456,6 +456,7 @@ hr.classical {
   padding:20px 10px 10px 10px ;
   opacity:0;
   height:100%;
+  width:309.5px;
   border-radius: 20px 20px 0 0;
 }
 .cardHead {
@@ -499,7 +500,7 @@ hr.classical {
   position:absolute;
   top:53px;
   left:77px;
-  max-width: 155px;
+  max-width: 154px;
   border-radius: 10px 10px 0 0;
   height: 33.5%;
   scale:2
