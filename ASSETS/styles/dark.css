@@ -115,9 +115,9 @@ ul#navList a:hover {
   background-color: var(--main-color-light) !important;
   border: 2px solid transparent;
 }
-hr.classical{
-    border: thin solid #2D4C73;
- }
+hr.classical {
+  border: thin solid #2d4c73;
+}
 .header_content,
 .main_subHeaders {
   color: #fff;
@@ -217,7 +217,8 @@ hr.classical{
   background-color: var(--secondary-body-color-dark);
 }
 
-.badge-roadmap {
+.badge-roadmap,
+.projectBadge {
   background-color: #24354b;
   color: var(--main-color-light);
 }
@@ -225,5 +226,22 @@ hr.classical{
   color: var(--pure-white);
 }
 .barSectionText {
+  color: var(--main-text-color-dark);
+}
+.cardContainer {
+  background-color: var(--main-body-color-dark);
+  border: thin solid #374151;
+}
+.cardHead {
+  background-color: #eaeaea;
+}
+.cardBody {
+  background-color: var(--secondary-body-color-dark);
+}
+.projectTitle {
+  color: var(--main-color-light);
+}
+.badge-projects {
+  background-color: #374151;
   color: var(--main-text-color-dark);
 }
