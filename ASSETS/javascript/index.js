@@ -36,5 +36,11 @@ switch (themeStorage) {
     break;
   default:;
 }
+// HANDLE DYNAMIC PICTURE CHANGE WITH THEME
+if (themeTag.getAttribute("href") === lightMode) {
+  portfolioPic.setAttribute("src" , "ASSETS/IMAGES/portfolio.png");
+} else {
+  portfolioPic.setAttribute("src" , "ASSETS/IMAGES/portfolio-light.png");
+}
 
 
