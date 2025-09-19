@@ -34,5 +34,4 @@ switch (themeStorage) {
     break;
   default:;
 }
-// HANDLE DYNAMIC PICTURE CHANGE WITH THEME
 

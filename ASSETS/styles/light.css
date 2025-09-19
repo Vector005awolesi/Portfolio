@@ -107,10 +107,12 @@ ul#navList a:hover {
   box-shadow: 0px 3px 5px var(--shadowColor);
 }
 
-#mainSection::-webkit-scrollbar-track {
+#mainSection::-webkit-scrollbar-track,
+#text-area::-webkit-scrollbar-track {
   background-color: #f3f4f6;
 }
-#mainSection::-webkit-scrollbar-thumb {
+#mainSection::-webkit-scrollbar-thumb,
+#text-area::-webkit-scrollbar-thumb {
   background-color: var(--main-color-light) !important;
   border: 2px solid transparent;
 }
@@ -215,8 +217,8 @@ ul#navList a:hover {
 .cardHead {
   background-color: #eaeaea;
 }
-.cardDescription{
-  color:var(--pure-white)
+.cardDescription {
+  color: var(--pure-white);
 }
 .cardBody {
   background-color: var(--pure-white);
@@ -228,24 +230,58 @@ ul#navList a:hover {
   background-color: #f3f4f6;
   color: var(--main-text-color-light);
 }
-.btn-description-code{
-   background-color: var(--link-color);
-   color:var(--pure-white)
+.btn-description-code {
+  background-color: var(--link-color);
+  color: var(--pure-white);
 }
-.btn-description-demo{
+.btn-description-demo {
   background-color: var(--main-color-light);
-  color:var(--pure-white) ;
- }
- .btn-description-demo:hover{
+  color: var(--pure-white);
+}
+.btn-description-demo:hover {
   background-color: #4a8ee6;
-  color:var(--pure-white)
+  color: var(--pure-white);
 }
-.btn-description-code:hover{
+.btn-description-code:hover {
   background-color: #5a5f69;
-  color:var(--pure-white)
+  color: var(--pure-white);
 }
-.cardContainer:hover .cardDescription{
+.cardContainer:hover .cardDescription {
   background-color: #201e1ec0;
 }
- 
-
+.contactHeader {
+  color: var(--main-text-color-light);
+}
+.myid {
+  color: var(--main-text-color-light);
+}
+.contact-icon {
+  color: var(--main-color-light);
+  background-color: #e5f1ff;
+}
+.active-icon {
+  background-color: rgb(67, 238, 33);
+}
+#availability {
+  border: thin solid var(--main-color-light);
+  background-color: #e5f1ff;
+}
+.formHeader {
+  color: var(--main-text-color-light);
+}
+#contactForm {
+  background-color: var(--pure-white);
+  box-shadow: 0px 2px 4px var(--shadowColor);
+  color: var(--main-text-color-light);
+}
+.btn-submit-contact {
+  background-color: var(--main-color-light);
+  color: var(--pure-white);
+}
+.form-control {
+  background-color: var(--pure-white);
+}
+.btn-submit-contact:hover {
+  background-color: #3a84e6;
+  color: var(--pure-white);
+}

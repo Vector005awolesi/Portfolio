@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.3s;
 }
 html {
   scroll-behavior: smooth;
@@ -451,12 +452,12 @@ hr.classical {
   height: 320px;
   border-radius: 20px;
 }
-.cardDescription{
+.cardDescription {
   text-align: center;
-  padding:20px 10px 10px 10px ;
-  opacity:0;
-  height:100%;
-  width:309.5px;
+  padding: 20px 10px 10px 10px;
+  opacity: 0;
+  height: 100%;
+  width: 309.5px;
   border-radius: 20px 20px 0 0;
 }
 .cardHead {
@@ -488,20 +489,90 @@ hr.classical {
   font-size: 15px;
   font-weight: 500;
 }
-.btn-description-code,.btn-description-demo{
+.btn-description-code,
+.btn-description-demo {
   border-radius: 10px;
 }
-.cardContainer:hover .cardDescription{
-  opacity:1;
-  transition:0.3s;
+.cardContainer:hover .cardDescription {
+  opacity: 1;
+  transition: 0.3s;
   position: relative;
 }
-.project-img{
-  position:absolute;
-  top:53px;
-  left:77px;
+.project-img {
+  position: absolute;
+  top: 53px;
+  left: 77px;
   max-width: 154px;
   border-radius: 10px 10px 0 0;
   height: 33.5%;
-  scale:2
+  scale: 2;
+}
+#contactsSection {
+  margin: 20px 0;
+}
+.contactHeader {
+  text-align: left;
+  position: relative;
+  left: 10px;
+}
+#contactSubsection {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin: 20px 0;
+}
+.myid {
+  line-height: 1.2;
+}
+.contact-icon {
+  margin-inline: 3px;
+  padding: 8px;
+  position: relative;
+  top: 5px;
+  border-radius: 100%;
+}
+.active-icon {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-inline: 2px;
+}
+#availability {
+  width: 200px;
+  padding: 15px;
+  border-radius: 20px;
+}
+#contactForm {
+  border-radius: 15px;
+  padding: 20px;
+  width: 350px;
+}
+.formHeader {
+  font-size: 1.1rem;
+  text-align: left;
+  margin: 20px 0;
+}
+.btn-submit-contact {
+  width: 100%;
+}
+label.text-area-label {
+  text-align: left;
+  margin-bottom: 10px;
+}
+#text-area::-webkit-scrollbar {
+  width: 8px;
+}
+#text-area::-webkit-scrollbar-track {
+  margin: 0 10px;
+  border-radius: 0px;
+  width: 10px;
+}
+#text-area::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  height: 50px !important;
+  border: 2px solid transparent;
 }
