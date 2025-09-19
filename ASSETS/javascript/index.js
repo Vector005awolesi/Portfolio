@@ -26,21 +26,13 @@ switch (themeStorage) {
     themeTag.setAttribute("href", lightMode);
     themeBtn.innerHTML = "<i class = 'fas fa-sharp fa-moon'><i>";
     localStorage.setItem("theme", lightTheme);
-    portfolioPic.setAttribute("src" , "ASSETS/IMAGES/portfolio-light.png");
     break;
   case darkMode:
     themeTag.setAttribute("href", darkMode);
     themeBtn.innerHTML = "<i class = 'fas fa-sharp fa-sun'><i>";
     localStorage.setItem("theme", darkTheme);
-    portfolioPic.setAttribute("src" , "ASSETS/IMAGES/portfolio.png")
     break;
   default:;
 }
 // HANDLE DYNAMIC PICTURE CHANGE WITH THEME
-if (themeTag.getAttribute("href") === lightMode) {
-  portfolioPic.setAttribute("src" , "ASSETS/IMAGES/portfolio.png");
-} else {
-  portfolioPic.setAttribute("src" , "ASSETS/IMAGES/portfolio-light.png");
-}
-
 
