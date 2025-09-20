@@ -449,7 +449,7 @@ hr.classical {
   flex-wrap: wrap;
   justify-content: center;
   box-sizing: border-box;
-  gap: 20px 15px;
+  gap: 20px 10px;
 }
 .cardContainer {
   width: 310px;
@@ -508,7 +508,16 @@ hr.classical {
   left: 77px;
   max-width: 154px;
   border-radius: 10px 10px 0 0;
-  height: 33.5%;
+  height: 31.5% !important;
+  scale: 2;
+}
+.rps-img{
+  position: absolute;
+  top: 53px;
+  left: 77px;
+  max-width: 154px;
+  border-radius: 10px 10px 0 0;
+  height: 35.5% !important;
   scale: 2;
 }
 #contactsSection {
