@@ -530,6 +530,7 @@
     height: 35%;
     scale: 2;
   }
+ 
   #contactsSection {
     margin: 20px 0;
   }
@@ -1077,11 +1078,11 @@
     text-align: center;
     padding:  10px ;
     opacity: 0;
-    height: 105%;
-    position: relative;
-    top:-5px;
-    right:10px;
-    width: 309.5px !important;
+    height: 105% !important;
+    /* position: relative; */
+    /* top:-5px;
+    right:2px; */
+    width: 310px !important;
     border-radius: 20px 20px 0 0;
   }
   .cardHead {
@@ -1126,13 +1127,23 @@
   }
   .project-img {
     position: absolute;
-    top: 44px;
-    left: 75px;
-    max-width: 154.5px;
+    top: 45px;
+    left: 76px;
+    max-width: 152px;
     border-radius: 10px 10px 0 0;
-    height: 34.5% !important;
+    height: 32% !important;
     scale: 2;
   }
+  .rps-img{
+    position: absolute;
+    top: 45px;
+    left: 77px;
+    max-width: 152.5px;
+    border-radius: 10px 10px 0 0;
+    height: 35% !important;
+    scale: 2;
+  }
+
   #contactsSection {
     margin: 20px 0;
   }
