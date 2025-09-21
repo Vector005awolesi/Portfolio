@@ -10,7 +10,7 @@
     transition: 0.5s;
   }
   #container {
-    padding: 2% 4% ;
+    padding: 2% 4%;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
@@ -90,10 +90,11 @@
   /* PROFILE CARD SECTION */
   #profileCardSection {
     width: 100vw !important;
-    height:auto !important;
+    height: auto !important;
     border-radius: 20px;
     position: relative;
-    padding: 0 0 20px 0
+    padding: 0 0 20px 0;
+    height: 85vh !important;
   }
   #profileCardHead {
     width: 100%;
@@ -129,8 +130,8 @@
   .social-btn {
     border-radius: 100%;
     margin-inline: 10px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     font-size: 16px;
     transition: 0.3s;
     padding: 5px;
@@ -164,7 +165,7 @@
     transition: 0.3s;
   }
   #mainSection {
-    padding:40px 15px;
+    padding: 40px 15px;
     flex-grow: 1;
     border-radius: 20px 0 0 20px;
     height: 93vh;
@@ -210,7 +211,7 @@
     top: 0px;
   }
   .subhero {
-    padding:  10px 20px;
+    padding: 10px 20px;
     border-radius: 20px;
     flex-grow: 1;
     display: flex;
@@ -407,7 +408,7 @@
     position: relative;
     top: calc(240px * 2);
   }
-  .growth-mobile{
+  .growth-mobile {
     position: relative;
     top: 300px;
   }
@@ -441,10 +442,10 @@
   .badge-roadmap {
     position: absolute;
     right: 0px !important;
-    font-size: 10px !important;;
+    font-size: 10px !important;
     font-family: inherit;
     padding: 5px;
-    top: 0px
+    top: 0px;
   }
   .barSectionHeader {
     font-size: 0.9rem;
@@ -473,11 +474,11 @@
   }
   .cardDescription {
     text-align: center;
-    padding:  10px ;
+    padding: 10px;
     opacity: 0;
     height: 105%;
     position: relative;
-    top:0px;
+    top: 0px;
     width: 259px !important;
     border-radius: 20px 20px 0 0;
   }
@@ -530,7 +531,16 @@
     height: 35%;
     scale: 2;
   }
- 
+  .product-img {
+    position: absolute;
+    top: 57px;
+    left: 64px;
+    max-width: 128.5px;
+    border-radius: 10px 10px 0 0;
+    height: 32% !important;
+    scale: 2;
+  }
+
   #contactsSection {
     margin: 20px 0;
   }
@@ -566,7 +576,7 @@
     margin-inline: 2px;
   }
   #availability {
-    width: 200px;
+    width: 100%;
     padding: 15px;
     border-radius: 20px;
   }
@@ -601,7 +611,8 @@
     border: 2px solid transparent;
   }
 }
-@media screen and (min-width: 321px) and (max-width: 425px) {
+/* Medium screen */
+@media screen and (min-width: 321px) and (max-width: 424px) {
   * {
     margin: 0;
     padding: 0;
@@ -613,7 +624,7 @@
     transition: 0.5s;
   }
   #container {
-    padding: 2% 4% ;
+    padding: 2% 4%;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
@@ -693,10 +704,11 @@
   /* PROFILE CARD SECTION */
   #profileCardSection {
     width: 100vw !important;
-    height:auto !important;
+    height: auto !important;
     border-radius: 20px;
     position: relative;
-    padding: 0 0 20px 0
+    height: 85vh !important;
+    padding: 0 0 20px 0;
   }
   #profileCardHead {
     width: 100%;
@@ -732,8 +744,8 @@
   .social-btn {
     border-radius: 100%;
     margin-inline: 10px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     font-size: 16px;
     transition: 0.3s;
     padding: 5px;
@@ -767,7 +779,7 @@
     transition: 0.3s;
   }
   #mainSection {
-    padding:40px 15px;
+    padding: 40px 15px;
     flex-grow: 1;
     border-radius: 20px 0 0 20px;
     height: 93vh;
@@ -813,7 +825,7 @@
     top: 0px;
   }
   .subhero {
-    padding:  10px 20px;
+    padding: 10px 20px;
     border-radius: 20px;
     flex-grow: 1;
     display: flex;
@@ -1003,29 +1015,29 @@
   .university {
     display: block;
     position: relative;
-    top: 280px;
+    top: 380px;
   }
   .personal {
     display: block;
     position: relative;
-    top: calc(200px * 2);
+    top: calc(260px * 2);
   }
-  .growth-mobile{
+  .growth-mobile {
     position: relative;
-    top: 260px;
+    top: 300px;
   }
   .roadmapLine {
     width: 2px;
     position: absolute;
     /* margin:0 0 10px 0; */
-    height: 500px;
+    height: 700px;
     left: 14px;
   }
   .roadmapLine2 {
     width: 2px;
     position: absolute;
     /* margin:0 0 10px 0; */
-    height: 650px;
+    height: 750px;
     left: 14px;
   }
   .barSection {
@@ -1044,10 +1056,10 @@
   .badge-roadmap {
     position: absolute;
     right: 0px !important;
-    font-size: 12px !important;;
+    font-size: 10px !important;
     font-family: inherit;
     padding: 5px;
-    top: 0px
+    top: 0px;
   }
   .barSectionHeader {
     font-size: 1rem;
@@ -1067,7 +1079,7 @@
     flex-wrap: wrap;
     justify-content: center;
     box-sizing: border-box;
-    gap: 10px;
+    gap: 30px 10px;
   }
   .cardContainer {
     width: 100vw !important;
@@ -1076,7 +1088,7 @@
   }
   .cardDescription {
     text-align: center;
-    padding:  10px ;
+    padding: 10px;
     opacity: 0;
     height: 105% !important;
     /* position: relative; */
@@ -1134,13 +1146,23 @@
     height: 32% !important;
     scale: 2;
   }
-  .rps-img{
+  .rps-img,
+  .portfolio-img {
     position: absolute;
     top: 45px;
     left: 77px;
     max-width: 152.5px;
     border-radius: 10px 10px 0 0;
     height: 35% !important;
+    scale: 2;
+  }
+  .product-img {
+    position: absolute;
+    top: 52px;
+    left: 77px;
+    max-width: 152.5px;
+    border-radius: 10px 10px 0 0;
+    height: 34% !important;
     scale: 2;
   }
 
@@ -1179,7 +1201,7 @@
     margin-inline: 2px;
   }
   #availability {
-    width: 200px;
+    width: 100%;
     padding: 15px;
     border-radius: 20px;
   }
@@ -1214,8 +1236,629 @@
     border: 2px solid transparent;
   }
 }
-@media screen and (min-width: 426px) and (max-width: 1024px) {
-  body {
-    background-color: yellow;
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+  html {
+    scroll-behavior: smooth;
+    transition: 0.5s;
+  }
+  #container {
+    padding: 2% 4%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+  }
+  /* NAVAGATION SECTION */
+  button#theme-btn,
+  button#theme-btn-dark {
+    border: none;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    position: absolute;
+    top: -55px;
+    left: 84% !important;
+    z-index: 99;
+    transition: 0.3s;
+    display: block;
+  }
+  button#theme-btn:hover,
+  button#theme-btn-dark {
+    scale: 1.07;
+    transition: 0.3s;
+  }
+  button#theme-btn:active,
+  button#theme-btn-dark {
+    border: none;
+    scale: 0.85;
+  }
+  .fa-moon {
+    transform: scale(1.2);
+    letter-spacing: 5px;
+  }
+  #navagation-section {
+    text-align: center;
+    position: relative;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+  }
+  #navbar {
+    width: 100vw;
+    display: inline-block;
+    border-radius: 0;
+    position: relative;
+  }
+  ul#navList {
+    margin: 0;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  ul#navList li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px 15px;
+    text-align: center;
+  }
+  ul#navList li a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    padding: 8px 5px;
+    font-weight: 600;
+    transition: 0.5;
+    border-radius: 10px;
+  }
+
+  .nav-text {
+    display: block;
+    font-size: 11px;
+  }
+  /* PROFILE CARD SECTION */
+  #profileCardSection {
+    width: 100vw !important;
+    height: auto !important;
+    border-radius: 20px;
+    position: relative;
+    height: 85vh !important;
+    padding: 0 0 20px 0;
+  }
+  #profileCardHead {
+    width: 100%;
+    height: 140px;
+    border-radius: 20px 20px 0 0;
+  }
+  #profileCardBody {
+    padding: 10px 10px;
+    text-align: center;
+  }
+  #profileImage {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 75px;
+    left: 150px;
+  }
+  #myName {
+    margin-top: 45px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    z-index: 1;
+  }
+  .profile-text-alt {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  #socialSection {
+    padding: 5px;
+  }
+  .social-btn {
+    border-radius: 100%;
+    margin-inline: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 5px;
+  }
+  .social-btn:hover {
+    transition: 0.3s;
+  }
+  .social-btn:active {
+    transition: 0.3s;
+  }
+  .download-resume-btn {
+    padding: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+
+  #downloadResumeSection {
+    margin-top: 15px;
+  }
+  .contactLinkBtn {
+    padding: 6px;
+    font-size: 16px;
+    margin-inline: 10px;
+    transition: 0.3s;
+  }
+  .contactLinkBtn:hover {
+    transition: 0.3s;
+    border: none;
+  }
+  .contactLinkBtn:active {
+    transition: 0.3s;
+  }
+  #mainSection {
+    padding: 40px 15px;
+    flex-grow: 1;
+    border-radius: 20px 0 0 20px;
+    height: 93vh;
+    width: 100vw;
+    font-size: 16px;
+    overflow-y: auto;
+  }
+  #mainSection::-webkit-scrollbar {
+    width: 5px;
+  }
+  #mainSection::-webkit-scrollbar-track {
+    margin: 0 10px;
+    border-radius: 0px;
+    width: 10px;
+  }
+  #mainSection::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    height: 50px;
+    border: 2px solid transparent;
+  }
+  .homeSection {
+    padding: 10px 0;
+    margin: 20px 0;
+  }
+  .header_content {
+    font-weight: bold;
+  }
+
+  #subheroSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  .subhero-icon {
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 20px;
+    position: relative;
+    top: 0px;
+  }
+  .subhero {
+    padding: 10px 20px;
+    border-radius: 20px;
+    flex-grow: 1;
+    display: flex;
+    gap: 20px;
+    /* padding:10px */
+  }
+  .subsectionHeroHeaders {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .subsectionHeroParagraph {
+    font-size: 14px;
+  }
+  .skillSection {
+    margin: 30px 0;
+  }
+  hr.classical {
+    display: inline-block;
+    width: 20%;
+    position: relative;
+    top: 10px;
+  }
+  .main_subHeaders {
+    display: inline-block;
+    margin-inline: 10px;
+  }
+
+  #lineSkillSection {
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px 0;
+  }
+  .skillLineHtml,
+  .skillLineCss {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    border-radius: 30px;
+    position: relative;
+  }
+  .skillLineHtml::before {
+    position: absolute;
+    content: " ";
+    width: 90%;
+    padding: 5px;
+    border-radius: 30px;
+    top: 0px;
+    left: 0px;
+    animation: fillHtml 2.5s 1 ease-out;
+  }
+  @keyframes fillHtml {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 90%;
+    }
+  }
+  .skillLineCss::before {
+    position: absolute;
+    content: " ";
+    width: 95%;
+    padding: 5px;
+    border-radius: 30px;
+    top: 0px;
+    left: 0px;
+    animation: fillCss 2.5s 1 ease-out;
+  }
+  @keyframes fillCss {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 95%;
+    }
+  }
+
+  .line-icon {
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .skillLineTextDivider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .lineSkillSubSection {
+    margin: 20px 0;
+  }
+  .skillLineText,
+  .card-text,
+  .barText {
+    font-weight: bold;
+  }
+
+  .skillLineIconText {
+    position: relative;
+    top: -15px;
+  }
+  #cardSkillSection {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .skillCard {
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    flex-grow: 1;
+    text-align: center;
+  }
+  .card-icon {
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 2.3rem;
+    margin-right: 10px;
+  }
+  .card-text-percentage,
+  .bar-percentage {
+    font-weight: bold;
+  }
+  #barSkillSection {
+    margin: 20px 0;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #uiUX,
+  #seo {
+    width: 100%;
+    flex-grow: 1;
+    padding: 20px 10px;
+    border-radius: 20px;
+  }
+  .bar-icon {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+  }
+  .barText,
+  .bar-percentage {
+    position: relative;
+    top: -10px;
+    margin-inline: 2;
+    font-size: 14px;
+  }
+  #educationBarSection,
+  #experiences {
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+  }
+  .roadmapSection {
+    position: relative;
+  }
+  .roadmap-icon {
+    padding: 5px;
+    border-radius: 100%;
+    font-size: 12px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  .highSchool,
+  .team {
+    display: block;
+    position: relative;
+    top:20px
+  }
+
+  .university {
+    display: block;
+    position: relative;
+    top: 300px;
+  }
+  .personal {
+    display: block;
+    position: relative;
+    top: calc(200px * 2);
+  }
+  .growth-mobile {
+    position: relative;
+    top: 300px;
+  }
+  .roadmapLine {
+    width: 2px;
+    position: absolute;
+    /* margin:0 0 10px 0; */
+    height: 600px;
+    left: 14px;
+  }
+  .roadmapLine2 {
+    width: 2px;
+    position: absolute;
+    /* margin:0 0 10px 0; */
+    height: 650px;
+    left: 14px;
+  }
+  .barSection {
+    flex-grow: 1;
+  }
+  .educationBar,
+  .experienceBar {
+    width: 90%;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: 0.3s;
+  }
+
+  .badge-roadmap {
+    position: absolute;
+    right: 0px !important;
+    font-size: 10px !important;
+    font-family: inherit;
+    padding: 5px;
+    top: 0px;
+  }
+  .barSectionHeader {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.5;
+  }
+  .barSectionText {
+    margin: 5px 0 0 5px;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  #projectsCardSection {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 30px 10px;
+  }
+  .cardContainer {
+    width: 100vw !important;
+    height: 100% !important;
+    border-radius: 20px;
+  }
+  .cardDescription {
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    height: 105% !important;
+    /* position: relative; */
+    /* top:-5px;
+    right:2px; */
+    width: 310px !important;
+    border-radius: 20px 20px 0 0;
+  }
+  .cardHead {
+    width: 100%;
+    height: 67%;
+    border-radius: 20px 20px 0 0;
+  }
+  .cardBody {
+    width: 100%;
+    height: 33%;
+    padding: 15px 20px 10px 8px;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    text-align: left;
+  }
+  .projectBadge {
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+    font-size: 12px;
+    right: 5px;
+    top: 10px;
+  }
+  .badge-projects {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 3px;
+    font-size: 10px;
+  }
+  .projectTitle {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .btn-description-code,
+  .btn-description-demo {
+    border-radius: 10px;
+  }
+  .cardContainer:hover .cardDescription {
+    opacity: 1;
+    transition: 0.3s;
+    position: relative;
+  }
+  .project-img {
+    position: absolute;
+    top: 45px;
+    left: 76px;
+    max-width: 152px;
+    border-radius: 10px 10px 0 0;
+    height: 32% !important;
+    scale: 2;
+  }
+  .rps-img,
+  .portfolio-img {
+    position: absolute;
+    top: 45px;
+    left: 77px;
+    max-width: 152.5px;
+    border-radius: 10px 10px 0 0;
+    height: 35% !important;
+    scale: 2;
+  }
+  .product-img {
+    position: absolute;
+    top: 52px;
+    left: 77px;
+    max-width: 152.5px;
+    border-radius: 10px 10px 0 0;
+    height: 34% !important;
+    scale: 2;
+  }
+
+  #contactsSection {
+    margin: 20px 0;
+  }
+  .contactHeader {
+    text-align: left;
+    position: relative;
+    left: 10px;
+  }
+  #contactSubsection {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .myid {
+    line-height: 1.2;
+  }
+  .contact-icon {
+    margin-inline: 3px;
+    padding: 8px;
+    position: relative;
+    top: 5px;
+    border-radius: 100%;
+  }
+  .active-icon {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin-inline: 2px;
+  }
+  #availability {
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+  }
+  #contactForm {
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+  }
+  .formHeader {
+    font-size: 1.1rem;
+    text-align: left;
+    margin: 20px 0;
+  }
+  .btn-submit-contact {
+    width: 100%;
+  }
+  label.text-area-label {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  #text-area::-webkit-scrollbar {
+    width: 8px;
+  }
+  #text-area::-webkit-scrollbar-track {
+    margin: 0 10px;
+    border-radius: 0px;
+    width: 10px;
+  }
+  #text-area::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    height: 50px;
+    border: 2px solid transparent;
   }
 }

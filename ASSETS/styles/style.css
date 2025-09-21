@@ -520,6 +520,24 @@ hr.classical {
   height: 35.5% !important;
   scale: 2;
 }
+.portfolio-img{
+  position: absolute;
+  top: 53px;
+  left: 77px;
+  max-width: 154px;
+  border-radius: 10px 10px 0 0;
+  height: 34% !important;
+  scale: 2;
+}
+.product-img{
+  position: absolute;
+  top: 53px;
+  left: 77px;
+  max-width: 154px;
+  border-radius: 10px 10px 0 0;
+  height: 34% !important;
+  scale: 2;
+}
 #contactsSection {
   margin: 20px 0;
 }

@@ -254,9 +254,17 @@ hr.classical {
   background-color: #6b7280;
   color: var(--pure-white);
 }
-.btn-description-demo {
+.btn-description-code:focus,.btn-description-code:active{
+  background-color: #6b7280 !important;
+  color: var(--pure-white) !important;
+}
+.btn-description-demo{
   background-color: var(--main-color-light);
   color: var(--pure-white);
+}
+.btn-description-demo:focus , .btn-description-demo:active{
+  background-color: var(--main-color-light) !important;
+  color: var(--pure-white) !important;
 }
 .btn-description-demo:hover {
   background-color: #4a8ee6;

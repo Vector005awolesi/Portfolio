@@ -234,9 +234,17 @@ ul#navList a:hover {
   background-color: var(--link-color);
   color: var(--pure-white);
 }
+.btn-description-code:focus,.btn-description-code:active{
+  background-color: var(--link-color) !important;
+  color: var(--pure-white) !important;
+}
 .btn-description-demo {
   background-color: var(--main-color-light);
   color: var(--pure-white);
+}
+.btn-description-demo:active , .btn-description-demo:focus{
+  background-color: var(--main-color-light) !important;
+  color: var(--pure-white) !important;
 }
 .btn-description-demo:hover {
   background-color: #4a8ee6;

@@ -3,7 +3,7 @@ var themeBtn = document.querySelector("#theme-btn");
 var themeTag = document.querySelector("#theme");
 var lightMode = "ASSETS/styles/light.css";
 var darkMode = "ASSETS/styles/dark.css";
-var portfolioPic = document.querySelector("#portfolio-img");
+var portfolioPic = document.getElementById("portfolioPic");
 var themeStorage = localStorage.getItem("theme");
 themeBtn.addEventListener("click", () => {
   if (themeTag.getAttribute("href") === lightMode) {
@@ -25,12 +25,14 @@ switch (themeStorage) {
   case lightMode:
     themeTag.setAttribute("href", lightMode);
     themeBtn.innerHTML = "<i class = 'fas fa-sharp fa-moon'><i>";
-    localStorage.setItem("theme", lightTheme);
+    localStorage.setItem("theme", lightMode );
+    portfolioPic.setAttribute("src" , "ASSETS/IMAGES/portfolio-light.png");
     break;
   case darkMode:
     themeTag.setAttribute("href", darkMode);
     themeBtn.innerHTML = "<i class = 'fas fa-sharp fa-sun'><i>";
-    localStorage.setItem("theme", darkTheme);
+    localStorage.setItem("theme", darkMode);
+    portfolioPic.setAttribute("src" , "ASSETS/IMAGES/portfolio.png");
     break;
   default:;
 }
