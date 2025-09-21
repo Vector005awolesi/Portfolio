@@ -1650,7 +1650,7 @@
   }
   .growth-mobile {
     position: relative;
-    top: 300px;
+    top: 230px;
   }
   .roadmapLine {
     width: 2px;
@@ -1720,7 +1720,7 @@
     /* position: relative; */
     /* top:-5px;
     right:2px; */
-    width: 310px !important;
+    width: 354px !important;
     border-radius: 20px 20px 0 0;
   }
   .cardHead {
@@ -1766,8 +1766,8 @@
   .project-img {
     position: absolute;
     top: 45px;
-    left: 76px;
-    max-width: 152px;
+    left: 86px;
+    max-width: 172px;
     border-radius: 10px 10px 0 0;
     height: 32% !important;
     scale: 2;
@@ -1776,19 +1776,19 @@
   .portfolio-img {
     position: absolute;
     top: 45px;
-    left: 77px;
-    max-width: 152.5px;
+    left: 88px;
+    max-width: 177.5px;
     border-radius: 10px 10px 0 0;
-    height: 35% !important;
+    height: 33% !important;
     scale: 2;
   }
   .product-img {
     position: absolute;
-    top: 52px;
-    left: 77px;
-    max-width: 152.5px;
+    top: 50px;
+    left: 90px;
+    width: 220px !important;
     border-radius: 10px 10px 0 0;
-    height: 34% !important;
+    height: 33% !important;
     scale: 2;
   }
 
