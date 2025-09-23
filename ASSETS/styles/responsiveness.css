@@ -1733,3 +1733,150 @@
     border: 2px solid transparent;
   }
 }
+@media screen  and (min-width : 768px ) and  (max-width: 1023px) {
+  /* PROFILE CARD SECTION */
+  #profileCardSection {
+    width: 400px;
+    height: 100% !important;
+    border-radius: 20px;
+    position: relative;
+  }
+  #profileCardHead {
+    width: 100%;
+    height: 170px;
+    border-radius: 20px 20px 0 0;
+  }
+  #profileCardBody {
+    padding: 20px 20px;
+    text-align: center;
+  }
+  #profileImage {
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 90px;
+    left:35%
+  }
+  #myName {
+    margin-top: 40px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    z-index: 1;
+  }
+  .profile-text-alt {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  #socialSection {
+    padding: 5px;
+  }
+  .social-btn {
+    border-radius: 100%;
+    margin-inline: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    transition: 0.3s;
+    padding: 5px;
+  }
+  .social-btn:hover {
+    transition: 0.3s;
+  }
+  .social-btn:active {
+    transition: 0.3s;
+  }
+  .download-resume-btn {
+    padding: 10px;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  #downloadResumeSection {
+    margin-top: 20px;
+  }
+  .contactLinkBtn {
+    padding: 10px;
+    font-size: 16px;
+    margin-inline: 10px;
+    transition: 0.3s;
+  }
+  .contactLinkBtn:hover {
+    transition: 0.3s;
+    border: none;
+  }
+  .contactLinkBtn:active {
+    transition: 0.3s;
+  }
+  #contactsSection {
+    margin: 20px 0;
+  }
+  .contactHeader {
+    text-align: left;
+    position: relative;
+    left: 10px;
+  }
+  #contactSubsection {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .myid {
+    line-height: 1.2;
+  }
+  .contact-icon {
+    margin-inline: 3px;
+    padding: 8px;
+    position: relative;
+    top: 5px;
+    border-radius: 100%;
+  }
+  .active-icon {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin-inline: 2px;
+  }
+  #availability {
+    width: 200px;
+    padding: 15px;
+    border-radius: 20px;
+  }
+  #contactForm {
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+  }
+  .formHeader {
+    font-size: 1.1rem;
+    text-align: left;
+    margin: 20px 0;
+  }
+  .btn-submit-contact {
+    width: 100%;
+  }
+  label.text-area-label {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  #text-area::-webkit-scrollbar {
+    width: 8px;
+  }
+  #text-area::-webkit-scrollbar-track {
+    margin: 0 10px;
+    border-radius: 0px;
+    width: 10px;
+  }
+  #text-area::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    height: 50px !important;
+    border: 2px solid transparent;
+  }
+  
+}
