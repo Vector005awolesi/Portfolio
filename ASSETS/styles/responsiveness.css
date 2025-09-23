@@ -646,6 +646,8 @@
     padding: 0 5px;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+
   }
   ul#navList li {
     list-style-type: none;
@@ -663,8 +665,9 @@
     border-radius: 10px;
   }
 
+
   .nav-text {
-    display: inline;
+    display: block;
     font-size: 11px;
   }
   /* PROFILE CARD SECTION */
@@ -691,7 +694,7 @@
     max-width: 100%;
     position: absolute;
     top: 75px;
-    left: 120px;
+    left: 35%
   }
   #myName {
     margin-top: 45px;
@@ -1268,7 +1271,7 @@
     max-width: 100%;
     position: absolute;
     top: 75px;
-    left: 150px;
+    left: 35%;
   }
   #myName {
     margin-top: 45px;
