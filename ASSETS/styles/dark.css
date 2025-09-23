@@ -209,9 +209,8 @@ hr.classical {
   color: var(--main-color-light);
 }
 
-.roadmapLine,
-.roadmapLine2 {
-  background-color: #2d4c73;
+.roadmap::after {
+  background-color: #2d4c73 !important;
 }
 
 .educationBar,

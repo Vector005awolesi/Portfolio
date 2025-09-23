@@ -187,9 +187,8 @@ ul#navList a:hover {
   color: var(--main-color-light);
 }
 
-.roadmapLine,
-.roadmapLine2 {
-  background-color: #c9e1ff;
+.roadmap::after {
+  background-color: #c9e1ff !important;
 }
 
 .educationBar,

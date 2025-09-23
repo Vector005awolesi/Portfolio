@@ -22,11 +22,18 @@
     />
     <!-- main stylesheet -->
     <!-- <link rel="stylesheet" href="ASSETS/styles/bootstrap.css" /> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"
-    <link rel="stylesheet" href="ASSETS/styles/all.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+      <link
+      rel="stylesheet"
+      href="ASSETS/styles/all.css"
+    />
     <link id="theme" rel="stylesheet" href="ASSETS/styles/light.css" />
     <link rel="stylesheet" href="ASSETS/styles/style.css" />
-    <link rel="stylesheet" href="ASSETS/styles/responsiveness.css">
+    <link rel="stylesheet" href="ASSETS/styles/responsiveness.css" />
   </head>
 
   <body>
@@ -97,7 +104,7 @@
             <button class="btn download-resume-btn">
               <i class="fas fa-sharp fa-download"></i> My Resume
             </button>
-            <button class="btn contactLinkBtn">
+            <button class="btn contactLinkBtn" onclick="window.location.href='#contactsSection'">
               <i class="fas fa-sharp fa-envelope"></i> Contact Me
             </button>
           </div>
@@ -242,15 +249,9 @@
             <hr class="classical" />
             <div id="educationBarSection">
               <div class="roadmapSection">
-                <div class="roadmapLine"></div>
-                <span class="highSchool"
+                <span class="highSchool roadmap"
                   ><i class="fas fa-sharp roadmap-icon fa-school"></i
                 ></span>
-                <span class="university"
-                  ><i class="fas fa-sharp fa-university roadmap-icon"></i
-                ></span>
-              </div>
-              <div class="barSection">
                 <div class="educationBar">
                   <h3 class="barSectionHeader">THE PINNACLE HEIGHT COLLEGE</h3>
                   <p class="barSectionText">
@@ -262,6 +263,11 @@
                   </p>
                   <div class="badge badge-roadmap">JUL 2019-2025</div>
                 </div>
+              </div>
+              <div class="roadmapSection">
+                <span class="university roadmap"
+                  ><i class="fas fa-sharp fa-university roadmap-icon"></i
+                ></span>
                 <div class="educationBar">
                   <h3 class="barSectionHeader">
                     LAGOS STATE UNIVERSITY OF SCIENCE AND TECHNOLOGY (LASUSTECH)
@@ -277,58 +283,59 @@
                 </div>
               </div>
             </div>
-            <div id="experienceBarSection">
-              <h3 class="main_subHeaders">
-                My <span class="header_alt">Experiences</span>
-              </h3>
-              <!--CUSTOMIZED HORIZONTAL RULE-->
-              <hr class="classical" />
-              <div id="experiences">
-                <div class="roadmapSection">
-                  <div class="roadmapLine2"></div>
-                  <span class="team"
-                    ><i class="fas fa-sharp roadmap-icon fa-briefcase"></i
-                  ></span>
-                  <span class="growth growth-mobile"
-                    ><i class="fas fa-sharp fa-code roadmap-icon"></i
-                  ></span>
-                  <span class="personal"
-                    ><i class="fas fa-sharp fa-laptop roadmap-icon"></i
-                  ></span>
+          </div>
+
+          <div id="experienceBarSection">
+            <h3 class="main_subHeaders">
+              My <span class="header_alt">Experiences</span>
+            </h3>
+            <!--CUSTOMIZED HORIZONTAL RULE-->
+            <hr class="classical" />
+            <div id="experiences">
+              <div class="roadmapSection">
+                <span class="roadmap"
+                  ><i class="fas fa-sharp roadmap-icon fa-briefcase"></i
+                ></span>
+                <div class="experienceBar">
+                  <h3 class="barSectionHeader">
+                    CEO & Senior Developer - INFINET Inc
+                  </h3>
+                  <p class="barSectionText">
+                    Founded and currently leading INFINET Inc , overseeing
+                    project development, strategy and execution. Actively
+                    involved in coding , team coordination and delivering
+                    innovative solutions
+                  </p>
+                  <div class="badge badge-roadmap">JAN 2025-Current</div>
                 </div>
-                <div class="barSection">
-                  <div class="experienceBar">
-                    <h3 class="barSectionHeader">
-                      CEO & Senior Developer - INFINET Inc
-                    </h3>
-                    <p class="barSectionText">
-                      Founded and currently leading INFINET Inc , overseeing
-                      project development, strategy and execution. Actively
-                      involved in coding , team coordination and delivering
-                      innovative solutions
-                    </p>
-                    <div class="badge badge-roadmap">JAN 2025-Current</div>
-                  </div>
-                  <div class="experienceBar">
-                    <h3 class="barSectionHeader">
-                      AI Model Development Project
-                    </h3>
-                    <p class="barSectionText">
-                      Collaborated with a team of developers to design and test
-                      an AI model, contributing to coding, problem-solving and
-                      teamwork
-                    </p>
-                    <div class="badge badge-roadmap">SEP 2025-Current</div>
-                  </div>
-                  <div class="experienceBar">
-                    <h3 class="barSectionHeader">Personal Projects</h3>
-                    <p class="barSectionText">
-                      Independently developed multiple projects, improving my
-                      proficiency in JavaScript , problem-solving, and pratical
-                      application of technology
-                    </p>
-                    <div class="badge badge-roadmap">DEC 2023-Current</div>
-                  </div>
+              </div>
+              <div class="roadmapSection">
+                <span class="roadmap"
+                  ><i class="fas fa-sharp fa-code roadmap-icon"></i
+                ></span>
+                <div class="experienceBar">
+                  <h3 class="barSectionHeader">AI Model Development Project</h3>
+                  <p class="barSectionText">
+                    Collaborated with a team of developers to design and test an
+                    AI model, contributing to coding, problem-solving and
+                    teamwork
+                  </p>
+                  <div class="badge badge-roadmap">SEP 2025-Current</div>
+                </div>
+              </div>
+
+              <div class="roadmapSection">
+                <span class="roadmap"
+                  ><i class="fas fa-sharp  fa-laptop roadmap-icon"></i
+                ></span>
+                <div class="experienceBar">
+                  <h3 class="barSectionHeader">Personal Projects</h3>
+                  <p class="barSectionText">
+                    Independently developed multiple projects, improving my
+                    proficiency in JavaScript , problem-solving, and pratical
+                    application of technology
+                  </p>
+                  <div class="badge badge-roadmap">DEC 2023-Current</div>
                 </div>
               </div>
             </div>
@@ -588,7 +595,11 @@
     </div>
 
     <!-- <script src="ASSETS/javascript/bootstrap.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
     <script src="ASSETS/javascript/all.js"></script>
     <script src="ASSETS/javascript/index.js"></script>
   </body>
