@@ -433,6 +433,7 @@ hr.classical {
   width: 310px;
   height: 320px;
   border-radius: 20px;
+  position: relative;
 }
 .cardDescription {
   text-align: center;
@@ -482,39 +483,11 @@ hr.classical {
 }
 .project-img {
   position: absolute;
-  top: 53px;
-  left: 77px;
-  max-width: 154px;
-  border-radius: 10px 10px 0 0;
-  height: 31.5% !important;
-  scale: 2;
-}
-.rps-img {
-  position: absolute;
-  top: 53px;
-  left: 77px;
-  max-width: 154px;
-  border-radius: 10px 10px 0 0;
-  height: 35.5% !important;
-  scale: 2;
-}
-.portfolio-img {
-  position: absolute;
-  top: 53px;
-  left: 77px;
-  max-width: 154px;
-  border-radius: 10px 10px 0 0;
-  height: 34% !important;
-  scale: 2;
-}
-.product-img {
-  position: absolute;
-  top: 53px;
-  left: 77px;
-  max-width: 154px;
-  border-radius: 10px 10px 0 0;
-  height: 34% !important;
-  scale: 2;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  border-radius: 20px 20px 0 0;
+  height: 67% !important;
 }
 #contactsSection {
   margin: 20px 0;
