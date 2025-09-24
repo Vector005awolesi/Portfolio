@@ -1733,11 +1733,11 @@
     border: 2px solid transparent;
   }
 }
-@media screen  and (min-width : 768px ) and  (max-width: 1023px) {
+@media screen  and (min-width : 768px ) and  (max-width: 1024px) {
   /* PROFILE CARD SECTION */
   #profileCardSection {
-    width: 400px;
-    height: 100% !important;
+    width: 500px;
+    height: 500px !important;
     border-radius: 20px;
     position: relative;
   }
@@ -1877,6 +1877,51 @@
     border-radius: 10px;
     height: 50px !important;
     border: 2px solid transparent;
+  }
+  
+}
+@media screen and (min-width:1440px) {
+  #profileCardSection {
+    width: 400px;
+    height: 600px !important;
+    border-radius: 20px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 2560px)  {
+
+  #profileCardSection {
+    width: 400px;
+    height: 600px !important;
+    border-radius: 20px;
+    position: relative;
+  }
+  .roadmap::after {
+    content: " ";
+    width: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    left: 4.5%;
+  }
+  
+}
+@media screen and (min-width: 3840px){
+  #profileCardSection {
+    width: 400px;
+    height: 600px !important;
+    border-radius: 20px;
+    position: relative;
+  }
+  .roadmap::after {
+    content: " ";
+    width: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    left: 4.5%;
   }
   
 }
