@@ -16,6 +16,8 @@
     <meta name="author" content="Awolesi Victor" />
     <!-- title -->
     <title>Portfolio | Awolesi victor</title>
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Styles & favicon -->
     <link
       rel="shortcut icon"
@@ -36,6 +38,7 @@
     <link id="theme" rel="stylesheet" href="ASSETS/styles/light.css" />
     <link rel="stylesheet" href="ASSETS/styles/style.css" />
     <link rel="stylesheet" href="ASSETS/styles/responsiveness.css" />
+    <link rel="stylesheet" href="ASSETS/styles/animations.css" />
   </head>
 
   <body>
@@ -125,10 +128,10 @@
       </div>
       <div id="mainSection">
         <div id="homeSection">
-          <h1 class="header_content">
+          <h1 class="header_content" data-aos="flip-up">
             Hey<span class="header_alt"> there! 👋</span>
           </h1>
-          <p class="main-section-txt">
+          <p class="main-section-txt" data-aos="fade-right">
             I'm delighted to share a bit about myself. With over 2 years of web
             development experience, I specialize in designing and building
             dynamic applications, software, and websites. Currently, I'm focused
@@ -139,7 +142,7 @@
           </p>
 
           <div id="subheroSection">
-            <div class="subhero">
+            <div class="subhero" data-aos="zoom-in">
               <div class="sectionHero">
                 <span
                   ><i class="fad fa-sharp fa-calendar subhero-icon"></i
@@ -152,7 +155,7 @@
                 </p>
               </div>
             </div>
-            <div class="subhero">
+            <div class="subhero" data-aos="zoom-in" data-aos-delay="200">
               <div class="sectionHero">
                 <span>
                   <i class="fas fa-sharp fa-laptop-code subhero-icon"></i>
@@ -164,7 +167,7 @@
               </div>
             </div>
 
-            <div class="subhero">
+            <div class="subhero" data-aos="zoom-in" data-aos-delay="400">
               <div class="sectionHero">
                 <span
                   ><i class="fas fa-sharp fa-circle-check subhero-icon"></i
@@ -184,7 +187,7 @@
             <!--CUSTOMIZED HORIZONTAL RULE-->
             <hr class="classical" />
             <!-- SKILL SHOWCASE SECTION - LINE , CARD SHAPES -->
-            <div id="skillShowcase">
+            <div id="skillShowcase" data-aos="zoom-in" data-aos-delay="500">
               <!-- LINE SKILL SECTION -->
               <div id="lineSkillSection">
                 <!-- LINE HTML -->
@@ -474,7 +477,7 @@
               <div class="cardContainer card">
                 <img
                   src="ASSETS/IMAGES/payj.png"
-                 alt="PAYJ finance web application concept screenshot"
+                  alt="PAYJ finance web application concept screenshot"
                   class="project-img"
                 />
                 <div class="cardHead">
@@ -503,7 +506,7 @@
               <div class="cardContainer">
                 <img
                   src="ASSETS/IMAGES/proland_landing_page_product.png"
-                   alt="Product landing page screenshot"
+                  alt="Product landing page screenshot"
                   class="project-img"
                 />
                 <div class="cardHead">
@@ -622,12 +625,15 @@
         </div>
       </div>
     </div>
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/vector005awolesi/Portfolio@main/ASSETS/javascript/all.js"></script>
     <script src="ASSETS/javascript/index.js"></script>
+    <!-- Custom animations handled by index.js -->
   </body>
 </html>

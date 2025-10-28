@@ -1,0 +1,85 @@
+/* Base Animation Properties */
+:root {
+    --base-duration: 1.5s;
+    --base-timing: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --blur-amount: 1px;
+}
+
+/* Hero section specific animations */
+.hero-hidden {
+    opacity: 0;
+    transform: scale(0.98) translateY(-15px);
+    transition: opacity var(--base-duration) var(--base-timing),
+                transform var(--base-duration) var(--base-timing);
+    will-change: opacity, transform;
+}
+
+.hero-show {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Text fade animation */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity var(--base-duration) var(--base-timing),
+                transform var(--base-duration) var(--base-timing);
+    will-change: opacity, transform;
+}
+
+.fade-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Zoom animation for skills and education */
+.zoom-hidden {
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity calc(var(--base-duration) + 0.2s) var(--base-timing),
+                transform calc(var(--base-duration) + 0.2s) var(--base-timing);
+    will-change: opacity, transform;
+}
+
+.zoom-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Slide animation for timeline */
+.slide-hidden {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity var(--base-duration) var(--base-timing),
+                transform var(--base-duration) var(--base-timing);
+    will-change: opacity, transform;
+}
+
+.slide-show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Flip animation for project cards */
+.flip-hidden {
+    opacity: 0;
+    transform: translateY(30px) rotateX(5deg);
+    transition: opacity 2s ease-out,
+                transform 2s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+    transform-origin: top;
+    perspective: 1500px;
+}
+
+.flip-show {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+}
+
+/* Staggered delays for smoother sequence */
+.delay-100 { transition-delay: 150ms; }
+.delay-200 { transition-delay: 300ms; }
+.delay-300 { transition-delay: 450ms; }
+.delay-400 { transition-delay: 600ms; }
+.delay-500 { transition-delay: 750ms; }
