@@ -18,6 +18,8 @@ html {
   --main-text-color-light: #4b5563;
   --main-text-color-dark: #d1d5db;
   --shadowColor: #101523;
+  --body-color: var(--secondary-body-color-dark);
+  --text-color: var(--main-text-color-dark);
   --link-color: #9ca3af;
   --link-color-dark: #9ca3af;
 }

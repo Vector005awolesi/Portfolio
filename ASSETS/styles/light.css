@@ -18,11 +18,15 @@ html {
   --main-text-color-light: #4b5563;
   --main-text-color-dark: #d1d5db;
   --shadowColor: #a1a2a3d2;
+  --body-color: var(--secondary-body-color-light);
+  --text-color: var(--main-text-color-light);
   --link-color: #6b7280;
 }
 body {
   background-color: var(--main-body-color-light);
 }
+
+
 /* NAVAGATION SECTION */
 button#theme-btn {
   background-color: var(--main-color-light);
