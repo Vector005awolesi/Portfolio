@@ -70,7 +70,8 @@ var themeBtn = document.querySelector("#theme-btn"),
   portfolioPic = document.getElementById("portfolioPic"),
   themeStorage = localStorage.getItem("theme"),
   loadingContainer = document.getElementById("loadingContainer");
-switch ((themeBtn.addEventListener("click", () => {
+switch (
+  (themeBtn.addEventListener("click", () => {
     themeTag.getAttribute("href") === lightMode
       ? (themeTag.setAttribute("href", darkMode),
         (themeBtn.innerHTML = "<i class = 'fas fa-sharp fa-sun'><i>"),
@@ -80,7 +81,9 @@ switch ((themeBtn.addEventListener("click", () => {
         (themeBtn.innerHTML = "<i class = 'fas fa-sharp fa-moon'><i>"),
         localStorage.setItem("theme", lightMode),
         portfolioPic.setAttribute("src", "ASSETS/IMAGES/portfolio-light.png"));
-  }),themeStorage)) {
+  }),
+  themeStorage)
+) {
   case lightMode:
     themeTag.setAttribute("href", lightMode),
       (themeBtn.innerHTML = "<i class = 'fas fa-sharp fa-moon'><i>"),
@@ -93,3 +96,10 @@ switch ((themeBtn.addEventListener("click", () => {
       localStorage.setItem("theme", darkMode),
       portfolioPic.setAttribute("src", "ASSETS/IMAGES/portfolio.png");
 }
+
+function changeYearText() {
+  const dynamicTimeText = document.getElementById("dynamicTimeText");
+  var currentYear = new Date().getFullYear();
+  dynamicTimeText.textContent += `${currentYear}`;
+}
+changeYearText();
