@@ -100,6 +100,6 @@ switch (
 function changeYearText() {
   const dynamicTimeText = document.getElementById("dynamicTimeText");
   var currentYear = new Date().getFullYear();
-  dynamicTimeText.textContent += `${currentYear}`;
+  dynamicTimeText.innerHTML += `${currentYear}`;
 }
 changeYearText();
