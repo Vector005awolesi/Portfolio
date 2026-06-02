@@ -11,7 +11,7 @@ function App() {
           Vite + Tailwind v4
         </h1>
         <p className="text-zinc-400 text-sm">
-          Your sleek developer workspace is running on the ultra-fast Rust-powered engine. No broken prompts, no hassle!
+          Your sleek developer workspace is running on the ultra-fast Rust-powered engine. Scaffolding built natively via Shell.
         </p>
         <div className="pt-2">
           <code className="px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-xs font-mono text-cyan-400">
