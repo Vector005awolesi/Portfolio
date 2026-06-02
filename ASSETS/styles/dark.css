@@ -134,7 +134,8 @@ hr.classical {
 }
 .subhero:hover,
 #uiUX:hover,
-#seo:hover {
+#seo:hover,
+#responsive:hover {
   box-shadow: 0 5px 5px var(--shadowColor);
   transition: 0.3s;
 }
@@ -181,7 +182,8 @@ hr.classical {
   color: var(--main-color-light);
 }
 #uiUX,
-#seo {
+#seo,
+#responsive {
   background-color: var(--main-body-color-dark);
 }
 .bar-icon {
@@ -259,6 +261,32 @@ hr.classical {
 }
 .cardContainer:hover .cardDescription {
   background-color: #201e1ec0;
+}
+#projectModal .modal-panel {
+  background-color: var(--secondary-body-color-dark);
+  color: var(--main-text-color-dark);
+}
+#projectModal .modal-panel h4,
+#projectModal .modal-panel h3,
+#projectModal .modal-panel h2 {
+  color: var(--pure-white);
+}
+#projectModal .modal-close-btn {
+  background-color: #374151;
+  color: var(--main-text-color-dark);
+}
+.testimonial-card {
+  background-color: var(--secondary-body-color-dark);
+  border: thin solid #374151;
+}
+.testimonial-quote {
+  color: var(--main-text-color-dark);
+}
+.testimonial-name {
+  color: var(--pure-white);
+}
+.testimonial-avatar {
+  background-color: #24354b;
 }
 .contactHeader {
   color: var(--main-text-color-dark);

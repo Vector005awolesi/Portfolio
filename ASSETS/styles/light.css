@@ -160,7 +160,8 @@ ul#navList a:hover {
   color: var(--main-color-light);
 }
 #uiUX,
-#seo {
+#seo,
+#responsive {
   background-color: #f6faff;
 }
 .bar-icon {

@@ -43,8 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     let s = [
       document.querySelector("#lineSkillSection"),
+      document.querySelector("#cardSkillSection"),
       document.querySelector("#barSkillSection"),
-      document.querySelector("#educationBarSection"),
+      document.querySelector("#testimonialsSection"),
     ];
     s.forEach((e, t) => {
       e &&
@@ -54,14 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     let o = document.querySelector("#experiences");
     o && (o.classList.add("slide-hidden"), observer.observe(o));
-    let r = document.querySelectorAll(".cardContainer");
-    r.forEach((e, t) => {
-      e.classList.add("flip-hidden"),
-        e.classList.add(`delay-${Math.min(200 * t, 800)}`),
-        observer.observe(e);
-    });
   };
-  e();
+  (window.observeFlipElements = (e) => {
+    observer.observe(e);
+  }),
+    e();
 });
 var themeBtn = document.querySelector("#theme-btn"),
   themeTag = document.querySelector("#theme"),

@@ -349,7 +349,8 @@ hr.classical {
   align-items: center;
 }
 #uiUX,
-#seo {
+#seo,
+#responsive {
   width: 47%;
   padding: 20px;
   border-radius: 20px;
