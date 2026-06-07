@@ -72,10 +72,12 @@
   let time = 0;
 
   function draw() {
-    if (!isActive || !isDark) {
+    if (!isActive) {
       animId = null;
       return;
     }
+
+    const color = isDark ? '138, 180, 248' : '26, 115, 232';
 
     time += WAVE_SPEED;
     ctx.clearRect(0, 0, width, height);
@@ -94,7 +96,7 @@
       ctx.beginPath();
       ctx.moveTo(x, 0);
       ctx.lineTo(x, height);
-      ctx.strokeStyle = `rgba(138, 180, 248, ${alpha})`;
+      ctx.strokeStyle = `rgba(${color}, ${alpha})`;
       ctx.lineWidth = 0.5;
       ctx.stroke();
     }
@@ -108,7 +110,7 @@
       ctx.beginPath();
       ctx.moveTo(0, y);
       ctx.lineTo(width, y);
-      ctx.strokeStyle = `rgba(138, 180, 248, ${alpha})`;
+      ctx.strokeStyle = `rgba(${color}, ${alpha})`;
       ctx.lineWidth = 0.5;
       ctx.stroke();
     }
@@ -129,14 +131,14 @@
         if (alpha > 0.02) {
           ctx.beginPath();
           ctx.arc(x, y, radius, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(138, 180, 248, ${alpha})`;
+          ctx.fillStyle = `rgba(${color}, ${alpha})`;
           ctx.fill();
 
           // Extra glow ring for close nodes
           if (proximity > 0.3) {
             ctx.beginPath();
             ctx.arc(x, y, radius + 4 * proximity, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(138, 180, 248, ${proximity * 0.12})`;
+            ctx.fillStyle = `rgba(${color}, ${proximity * 0.12})`;
             ctx.fill();
           }
         }
@@ -161,15 +163,15 @@
 
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius * flicker, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(138, 180, 248, ${(p.alpha + pGlow * 0.3) * flicker})`;
+      ctx.fillStyle = `rgba(${color}, ${(p.alpha + pGlow * 0.3) * flicker})`;
       ctx.fill();
     });
 
     // Radial mouse glow overlay
     if (mouse.x > 0 && mouse.y > 0) {
       const gradient = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, GLOW_RADIUS);
-      gradient.addColorStop(0, 'rgba(138, 180, 248, 0.04)');
-      gradient.addColorStop(1, 'rgba(138, 180, 248, 0)');
+      gradient.addColorStop(0, `rgba(${color}, ${isDark ? 0.04 : 0.05})`);
+      gradient.addColorStop(1, `rgba(${color}, 0)`);
       ctx.fillStyle = gradient;
       ctx.fillRect(mouse.x - GLOW_RADIUS, mouse.y - GLOW_RADIUS, GLOW_RADIUS * 2, GLOW_RADIUS * 2);
     }
@@ -196,15 +198,8 @@
   // ── Theme awareness ──
   function checkTheme() {
     const theme = document.documentElement.getAttribute('data-theme');
-    const wasDark = isDark;
     isDark = theme !== 'light';
-    canvas.style.opacity = isDark ? '1' : '0';
-
-    if (isDark && !wasDark) {
-      start();
-    } else if (!isDark && wasDark) {
-      stop();
-    }
+    canvas.style.opacity = '1';
   }
 
   // ── Events ──
@@ -256,5 +251,5 @@
 
   resize();
   checkTheme();
-  if (isDark) start();
+  start();
 })();

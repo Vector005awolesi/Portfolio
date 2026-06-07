@@ -100,7 +100,7 @@
     <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl z-50 rounded-full navbar-glass">
       <div class="px-6 flex items-center justify-between h-14">
         <!-- Logo -->
-        <a href="#hero" id="navbar-logo" class="font-outfit text-blue-400 font-bold text-sm tracking-widest hover:text-blue-300 transition-colors logo-cursor">
+        <a href="#hero" class="font-outfit text-blue-400 font-bold text-sm tracking-widest hover:text-blue-300 transition-colors logo-cursor">
           &lt;AV /&gt;
         </a>
 
@@ -134,14 +134,18 @@
       </div>
 
       <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 px-6 py-3 space-y-1">
-        <a href="#hero" class="mobile-nav-link" onclick="closeMobileMenu()">About</a>
-        <a href="#tools" class="mobile-nav-link" onclick="closeMobileMenu()">Tools</a>
-        <a href="#career" class="mobile-nav-link" onclick="closeMobileMenu()">Career</a>
-        <a href="#projects" class="mobile-nav-link" onclick="closeMobileMenu()">Projects</a>
-        <a href="#testimonials" class="mobile-nav-link" onclick="closeMobileMenu()">Testimonials</a>
-        <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
-        <a href="#contact" class="mobile-nav-link text-blue-400 font-semibold" onclick="closeMobileMenu()">Hire Me <i class="fas fa-arrow-right text-[10px] ml-1"></i></a>
+      <div id="mobile-menu" class="md:hidden mobile-menu-wrapper">
+        <div class="mobile-menu-inner">
+          <div class="px-6 py-4 space-y-2 border-t border-white/5">
+            <a href="#hero" class="mobile-nav-link" onclick="closeMobileMenu()">About</a>
+            <a href="#tools" class="mobile-nav-link" onclick="closeMobileMenu()">Tools</a>
+            <a href="#career" class="mobile-nav-link" onclick="closeMobileMenu()">Career</a>
+            <a href="#projects" class="mobile-nav-link" onclick="closeMobileMenu()">Projects</a>
+            <a href="#testimonials" class="mobile-nav-link" onclick="closeMobileMenu()">Testimonials</a>
+            <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
+            <a href="#contact" class="mobile-nav-link text-blue-400 font-semibold" onclick="closeMobileMenu()">Hire Me <i class="fas fa-arrow-right text-[10px] ml-1"></i></a>
+          </div>
+        </div>
       </div>
     </nav>
 
@@ -170,15 +174,13 @@
             </h1>
 
             <p class="hero-reveal text-lg sm:text-xl text-slate-400 font-medium mb-2" style="transition-delay: 300ms;">
-              <span class="font-mono text-blue-400">&lt;</span>
               Fullstack Developer &amp; Software Engineer
-              <span class="font-mono text-blue-400">/&gt;</span>
             </p>
 
             <p class="hero-reveal text-slate-400 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed" style="transition-delay: 400ms;">
               With over <strong class="text-slate-200">2+ years</strong> of experience building dynamic web applications and software.
               CEO at <strong class="text-blue-400">INFINET Inc</strong>. I specialize in crafting end-to-end solutions that are fast,
-              accessible, and built to scale. Based in <i class="fas fa-location-dot text-blue-400 text-sm"></i> Lagos, Nigeria.
+              accessible, and built to scale. Based in Lagos, Nigeria.
             </p>
 
             <div class="hero-reveal flex flex-wrap gap-3 justify-center lg:justify-start" style="transition-delay: 500ms;">

@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initParallax();
   initCountUp();
   initCardTilt();
-  initLogoTyping();
 });
 
 // ─────────────────────────── THEME TOGGLE ───────────────────────────
@@ -140,15 +139,21 @@ function initNavbar() {
 function initMobileMenu() {
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
+  const navbar = document.getElementById('navbar');
   if (!btn || !menu) return;
 
   btn.addEventListener('click', () => {
-    const isOpen = !menu.classList.contains('hidden');
+    const isOpen = menu.classList.contains('open');
     if (isOpen) {
       closeMobileMenu();
     } else {
-      menu.classList.remove('hidden');
+      menu.classList.add('open');
+      navbar?.classList.add('mobile-menu-open');
       btn.setAttribute('aria-expanded', 'true');
+      const icon = btn.querySelector('i');
+      if (icon) {
+        icon.className = 'fas fa-times';
+      }
     }
   });
 }
@@ -156,8 +161,14 @@ function initMobileMenu() {
 function closeMobileMenu() {
   const menu = document.getElementById('mobile-menu');
   const btn = document.getElementById('mobile-menu-btn');
-  menu?.classList.add('hidden');
+  const navbar = document.getElementById('navbar');
+  menu?.classList.remove('open');
+  navbar?.classList.remove('mobile-menu-open');
   btn?.setAttribute('aria-expanded', 'false');
+  const icon = btn?.querySelector('i');
+  if (icon) {
+    icon.className = 'fas fa-bars';
+  }
 }
 
 // ─────────────────────────── SCROLL REVEAL ───────────────────────────
@@ -533,44 +544,6 @@ function triggerHeroReveals() {
   });
 }
 
-// ─────────────────────────── LOGO TYPING ANIMATION ───────────────────────────
-function initLogoTyping() {
-  const logo = document.getElementById('navbar-logo');
-  if (!logo) return;
-
-  // Professional developer variations
-  const words = ["<AV />", "<Awolesi />", "<Victor />", "<Developer />"];
-  let wordIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  let delay = 120;
-
-  function type() {
-    const currentWord = words[wordIndex];
-    
-    if (isDeleting) {
-      logo.textContent = currentWord.substring(0, charIndex - 1);
-      charIndex--;
-      delay = 60;
-    } else {
-      logo.textContent = currentWord.substring(0, charIndex + 1);
-      charIndex++;
-      delay = 120;
-    }
-
-    if (!isDeleting && charIndex === currentWord.length) {
-      isDeleting = true;
-      delay = 2200;
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      wordIndex = (wordIndex + 1) % words.length;
-      delay = 500;
-    }
-
-    setTimeout(type, delay);
-  }
-
-  setTimeout(type, 800);
-}
+// (Logo typing animation function removed per user request)
 
 
