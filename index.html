@@ -1,978 +1,1497 @@
-<!-- WRITTEN BY VICTOR Last edited june 2026 -->
+<!-- WRITTEN BY VICTOR | Redesigned June 2026 — Fullstack Developer Portfolio -->
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
-    <!-- meta information -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Explore the professional portfolio of Awolesi Victor, a talented Frontend Developer and Software Engineer based in Lagos, Nigeria. Specializing in JavaScript, React, UI/UX design, and responsive web development. View projects including portfolio websites, landing pages, web apps, and more. Available for freelance and remote work."
+      content="Explore the professional portfolio of Awolesi Victor, a Fullstack Developer and Software Engineer based in Lagos, Nigeria. Specializing in JavaScript, TypeScript, React, Node.js, Express, Supabase, MongoDB and modern web development. Available for freelance and remote work."
     />
     <meta
       name="keywords"
-      content="Awolesi Victor, Victor portfolio, frontend developer, web developer Lagos, JavaScript developer, React developer, UI/UX designer, software engineer Nigeria, freelance web developer, portfolio website, modern web design, responsive web developer, INFINET Inc, school management app developer, Crixy developer, digital banking web app, result processor developer, product landing page designer, tech talent Nigeria, frontend dev Lagos, frontend developer Lagos Nigeria, web developer Lagos Nigeria, software engineer Lagos Nigeria, freelance frontend developer Lagos, JavaScript developer Lagos, React developer Nigeria, UI/UX designer Lagos, responsive web developer Nigeria, tech talent Lagos, web development Lagos, software engineering Nigeria"
+      content="Awolesi Victor, Victor portfolio, fullstack developer, web developer Lagos, JavaScript developer, TypeScript developer, React developer, Node.js developer, Express developer, Supabase developer, MongoDB developer, software engineer Nigeria, freelance web developer, portfolio website"
     />
     <meta name="author" content="Awolesi Victor" />
     <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Portfolio | Awolesi Victor" />
-    <meta
-      property="og:description"
-      content="Professional portfolio of Awolesi Victor, Frontend Developer in Lagos, Nigeria. Explore web development projects and skills."
-    />
+    <meta property="og:title" content="Awolesi Victor — Fullstack Developer" />
+    <meta property="og:description" content="Professional portfolio of Awolesi Victor, Fullstack Developer in Lagos, Nigeria." />
     <meta property="og:image" content="ASSETS/IMAGES/profile-main.png" />
-    <meta
-      property="og:url"
-      content="https://vector005awolesi.github.io/Portfolio/"
-    />
+    <meta property="og:url" content="https://vector005awolesi.github.io/Portfolio/" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Awolesi Victor - Frontend Developer Portfolio"
-    />
-    <meta
-      name="twitter:description"
-      content="Explore projects and skills of Awolesi Victor, a Frontend Developer in Lagos, Nigeria."
-    />
+    <meta name="twitter:title" content="Awolesi Victor — Fullstack Developer" />
+    <meta name="twitter:description" content="Explore projects and skills of Awolesi Victor, a Fullstack Developer in Lagos, Nigeria." />
     <meta name="twitter:image" content="ASSETS/IMAGES/profile-main.png" />
-    <!-- title -->
-    <title>
-      Awolesi Victor - Frontend Developer & Software Engineer Portfolio | Lagos,
-      Nigeria
-    </title>
-    <!-- AOS Animation Library -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- Styles & favicon -->
-    <link
-      rel="shortcut icon"
-      href="ASSETS/IMAGES/favicon.ico"
-      type="image/x-icon"
-    />
-    <!-- main stylesheet -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/vector005awolesi/Portfolio@main/ASSETS/styles/icon.css"
-    />
-    <link id="theme" rel="stylesheet" href="ASSETS/styles/light.css" />
+
+    <title>Awolesi Victor — Fullstack Developer & Software Engineer | Lagos, Nigeria</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vector005awolesi/Portfolio@main/ASSETS/styles/icon.css" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="ASSETS/IMAGES/favicon.ico" type="image/x-icon" />
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="ASSETS/styles/style.css" />
-    <link rel="stylesheet" href="ASSETS/styles/responsiveness.css" />
-    <link rel="stylesheet" href="ASSETS/styles/animations.css" />
+
+    <script>
+      // Tailwind config mapping to custom variables for dynamic themes
+      tailwind.config = {
+        darkMode: ['selector', '[data-theme="dark"]'],
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ['Inter', 'sans-serif'],
+              outfit: ['Outfit', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              navy: {
+                950: 'var(--bg-base)',
+                900: 'var(--bg-surface)',
+                800: 'var(--bg-card)',
+                700: 'var(--bg-card-hover)',
+                600: 'var(--bg-elevated)',
+                500: 'var(--accent-dim)',
+              },
+              slate: {
+                50: 'var(--text-primary)',
+                100: 'var(--text-primary)',
+                200: 'var(--text-primary)',
+                300: 'var(--text-secondary)',
+                400: 'var(--text-secondary)',
+                500: 'var(--text-muted)',
+                600: 'var(--text-muted)',
+                700: 'var(--text-muted)',
+                800: 'var(--text-muted)',
+                900: 'var(--text-primary)',
+              },
+              blue: {
+                400: 'var(--accent-light)',
+                500: 'var(--accent)',
+                600: 'var(--accent-solid)',
+                glow: 'var(--accent-dim)',
+              },
+            },
+          },
+        },
+      };
+    </script>
   </head>
 
-  <body>
+  <body class="font-inter bg-navy-950 text-slate-100 min-h-screen overflow-x-hidden transition-colors duration-300" id="body">
+
+    <!-- ═══════════════════════════ LOADING SCREEN ═══════════════════════════ -->
     <div id="loadingContainer">
-      <img
-        style="max-width: 100%"
-        src="ASSETS/IMAGES/Dual Ball@1x-1.0s-200px-200px (1).svg"
-        alt="Loading animation icon for Awolesi Victor's portfolio website"
-      />
+      <div class="loader-ring"></div>
+      <p class="loader-text font-mono">Initializing<span class="loader-dots"></span></p>
     </div>
-    <div id="container">
-      <div id="navagation-section">
-        <button id="theme-btn" class="btn">
-          <i class="fal fa-sharp fa-moon"></i>
-        </button>
-        <div id="navbar">
-          <ul id="navList">
-            <li>
-              <a href="#homeSection">
-                <i class="far fa-sharp icon fa-circle-user"></i>
-                <span class="nav-text">ABOUT</span>
-              </a>
-            </li>
-            <li>
-              <a href="#experienceSection">
-                <i class="far icon fa-sharp fa-address-card"> </i>
-                <span class="nav-text">CAREER</span>
-              </a>
-            </li>
-            <li>
-              <a href="#projectsSection">
-                <i class="far icon fa-sharp fa-folder-open"></i>
-                <span class="nav-text">PROJECTS</span>
-              </a>
-            </li>
-            <li>
-              <a href="#contactsSection">
-                <i class="fas icon fa-sharp fa-paper-plane"></i>
-                <span class="nav-text">CONTACT</span>
-              </a>
-            </li>
-          </ul>
+
+    <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+    <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl z-50 rounded-full navbar-glass">
+      <div class="px-6 flex items-center justify-between h-14">
+        <!-- Logo -->
+        <a href="#hero" id="navbar-logo" class="font-outfit text-blue-400 font-bold text-sm tracking-widest hover:text-blue-300 transition-colors logo-cursor">
+          &lt;AV /&gt;
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <ul class="hidden md:flex items-center gap-1 nav-pill">
+          <li><a href="#hero" class="nav-link">About</a></li>
+          <li><a href="#tools" class="nav-link">Tools</a></li>
+          <li><a href="#career" class="nav-link">Career</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Right Controls -->
+        <div class="flex items-center gap-3">
+          <!-- Theme Toggle -->
+          <button id="theme-btn" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle light/dark mode">
+            <i class="fas fa-sharp fa-moon" id="theme-icon"></i>
+          </button>
+          
+          <!-- Hire Me CTA -->
+          <a href="#contact" class="hidden sm:inline-flex nav-hire-btn">
+            Hire Me <i class="fas fa-arrow-right text-[10px]"></i>
+          </a>
+
+          <!-- Mobile menu button -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full text-slate-400 hover:text-blue-400 hover:bg-white/5 transition-all" aria-label="Open menu">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
       </div>
-      <div id="profileCardSection">
-        <div id="profileCardHead"></div>
-        <span
-          ><img
-            src="ASSETS/IMAGES/profile-main.png"
-            alt="Professional profile photo of Awolesi Victor, Frontend Developer and Software Engineer from Lagos, Nigeria"
-            id="profileImage"
-        /></span>
-        <div id="profileCardBody">
-          <h3 id="myName">Awolesi Victor</h3>
-          <p class="profile-text-alt">Frontend Developer</p>
-          <p class="profile-text">
-            <i class="fas fa-sharp fa-location-dot"></i> Lagos State, Nigeria
-          </p>
-          <div id="socialSection">
-            <button
-              class="social-btn btn"
-              onclick="
-                window.open('https://github.com/vector005awolesi', '_blank')
-              "
-            >
-              <i class="fab fa-sharp fa-github"></i>
-            </button>
-            <button
-              class="social-btn btn"
-              onclick="
-                window.open('https://facebook.com/awolesi.victor', '_blank')
-              "
-            >
-              <i class="fab fa-sharp fa-facebook"></i>
-            </button>
-            <button
-              class="social-btn btn"
-              onclick="
-                window.open(
-                  'https://linkedin.com/in/awolesi-victor-236435362?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-                  '_blank',
-                )
-              "
-            >
-              <i class="fab fa-sharp fa-linkedin"></i>
-            </button>
-            <button
-              class="social-btn btn"
-              onclick="window.open('https://x.com/awolesi_victor', '_blank')"
-            >
-              <i class="fab fa-sharp fa-x-twitter"></i>
-            </button>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 px-6 py-3 space-y-1">
+        <a href="#hero" class="mobile-nav-link" onclick="closeMobileMenu()">About</a>
+        <a href="#tools" class="mobile-nav-link" onclick="closeMobileMenu()">Tools</a>
+        <a href="#career" class="mobile-nav-link" onclick="closeMobileMenu()">Career</a>
+        <a href="#projects" class="mobile-nav-link" onclick="closeMobileMenu()">Projects</a>
+        <a href="#testimonials" class="mobile-nav-link" onclick="closeMobileMenu()">Testimonials</a>
+        <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
+        <a href="#contact" class="mobile-nav-link text-blue-400 font-semibold" onclick="closeMobileMenu()">Hire Me <i class="fas fa-arrow-right text-[10px] ml-1"></i></a>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════ HERO SECTION ═══════════════════════════ -->
+    <section id="hero" class="min-h-screen pt-24 pb-12 flex items-center relative overflow-hidden">
+      <!-- Animated Canvas Grid (dark mode only) -->
+      <canvas id="hero-grid-canvas" class="hero-canvas"></canvas>
+      <!-- Background grid + glow -->
+      <div class="hero-bg-grid"></div>
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+
+      <div class="hero-content max-w-6xl mx-auto px-4 sm:px-6 w-full py-8 lg:py-16">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+          <!-- Left: Text Content -->
+          <div class="flex-1 text-center lg:text-left">
+            <div class="hero-reveal inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--accent-dim)] border border-[var(--accent-border)] mb-6" style="transition-delay: 100ms;">
+              <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+              <span class="font-mono text-xs text-blue-400 tracking-wider">Available for work</span>
+            </div>
+
+            <h1 class="hero-reveal text-4xl sm:text-5xl lg:text-6xl font-bold font-outfit leading-tight mb-4 text-slate-100" style="transition-delay: 200ms;">
+              Hey, I'm
+              <span class="block gradient-text mt-1 font-outfit bounce-text">Awolesi Victor</span>
+            </h1>
+
+            <p class="hero-reveal text-lg sm:text-xl text-slate-400 font-medium mb-2" style="transition-delay: 300ms;">
+              <span class="font-mono text-blue-400">&lt;</span>
+              Fullstack Developer &amp; Software Engineer
+              <span class="font-mono text-blue-400">/&gt;</span>
+            </p>
+
+            <p class="hero-reveal text-slate-400 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed" style="transition-delay: 400ms;">
+              With over <strong class="text-slate-200">2+ years</strong> of experience building dynamic web applications and software.
+              CEO at <strong class="text-blue-400">INFINET Inc</strong>. I specialize in crafting end-to-end solutions that are fast,
+              accessible, and built to scale. Based in <i class="fas fa-location-dot text-blue-400 text-sm"></i> Lagos, Nigeria.
+            </p>
+
+            <div class="hero-reveal flex flex-wrap gap-3 justify-center lg:justify-start" style="transition-delay: 500ms;">
+              <a href="#contact" class="btn-primary">
+                <i class="fas fa-paper-plane"></i> Get In Touch
+              </a>
+              <button class="btn-secondary" onclick="window.open('#', '_blank')">
+                <!-- TODO: Add resume PDF link -->
+                <i class="fas fa-download"></i> My Resume
+              </button>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hero-reveal flex items-center gap-3 mt-8 justify-center lg:justify-start" style="transition-delay: 600ms;">
+              <span class="text-xs text-slate-500 font-mono">FOLLOW ME</span>
+              <div class="h-px w-8 bg-slate-700"></div>
+              <div class="flex gap-2">
+                <a href="https://github.com/vector005awolesi" target="_blank" class="social-icon-btn" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/awolesi-victor-236435362" target="_blank" class="social-icon-btn" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://x.com/awolesi_victor" target="_blank" class="social-icon-btn" aria-label="X / Twitter">
+                  <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://facebook.com/awolesi.victor" target="_blank" class="social-icon-btn" aria-label="Facebook">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </div>
+            </div>
           </div>
-          <div id="downloadResumeSection">
-            <button class="btn download-resume-btn">
-              <i class="fas fa-sharp fa-download"></i> My Resume
-            </button>
-            <button
-              class="btn contactLinkBtn"
-              onclick="window.location.href = '#contactsSection'"
-            >
-              <i class="fas fa-sharp fa-envelope"></i> Contact Me
-            </button>
+
+          <!-- Right: Profile Image -->
+          <div class="flex-shrink-0 hero-reveal" style="transition-delay: 350ms;">
+            <div class="profile-avatar-container">
+              <div class="profile-avatar-glow"></div>
+              <div class="profile-avatar-ring-outer">
+                <div class="profile-avatar-ring-inner">
+                  <img
+                    src="ASSETS/IMAGES/profile-main.png"
+                    alt="Awolesi Victor — Fullstack Developer from Lagos, Nigeria"
+                    class="profile-avatar-img"
+                  />
+                </div>
+              </div>
+              <!-- Stat chips overlapping avatar container -->
+              <div class="profile-avatar-badge profile-avatar-badge-1">
+                <span class="badge-num">2+</span>
+                <span class="badge-lbl">Years Exp.</span>
+              </div>
+              <div class="profile-avatar-badge profile-avatar-badge-2">
+                <span class="badge-num">20+</span>
+                <span class="badge-lbl">Projects</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar mt-16 hero-reveal" style="transition-delay: 700ms;">
+          <div class="stat-item">
+            <span class="stat-num">2+</span>
+            <span class="stat-label">Years of Experience</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">20+</span>
+            <span class="stat-label">Websites Designed</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">15+</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">15+</span>
+            <span class="stat-label">Happy Clients</span>
           </div>
         </div>
       </div>
-      <div id="mainSection">
-        <div id="homeSection">
-          <h1 class="header_content" data-aos="flip-up">
-            Hey<span class="header_alt"> there! 👋</span>
-          </h1>
-          <p class="main-section-txt" data-aos="fade-right">
-            I'm delighted to share a bit about myself. With over 2 years of web
-            development experience, I specialize in designing and building
-            dynamic applications, software, and websites. Currently, I'm focused
-            on developing a School website for 
-            <strong> Ephraim School</strong>
-            If you need a motivated, results-driven team player, I’d love to
-            collaborate!
-          </p>
+    </section>
 
-          <div id="subheroSection">
-            <div class="subhero">
-              <div class="sectionHero">
-                <span
-                  ><i class="fad fa-sharp fa-calendar subhero-icon"></i
-                ></span>
-              </div>
-              <div class="sectionHero">
-                <h2 class="subsectionHeroHeaders">2+</h2>
-                <p class="subsectionHeroParagraph">
-                  Years of <br />Expererience
-                </p>
-              </div>
-            </div>
-            <div class="subhero">
-              <div class="sectionHero">
-                <span>
-                  <i class="fas fa-sharp fa-laptop-code subhero-icon"></i>
-                </span>
-              </div>
-              <div class="sectionHero">
-                <h2 class="subsectionHeroHeaders">20+</h2>
-                <p class="subsectionHeroParagraph">Websites <br />Designed</p>
-              </div>
-            </div>
+    <!-- ═══════════════════════════ TOOLS SECTION ═══════════════════════════ -->
+    <section id="tools" class="section-pad relative">
+      <div class="section-glow-left"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
 
-            <div class="subhero">
-              <div class="sectionHero">
-                <span
-                  ><i class="fas fa-sharp fa-circle-check subhero-icon"></i
-                ></span>
-              </div>
-              <div class="sectionHero">
-                <h2 class="subsectionHeroHeaders">15+</h2>
-                <p class="subsectionHeroParagraph">Projects <br />Completed</p>
-              </div>
+        <div class="section-header reveal-up">
+          <span class="section-tag">MY ARSENAL</span>
+          <h2 class="section-title">Tools I <span class="gradient-text bounce-text">Work With</span></h2>
+          <p class="section-subtitle">The technologies and tools I use to build end-to-end digital products</p>
+        </div>
+
+        <!-- Tech Tools Grid -->
+        <div class="tools-grid reveal-stagger">
+
+          <div class="tool-card group" data-tool="HTML5">
+            <div class="tool-icon-wrap">
+              <i class="fab fa-html5 tool-icon" style="color:#e34c26"></i>
             </div>
+            <span class="tool-name">HTML5</span>
+            <span class="tool-category">Markup</span>
           </div>
 
-          <div id="skillSection">
-            <!-- SKILL SECTION HEADER -->
-            <h3 class="main_subHeaders">
-              My <span class="header_alt">Skills</span>
-            </h3>
-            <!--CUSTOMIZED HORIZONTAL RULE-->
-            <hr class="classical" />
-            <!-- SKILL SHOWCASE SECTION - LINE , CARD SHAPES -->
-            <div id="skillShowcase">
-              <!-- LINE SKILL SECTION -->
-              <div id="lineSkillSection">
-                <!-- LINE HTML -->
-                <div class="lineSkillSubSection">
-                  <!-- TEXT DIVIDER -->
-                  <div class="skillLineTextDivider">
-                    <div>
-                      <i class="fab fa-sharp line-icon fa-html5"></i>
-                      <span class="skillLineText skillLineIconText">
-                        HTML5</span
-                      >
-                    </div>
-                    <div>
-                      <span class="skillLineText"> 90%</span>
-                    </div>
-                  </div>
-                  <!-- LINE REFERENCE -->
-                  <div class="skillLineHtml"></div>
-                </div>
-
-                <div class="lineSkillSubSection">
-                  <!-- TEXT DIVIDER -->
-                  <div class="skillLineTextDivider">
-                    <div>
-                      <i class="fab fa-sharp line-icon fa-css3-alt"></i>
-                      <span class="skillLineText skillLineIconText"> CSS3</span>
-                    </div>
-                    <div>
-                      <span class="skillLineText"> 95%</span>
-                    </div>
-                  </div>
-                  <!-- LINE REFERENCE -->
-                  <div class="skillLineCss"></div>
-                </div>
-              </div>
-              <!-- CARD SKILL SECTION -->
-              <div id="cardSkillSection">
-                <div class="card skillCard">
-                  <i class="fab card-icon fa-sharp fa-js"></i>
-                  <p class="card-text">JAVASCRIPT</p>
-                </div>
-                <div class="card skillCard">
-                  <i class="fab card-icon fa-sharp fa-bootstrap"></i>
-                  <p class="card-text">BOOTSTRAP</p>
-                </div>
-                <div class="card skillCard">
-                  <i class="fab card-icon fa-sharp fa-react"></i>
-                  <p class="card-text">REACT</p>
-                </div>
-              </div>
+          <div class="tool-card group" data-tool="CSS3">
+            <div class="tool-icon-wrap">
+              <i class="fab fa-css3-alt tool-icon" style="color:#264de4"></i>
             </div>
-            <!-- SOFT SKILLS UI/UX SEO TEAMPLAYER -->
-            <div id="barSkillSection">
-              <div id="uiUX">
-                <i class="fas fa-sharp fa-paint-brush bar-icon"></i>
-                <span class="barText">UI/UX DESIGN </span>
-              </div>
-              <div id="seo">
-                <i class="fas fa-sharp fa-magnifying-glass bar-icon"></i>
-                <span class="barText">SEO OPTIMIZATION </span>
-              </div>
-            </div>
+            <span class="tool-name">CSS3</span>
+            <span class="tool-category">Styling</span>
           </div>
 
-          <div id="experienceSection">
-            <h3 class="main_subHeaders">
-              My <span class="header_alt">Education</span>
-            </h3>
-            <!--CUSTOMIZED HORIZONTAL RULE-->
-            <hr class="classical" />
-            <div id="educationBarSection">
-              <div class="roadmapSection">
-                <span class="highSchool roadmap"
-                  ><i class="fas fa-sharp roadmap-icon fa-university"></i
-                ></span>
-                <div class="educationBar">
-                  <h3 class="barSectionHeader">
-                    LAGOS STATE UNIVERSITY OF SCIENCE AND TECHNOLOGY (LASUSTECH)
-                    - COMPUTER SCIENCE
-                  </h3>
-                  <p class="barSectionText">
-                    Currently pursuing a degree in Computer Science, where i am
-                    strengthening my problem-solving skills and exploring
-                    pratical applications of technology for real world
-                    solutions.
-                  </p>
-                  <div class="badge badge-roadmap">SEP 2025-Current</div>
-                </div>
-              </div>
-              <div class="roadmapSection">
-                <span class="university roadmap"
-                  ><i class="fas fa-sharp fa-school roadmap-icon"></i
-                ></span>
-                <div class="educationBar">
-                  <h3 class="barSectionHeader">THE PINNACLE HEIGHT COLLEGE</h3>
-                  <p class="barSectionText">
-                    I engaged in various academics and extracurricular projects
-                    that strengthened my problem-solving and critical thinking
-                    skills During this time, i also gained leadership experience
-                    by leading a team,which improved my adaptability and
-                    collaboration.
-                  </p>
-                  <div class="badge badge-roadmap">JUL 2019-2025</div>
-                </div>
-              </div>
+          <div class="tool-card group" data-tool="JavaScript">
+            <div class="tool-icon-wrap">
+              <i class="fab fa-js tool-icon" style="color:#f7df1e"></i>
             </div>
+            <span class="tool-name">JavaScript</span>
+            <span class="tool-category">Language</span>
           </div>
 
-          <div id="experienceBarSection">
-            <h3 class="main_subHeaders">
-              My <span class="header_alt">Experiences</span>
-            </h3>
-            <!--CUSTOMIZED HORIZONTAL RULE-->
-            <hr class="classical" />
-            <div id="experiences">
-              <div class="roadmapSection">
-                <span class="roadmap"
-                  ><i class="fas fa-sharp roadmap-icon fa-briefcase"></i
-                ></span>
-                <div class="experienceBar">
-                  <h3 class="barSectionHeader">
-                    CEO & Senior Developer - INFINET Inc
-                  </h3>
-                  <p class="barSectionText">
-                    Founded and currently leading INFINET Inc , overseeing
-                    project development, strategy and execution. Actively
-                    involved in coding , team coordination and delivering
-                    innovative solutions
-                  </p>
-                  <div class="badge badge-roadmap">JAN 2025-Current</div>
-                </div>
-              </div>
-              <div class="roadmapSection">
-                <span class="roadmap"
-                  ><i class="fas fa-sharp fa-code roadmap-icon"></i
-                ></span>
-                <div class="experienceBar">
-                  <h3 class="barSectionHeader">AI Model Development Project</h3>
-                  <p class="barSectionText">
-                    Collaborated with a team of developers to design and test an
-                    AI model, contributing to coding, problem-solving and
-                    teamwork
-                  </p>
-                  <div class="badge badge-roadmap">SEP 2025-Current</div>
-                </div>
-              </div>
-
-              <div class="roadmapSection">
-                <span class="roadmap"
-                  ><i class="fas fa-sharp fa-laptop roadmap-icon"></i
-                ></span>
-                <div class="experienceBar">
-                  <h3 class="barSectionHeader">Personal Projects</h3>
-                  <p class="barSectionText">
-                    Independently developed multiple projects, improving my
-                    proficiency in JavaScript , problem-solving, and pratical
-                    application of technology
-                  </p>
-                  <div class="badge badge-roadmap">DEC 2023-Current</div>
-                </div>
-              </div>
+          <div class="tool-card group" data-tool="TypeScript">
+            <div class="tool-icon-wrap">
+              <span class="tool-icon font-mono font-bold text-xl" style="color:#3178c6">TS</span>
             </div>
+            <span class="tool-name">TypeScript</span>
+            <span class="tool-category">Language</span>
           </div>
-          <!-- PROJECTS SECTION -->
-          <div id="projectsSection">
-            <h3 class="main_subHeaders">
-              My <span class="header_alt">Projects </span>
-            </h3>
-            <!--CUSTOMIZED HORIZONTAL RULE-->
-            <hr class="classical" />
-            <div id="projectsCardSection">
-              <div class="cardContainer">
-                <img
-                  src="ASSETS/IMAGES/portfolio-light.png"
-                  alt="Screenshot of Awolesi Victor's personal portfolio website, showcasing frontend development skills, projects, and contact information"
-                  id="portfolioPic"
-                  class="project-img"
-                />
-                <div class="cardHead">
-                  <div class="cardDescription">
-                    <h4 class="projectCardHeading">Portfolio Website</h4>
-                    <p>
-                      A Responsive , modern portfolio to showcase my skills and
-                      projects in a clean user friendly way
-                    </p>
-                    <button
-                      class="btn btn-description-code"
-                      onclick="
-                        window.open(
-                          'https://github.com/vector005awolesi/Portfolio',
-                          '_blank',
-                        )
-                      "
-                    >
-                      <i class="fab fa-sharp fa-github"></i> Code
-                    </button>
-                    <button
-                      class="btn btn-description-demo"
-                      onclick="window.location.href = '#'"
-                    >
-                      <i class="fas fa-sharp fa-paperclip"></i> Demo
-                    </button>
-                  </div>
-                </div>
-                <div class="cardBody">
-                  <p class="projectTitle">Personal Portfolio</p>
-                  <div class="badge projectBadge">Web development</div>
-                  <div class="techStack">
-                    <span class="badge badge-projects">HTML</span>
-                    <span class="badge badge-projects">CSS</span>
-                    <span class="badge badge-projects">JAVASCRIPT</span>
-                    <span class="badge badge-projects">+1</span>
-                  </div>
-                </div>
-              </div>
 
-              <div class="cardContainer">
-                <img
-                  src="ASSETS/IMAGES/app-preview.png"
-                  alt="Screenshot of Quix AI , a web app that helps students with study tools. Developed by Awolesi Victor, showcasing frontend development skills and AI integration for educational support"
-                  class="project-img"
-                />
-                <div class="cardHead">
-                  <div class="cardDescription">
-                    <h4 class="projectCardHeading">Quix AI</h4>
-                    <p>
-                      A web app that helps students with study tools, developed
-                      with a focus on frontend development and AI integration
-                      for educational support.
-                    </p>
-                    <button
-                      disabled
-                      hidden="true"
-                      class="btn btn-description-code"
-                      onclick="
-                        window.open(
-                          'https://github.com/vector005awolesi/study-buddy-ai',
-                          '_blank',
-                        )
-                      "
-                    >
-                      <i class="fab fa-sharp fa-github"></i> Code
-                    </button>
-                    <button
-                      class="btn btn-description-demo"
-                      onclick="
-                        window.open('https://quix-ai-buddy.vercel.app/', '_blank')
-                      "
-                    >
-                      <i class="fas fa-sharp fa-paperclip"></i> Live
-                    </button>
-                  </div>
-                </div>
-                <div class="cardBody">
-                  <p class="projectTitle">Quix AI</p>
-                  <div class="badge projectBadge">Web Application</div>
-                  <div class="techStack">
-                    <span class="badge badge-projects">REACT</span>
-                    <span class="badge badge-projects">TAILWIND</span>
-                    <span class="badge badge-projects">SUPABASE</span>
-                    <span class="badge badge-projects">+5</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="cardContainer">
-                <img
-                  src="ASSETS/IMAGES/v9-technologies.png"
-                  alt="Screenshot of V9 Technologies , A webdevelopment agency website which clients can contact developers to build their projects. Developed by Awolesi Victor"
-                  class="project-img"
-                />
-                <div class="cardHead">
-                  <div class="cardDescription">
-                    <h4 class="projectCardHeading">V9 Technologies</h4>
-                    <p>
-                      A web development agency website where clients can contact
-                      developers to build their projects.
-                    </p>
-                    <button
-                      disabled
-                      hidden="true"
-                      class="btn btn-description-code"
-                      onclick="
-                        window.open(
-                          'https://github.com/vector005awolesi/V9-technologies',
-                          '_blank',
-                        )
-                      "
-                    >
-                      <i class="fab fa-sharp fa-github"></i> Code
-                    </button>
-                    <button
-                      class="btn btn-description-demo"
-                      onclick="
-                        window.open(
-                          'https://v9-technologies.vercel.app/',
-                          '_blank',
-                        )
-                      "
-                    >
-                      <i class="fas fa-sharp fa-paperclip"></i> Live
-                    </button>
-                  </div>
-                </div>
-                <div class="cardBody">
-                  <p class="projectTitle">V9 Technologies</p>
-                  <div class="badge projectBadge">Web development</div>
-                  <div class="techStack">
-                    <span class="badge badge-projects">REACT</span>
-                    <span class="badge badge-projects">TAILWIND</span>
-                    <span class="badge badge-projects">FRAMER</span>
-                    <span class="badge badge-projects">+3</span>
-                  </div>
-                </div>
-              </div>
-
-
-
-                  <div class="cardContainer">
-                <img
-                  src="/ASSETS/IMAGES/soft-store.png"
-                  alt="A screenshot of Soft-store , an ecommerce website built for the gaming community"
-                  class="project-img"
-                />
-                <div class="cardHead">
-                  <div class="cardDescription">
-                    <h4 class="projectCardHeading">Soft Store NG</h4>
-                    <p>
-                      An ecommerce platform featuring product catalogs, shopping cart functionality, and integrated payment systems for seamless tech purchases
-                    </p>
-                    <button
-                      disabled
-                      hidden="true"
-                      class="btn btn-description-code"
-                      onclick="
-                        window.open(
-                          'https://github.com/vector005awolesi/soft-store-ng',
-                          '_blank',
-                        )
-                      "
-                    >
-                      <i class="fab fa-sharp fa-github"></i> Code
-                    </button>
-                    <button
-                      class="btn btn-description-demo"
-                      onclick="
-                        window.open(
-                          'https://soft-store-ng.vercel.app/',
-                          '_blank',
-                        )
-                      "
-                    >
-                      <i class="fas fa-sharp fa-paperclip"></i> Live
-                    </button>
-                  </div>
-                </div>
-                <div class="cardBody">
-                  <p class="projectTitle">Soft Store NG</p>
-                  <div class="badge projectBadge">Web development</div>
-                  <div class="techStack">
-                    <span class="badge badge-projects">REACT</span>
-                    <span class="badge badge-projects">TAILWIND</span>
-                    <span class="badge badge-projects">SUPABASE</span>
-                    <span class="badge badge-projects">+3</span>
-                  </div>
-                </div>
-              </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <div class="cardContainer">
-                <img
-                  src="ASSETS/IMAGES/taxclarity.png"
-                  alt="Screenshot of TaxClarity , A website developed to clarify and enlighten people on how they are being taxed. Developed by Awolesi Victor"
-                  class="project-img"
-                />
-                <div class="cardHead">
-                  <div class="cardDescription">
-                    <h4 class="projectCardHeading">TaxClarity</h4>
-                    <p>
-                      A website developed to clarify and enlighten people on how
-                      they are being taxed.
-                    </p>
-                    <button
-                      class="btn btn-description-code"
-                      onclick="
-                        window.open(
-                          'https://github.com/Apex-Shippers/Tax-Clarity-NG',
-                          '_blank',
-                        )
-                      "
-                    >
-                      <i class="fab fa-sharp fa-github"></i> Code
-                    </button>
-                    <button
-                      class="btn btn-description-demo"
-                      onclick="
-                        window.open(
-                          'https://tax-clarity-ng-six.vercel.app/',
-                          '_blank',
-                        )
-                      "
-                    >
-                      <i class="fas fa-sharp fa-paperclip"></i> Live
-                    </button>
-                  </div>
-                </div>
-                <div class="cardBody">
-                  <p class="projectTitle">TaxClarity</p>
-                  <div class="badge projectBadge">Web development</div>
-                  <div class="techStack">
-                    <span class="badge badge-projects">REACT</span>
-                    <span class="badge badge-projects">TAILWIND CSS </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="cardContainer">
-                <div class="cardHead">
-                  <img
-                    src="ASSETS/IMAGES/vera.png"
-                    alt="Vera landscaping website screenshot, a responsive web design project by Awolesi Victor featuring modern landscaping services"
-                    class="project-img"
-                  />
-                  <div class="cardDescription">
-                    <h4 class="projectCardHeading">Vera landscaping site</h4>
-                    <p>
-                      Vera Landscaping is a modern landscaping service focused
-                      on clean design, lawn care, and outdoor maintenance.
-                    </p>
-                    <button
-                      class="btn btn-description-code"
-                      onclick="
-                        window.open(
-                          'https://github.com/vector005awolesi/landscaping',
-                          '_blank',
-                        )
-                      "
-                    >
-                      <i class="fab fa-sharp fa-github"></i> Code
-                    </button>
-                    <button
-                      class="btn btn-description-demo"
-                      onclick="
-                        window.open(
-                          'https://vera-landscaping.netlify.app/',
-                          '_blank',
-                        )
-                      "
-                    >
-                      <i class="fas fa-sharp fa-paperclip"></i> Demo
-                    </button>
-                  </div>
-                </div>
-                <div class="cardBody">
-                  <p class="projectTitle">Vera landscaping</p>
-                  <div class="badge projectBadge">Web development</div>
-                  <div class="techStack">
-                    <span class="badge badge-projects">HTML</span>
-                    <span class="badge badge-projects">CSS</span>
-                    <span class="badge badge-projects">JAVASCRIPT</span>
-                    <span class="badge badge-projects">+2</span>
-                  </div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <div class="cardHead">
-                  <img
-                    src="ASSETS/IMAGES/result-compiler.png"
-                    alt="Result Processor web application screenshot, a school management tool developed by Awolesi Victor for processing student scores and generating report cards"
-                    class="project-img"
-                  />
-                  <div class="cardDescription">
-                    <h4 class="projectCardHeading">Result Processor</h4>
-                    <p>
-                      Processes student scores automatically, evaluates
-                      performance, and generates clear printable report cards
-                    </p>
-                    <button
-                      class="btn btn-description-code"
-                      onclick="
-                        window.open(
-                          'https://github.com/vector005awolesi/RC',
-                          '_blank',
-                        )
-                      "
-                    >
-                      <i class="fab fa-sharp fa-github"></i> Code
-                    </button>
-                    <button
-                      class="btn btn-description-demo"
-                      onclick="
-                        window.open(
-                          'https://vector005awolesi.github.io/RC/',
-                          '_blank',
-                        )
-                      "
-                    >
-                      <i class="fas fa-sharp fa-paperclip"></i> Demo
-                    </button>
-                  </div>
-                </div>
-                <div class="cardBody">
-                  <p class="projectTitle">SRMS</p>
-                  <div class="badge projectBadge">Web development</div>
-                  <div class="techStack">
-                    <span class="badge badge-projects">HTML</span>
-                    <span class="badge badge-projects">CSS</span>
-                    <span class="badge badge-projects">JAVASCRIPT</span>
-                    <span class="badge badge-projects">+1</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="cardContainer">
-                <div class="cardHead">
-                  <img
-                    src="ASSETS/IMAGES/rps.png"
-                    alt="SmartPlay Rock Paper Scissors AI game screenshot, an interactive web game with AI opponent built by Awolesi Victor using JavaScript"
-                    class="project-img"
-                  />
-                  <div class="cardDescription">
-                    <h4 class="projectCardHeading">SmartPlay - RPS AI</h4>
-                    <p>
-                      An interactive game with a simulated AI opponent using
-                      logic and user pattern tracking , featuring dynamic UI and
-                      engaging gameplay
-                    </p>
-                    <button
-                      class="btn btn-description-code"
-                      onclick="
-                        window.open(
-                          'https://github.com/vector005awolesi/RPS',
-                          '_blank',
-                        )
-                      "
-                    >
-                      <i class="fab fa-sharp fa-github"></i> Code
-                    </button>
-                    <button
-                      class="btn btn-description-demo"
-                      onclick="
-                        window.open(
-                          'https://vector005awolesi.github.io/RPS/',
-                          '_blank',
-                        )
-                      "
-                    >
-                      <i class="fas fa-sharp fa-paperclip"></i> Demo
-                    </button>
-                  </div>
-                </div>
-                <div class="cardBody">
-                  <p class="projectTitle">SmartPlay - RPS AI</p>
-                  <div class="badge projectBadge">Web development</div>
-                  <div class="techStack">
-                    <span class="badge badge-projects">HTML</span>
-                    <span class="badge badge-projects">CSS</span>
-                    <span class="badge badge-projects">JAVASCRIPT</span>
-                  </div>
-                </div>
-              </div>
-              <div class="cardContainer card">
-                <img
-                  src="ASSETS/IMAGES/payj.png"
-                  alt="PAYJ Finance web application concept screenshot, a React-based fintech app simulating digital banking, developed by Awolesi Victor"
-                  class="project-img"
-                />
-                <div class="cardHead">
-                  <div class="cardDescription">
-                    <h4 class="projectCardHeading">PAYJ - Finance webapp</h4>
-                    <p>
-                      A fintech inspired web application concept that simulates
-                      modern digital banking.
-                    </p>
-                    <button class="btn btn-description-demo">
-                      <i class="fas fa-sharp fa-code"></i> In development
-                    </button>
-                  </div>
-                </div>
-                <div class="cardBody">
-                  <p class="projectTitle">PayJ - Finance webapp</p>
-                  <div class="badge projectBadge">Web Application</div>
-                  <div class="techStack">
-                    <span class="badge badge-projects">REACT</span>
-                    <span class="badge badge-projects">TAILWIND CSS</span>
-                    <span class="badge badge-projects">STRIPE</span>
-                    <span class="badge badge-projects">+3</span>
-                  </div>
-                </div>
-              </div>
-              <div class="cardContainer">
-                <img
-                  src="ASSETS/IMAGES/proland_landing_page_product.png"
-                  alt="Product landing page screenshot, a modern responsive web design project by Awolesi Victor showcasing product features and call-to-actions"
-                  class="project-img"
-                />
-                <div class="cardHead">
-                  <div class="cardDescription">
-                    <h4 class="projectCardHeading">Product Landing Page</h4>
-                    <p>
-                      A modern Responsive landing page built to showcase a
-                      product/service with clear value propositions call to
-                      actions and engaging UI sections
-                    </p>
-                    <button class="btn btn-description-code">
-                      <i class="fab fa-sharp fa-github"></i> Code
-                    </button>
-                    <button class="btn btn-description-demo">
-                      <i class="fas fa-sharp fa-paperclip"></i> Demo
-                    </button>
-                  </div>
-                </div>
-                <div class="cardBody">
-                  <p class="projectTitle">Product Landing page</p>
-                  <div class="badge projectBadge">Web development</div>
-                  <div class="techStack">
-                    <span class="badge badge-projects">HTML</span>
-                    <span class="badge badge-projects">CSS</span>
-                    <span class="badge badge-projects">JAVASCRIPT</span>
-                    <span class="badge badge-projects">+2</span>
-                  </div>
-                </div>
-              </div>
+          <div class="tool-card group" data-tool="React">
+            <div class="tool-icon-wrap">
+              <i class="fab fa-react tool-icon" style="color:#61dafb"></i>
             </div>
+            <span class="tool-name">React</span>
+            <span class="tool-category">Frontend</span>
           </div>
-          <!-- CONTACTS SECTION -->
-          <div id="contactsSection">
-            <h3 class="main_subHeaders">
-              Contact <span class="header_alt">Me </span>
-            </h3>
-            <!--CUSTOMIZED HORIZONTAL RULE-->
-            <hr class="classical" />
-            <h6 class="contactHeader">Have a project in mind? Get in touch</h6>
-            <div id="contactSubsection">
-              <div id="myID">
-                <p class="myid">
-                  <i class="fas contact-icon fa-sharp fa-envelope"></i>
-                  awolesivictor7&#64;gmail&#46;com
-                </p>
-                <p class="myid">
-                  <i class="fas contact-icon fa-sharp fa-phone"></i>
-                  (+234)8145958722
-                </p>
-                <p class="myid">
-                  <i class="fas contact-icon fa-sharp fa-location-dot"></i>
-                  Lagos State , Nigeria
-                </p>
-                <div id="availability">
-                  <h6 class="header-alt">Availability</h6>
-                  <span class="active-icon"></span> Available <br />
-                  <small class="myid"
-                    >I'm actively available for remote jobs and freelance
-                    jobs</small
-                  >
-                </div>
-              </div>
-              <div id="contactForm">
-                <form name="contact" method="post" data-netlify="true">
-                  <input type="hidden" name="form-name" value="contact" />
-                  <h6 class="formHeader">Send me an email</h6>
-                  <div class="form-floating form-dark mb-3">
-                    <input
-                      type="text"
-                      id="name-input"
-                      placeholder="Enter your name"
-                      name="Name: "
-                      class="form-control"
-                      required
-                    />
-                    <label for="name-input"
-                      ><i class="fa-solid fa-user form-icon"></i>
-                      <span class="form-icon-text"> Name</span></label
-                    >
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="floatingInput"
-                      placeholder="name@example.com"
-                      name="Email: "
-                      required
-                    />
-                    <label for="floatingInput"
-                      ><i class="fa fa-solid fa-envelope form-icon"></i>
-                      <span class="form-icon-text">Email</span></label
-                    >
-                  </div>
-                  <label for="text-area" class="text-area-label"
-                    ><i class="fas fa-message"></i> Message</label
-                  >
-                  <textarea
-                    class="form-control"
-                    aria-label="With textarea"
-                    name="Content: "
-                    required
-                    id="text-area"
-                  ></textarea>
-                  <br />
-                  <button
-                    type="submit"
-                    class="btn btn-submit-contact contact-btn"
-                  >
-                    Send <i class="fa-solid fa-paper-plane form-icon-light"></i>
-                  </button>
-                </form>
-              </div>
+
+          <div class="tool-card group" data-tool="Tailwind CSS">
+            <div class="tool-icon-wrap">
+              <span class="tool-icon font-mono font-bold text-xl" style="color:#38bdf8">TW</span>
             </div>
+            <span class="tool-name">Tailwind CSS</span>
+            <span class="tool-category">Styling</span>
+          </div>
+
+          <div class="tool-card group" data-tool="Node.js">
+            <div class="tool-icon-wrap">
+              <i class="fab fa-node-js tool-icon" style="color:#68a063"></i>
+            </div>
+            <span class="tool-name">Node.js</span>
+            <span class="tool-category">Backend</span>
+          </div>
+
+          <div class="tool-card group" data-tool="Express">
+            <div class="tool-icon-wrap">
+              <span class="tool-icon font-mono font-bold text-lg" style="color:#ffffff">EX</span>
+            </div>
+            <span class="tool-name">Express</span>
+            <span class="tool-category">Backend</span>
+          </div>
+
+          <div class="tool-card group" data-tool="MongoDB">
+            <div class="tool-icon-wrap">
+              <span class="tool-icon font-mono font-bold text-xl" style="color:#47a248">MG</span>
+            </div>
+            <span class="tool-name">MongoDB</span>
+            <span class="tool-category">Database</span>
+          </div>
+
+          <div class="tool-card group" data-tool="SQL">
+            <div class="tool-icon-wrap">
+              <i class="fas fa-database tool-icon" style="color:#f29111"></i>
+            </div>
+            <span class="tool-name">SQL</span>
+            <span class="tool-category">Database</span>
+          </div>
+
+          <div class="tool-card group" data-tool="Supabase">
+            <div class="tool-icon-wrap">
+              <span class="tool-icon font-mono font-bold text-xl" style="color:#3ecf8e">SB</span>
+            </div>
+            <span class="tool-name">Supabase</span>
+            <span class="tool-category">Backend-as-a-Service</span>
+          </div>
+
+          <div class="tool-card group" data-tool="GitHub">
+            <div class="tool-icon-wrap">
+              <i class="fab fa-github tool-icon" style="color:#ffffff"></i>
+            </div>
+            <span class="tool-name">GitHub</span>
+            <span class="tool-category">Version Control</span>
           </div>
         </div>
 
-        <footer class="footer">
-          <small class="footer-text">
-            Awolesi Victor - Frontend Developer & Software Engineer
-          </small>
-          <span id="dynamicTimeText"> &copy; </span>
-        </footer>
+        <!-- Also skilled in badge row -->
+        <div class="flex flex-wrap gap-2 mt-8 justify-center reveal-up" style="animation-delay:0.3s">
+          <span class="also-badge">UI/UX Design</span>
+          <span class="also-badge">SEO Optimization</span>
+          <span class="also-badge">REST APIs</span>
+          <span class="also-badge">Responsive Design</span>
+          <span class="also-badge">Performance Optimization</span>
+        </div>
+
+        <!-- ═══ SOFT SKILLS ═══ -->
+        <div class="mt-20 reveal-up" style="animation-delay:0.1s">
+          <div class="section-header">
+            <span class="section-tag">PEOPLE SKILLS</span>
+            <h2 class="section-title">Soft <span class="gradient-text bounce-text">Skills</span></h2>
+            <p class="section-subtitle">Technical excellence is only half the story — here's how I work with people</p>
+          </div>
+
+          <div class="soft-skills-grid reveal-stagger">
+
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon-wrap">
+                <i class="fas fa-crown soft-skill-icon"></i>
+              </div>
+              <h3 class="soft-skill-title">Leadership</h3>
+              <p class="soft-skill-desc">CEO of INFINET Inc. Leading cross-functional teams, setting project vision and driving execution toward shared goals.</p>
+            </div>
+
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon-wrap">
+                <i class="fas fa-comments soft-skill-icon"></i>
+              </div>
+              <h3 class="soft-skill-title">Communication</h3>
+              <p class="soft-skill-desc">Articulating complex technical concepts clearly to both technical and non-technical stakeholders. Active listener and empathetic communicator.</p>
+            </div>
+
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon-wrap">
+                <i class="fas fa-lightbulb soft-skill-icon"></i>
+              </div>
+              <h3 class="soft-skill-title">Problem Solving</h3>
+              <p class="soft-skill-desc">Analytical thinker who breaks down complex challenges into manageable pieces and delivers creative, efficient solutions under pressure.</p>
+            </div>
+
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon-wrap">
+                <i class="fas fa-users soft-skill-icon"></i>
+              </div>
+              <h3 class="soft-skill-title">Teamwork</h3>
+              <p class="soft-skill-desc">Collaborative team player who thrives in agile environments, contributes meaningfully and uplifts those around me.</p>
+            </div>
+
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon-wrap">
+                <i class="fas fa-arrows-rotate soft-skill-icon"></i>
+              </div>
+              <h3 class="soft-skill-title">Adaptability</h3>
+              <p class="soft-skill-desc">Quick to embrace new technologies, workflows, and requirements. Comfortable navigating ambiguity and pivoting strategies when needed.</p>
+            </div>
+
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon-wrap">
+                <i class="fas fa-brain soft-skill-icon"></i>
+              </div>
+              <h3 class="soft-skill-title">Critical Thinking</h3>
+              <p class="soft-skill-desc">Evaluating options objectively, questioning assumptions and making data-informed decisions that align with both user needs and business goals.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ CAREER SECTION ═══════════════════════════ -->
+    <section id="career" class="section-pad relative">
+      <div class="section-glow-right"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <div class="section-header reveal-up">
+          <span class="section-tag">WORK HISTORY</span>
+          <h2 class="section-title">My <span class="gradient-text bounce-text">Experience</span></h2>
+          <p class="section-subtitle">My professional journey and key milestones</p>
+        </div>
+
+        <div class="timeline reveal-stagger">
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">CEO &amp; Senior Developer</h3>
+                  <p class="timeline-company">INFINET Inc</p>
+                </div>
+                <span class="timeline-badge">JAN 2025 — Present</span>
+              </div>
+              <p class="timeline-desc">
+                Founded and currently leading INFINET Inc, overseeing project development, strategy and execution.
+                Actively involved in full-stack coding, team coordination and delivering innovative digital solutions
+                for clients across multiple industries.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="tl-tag">Leadership</span>
+                <span class="tl-tag">Fullstack Dev</span>
+                <span class="tl-tag">Strategy</span>
+                <span class="tl-tag">Client Management</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">AI Model Development</h3>
+                  <p class="timeline-company">Collaborative Research Project</p>
+                </div>
+                <span class="timeline-badge">SEP 2025 — Present</span>
+              </div>
+              <p class="timeline-desc">
+                Collaborated with a team of developers to design, build and test an AI model. Contributed to the
+                codebase, problem-solving sessions and cross-team communication, advancing the project from concept to prototype.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="tl-tag">AI/ML</span>
+                <span class="tl-tag">Python</span>
+                <span class="tl-tag">Teamwork</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">Fullstack Developer</h3>
+                  <p class="timeline-company">Personal Projects &amp; Freelance</p>
+                </div>
+                <span class="timeline-badge">DEC 2023 — Present</span>
+              </div>
+              <p class="timeline-desc">
+                Independently developed 15+ projects ranging from e-commerce platforms, fintech apps, educational tools
+                and agency websites. Continuously expanding skill set across the full stack — from pixel-perfect UI to
+                robust backend APIs.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="tl-tag">React</span>
+                <span class="tl-tag">Node.js</span>
+                <span class="tl-tag">Supabase</span>
+                <span class="tl-tag">MongoDB</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+    <section id="projects" class="section-pad relative">
+      <div class="section-glow-left"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <div class="section-header reveal-up">
+          <span class="section-tag">PORTFOLIO</span>
+          <h2 class="section-title">Featured <span class="gradient-text bounce-text">Projects</span></h2>
+          <p class="section-subtitle">Click any card to explore the full project details, screenshots and links</p>
+        </div>
+
+        <div class="projects-grid reveal-stagger">
+
+          <!-- PROJECT 1: Portfolio Website -->
+          <article class="project-card" onclick="openModal('modal-portfolio')" tabindex="0" role="button" aria-label="View Portfolio Website project details">
+            <div class="project-card-img-wrap">
+              <img src="ASSETS/IMAGES/portfolio-light.png" alt="Awolesi Victor Portfolio Website" class="project-card-img" loading="lazy" />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Portfolio Website</h3>
+                <span class="project-type-badge">Web Dev</span>
+              </div>
+              <p class="project-card-desc">A responsive, modern portfolio to showcase skills and projects in a clean, user-friendly way.</p>
+              <div class="project-stack">
+                <span class="stack-pill">HTML</span>
+                <span class="stack-pill">CSS</span>
+                <span class="stack-pill">JavaScript</span>
+                <span class="stack-pill">Tailwind</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Quix AI -->
+          <article class="project-card" onclick="openModal('modal-quix')" tabindex="0" role="button" aria-label="View Quix AI project details">
+            <div class="project-card-img-wrap">
+              <img src="ASSETS/IMAGES/app-preview.png" alt="Quix AI study app screenshot" class="project-card-img" loading="lazy" />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Quix AI</h3>
+                <span class="project-type-badge">Web App</span>
+              </div>
+              <p class="project-card-desc">A web app that helps students with AI-powered study tools for educational support.</p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Tailwind</span>
+                <span class="stack-pill">Supabase</span>
+                <span class="stack-pill stack-pill-more">+5</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: V9 Technologies -->
+          <article class="project-card" onclick="openModal('modal-v9')" tabindex="0" role="button" aria-label="View V9 Technologies project details">
+            <div class="project-card-img-wrap">
+              <img src="ASSETS/IMAGES/v9-technologies.png" alt="V9 Technologies agency website" class="project-card-img" loading="lazy" />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">V9 Technologies</h3>
+                <span class="project-type-badge">Agency Site</span>
+              </div>
+              <p class="project-card-desc">A web development agency website where clients can contact developers to build their projects.</p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Tailwind</span>
+                <span class="stack-pill">Framer</span>
+                <span class="stack-pill stack-pill-more">+3</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: Soft Store NG -->
+          <article class="project-card" onclick="openModal('modal-softstore')" tabindex="0" role="button" aria-label="View Soft Store NG project details">
+            <div class="project-card-img-wrap">
+              <img src="ASSETS/IMAGES/soft-store.png" alt="Soft Store NG ecommerce website" class="project-card-img" loading="lazy" />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Soft Store NG</h3>
+                <span class="project-type-badge">E-Commerce</span>
+              </div>
+              <p class="project-card-desc">An e-commerce platform with product catalogs, shopping cart and integrated payment systems.</p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Tailwind</span>
+                <span class="stack-pill">Supabase</span>
+                <span class="stack-pill stack-pill-more">+3</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 5: TaxClarity -->
+          <article class="project-card" onclick="openModal('modal-taxclarity')" tabindex="0" role="button" aria-label="View TaxClarity project details">
+            <div class="project-card-img-wrap">
+              <img src="ASSETS/IMAGES/taxclarity.png" alt="TaxClarity website screenshot" class="project-card-img" loading="lazy" />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">TaxClarity</h3>
+                <span class="project-type-badge">Web Dev</span>
+              </div>
+              <p class="project-card-desc">A website developed to clarify and enlighten people on how they are being taxed in Nigeria.</p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Tailwind CSS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 6: Vera Landscaping -->
+          <article class="project-card" onclick="openModal('modal-vera')" tabindex="0" role="button" aria-label="View Vera Landscaping project details">
+            <div class="project-card-img-wrap">
+              <img src="ASSETS/IMAGES/vera.png" alt="Vera landscaping website" class="project-card-img" loading="lazy" />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Vera Landscaping</h3>
+                <span class="project-type-badge">Web Dev</span>
+              </div>
+              <p class="project-card-desc">A modern landscaping service website focused on clean design, lawn care and outdoor maintenance.</p>
+              <div class="project-stack">
+                <span class="stack-pill">HTML</span>
+                <span class="stack-pill">CSS</span>
+                <span class="stack-pill">JavaScript</span>
+                <span class="stack-pill stack-pill-more">+2</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 7: Result Processor -->
+          <article class="project-card" onclick="openModal('modal-result')" tabindex="0" role="button" aria-label="View Result Processor project details">
+            <div class="project-card-img-wrap">
+              <img src="ASSETS/IMAGES/result-compiler.png" alt="Result Processor web app" class="project-card-img" loading="lazy" />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Result Processor</h3>
+                <span class="project-type-badge">EdTech Tool</span>
+              </div>
+              <p class="project-card-desc">Automatically processes student scores, evaluates performance and generates printable report cards.</p>
+              <div class="project-stack">
+                <span class="stack-pill">HTML</span>
+                <span class="stack-pill">CSS</span>
+                <span class="stack-pill">JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 8: SmartPlay RPS AI -->
+          <article class="project-card" onclick="openModal('modal-rps')" tabindex="0" role="button" aria-label="View SmartPlay RPS AI project details">
+            <div class="project-card-img-wrap">
+              <img src="ASSETS/IMAGES/rps.png" alt="SmartPlay Rock Paper Scissors AI" class="project-card-img" loading="lazy" />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">SmartPlay — RPS AI</h3>
+                <span class="project-type-badge">Game / AI</span>
+              </div>
+              <p class="project-card-desc">An interactive RPS game with a simulated AI opponent using logic and user pattern tracking.</p>
+              <div class="project-stack">
+                <span class="stack-pill">HTML</span>
+                <span class="stack-pill">CSS</span>
+                <span class="stack-pill">JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 9: PAYJ Finance -->
+          <article class="project-card" onclick="openModal('modal-payj')" tabindex="0" role="button" aria-label="View PAYJ Finance webapp project details">
+            <div class="project-card-img-wrap">
+              <img src="ASSETS/IMAGES/payj.png" alt="PAYJ Finance web application" class="project-card-img" loading="lazy" />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">PAYJ — Finance App</h3>
+                <span class="project-type-badge in-dev">In Development</span>
+              </div>
+              <p class="project-card-desc">A fintech-inspired web application concept that simulates modern digital banking features.</p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Tailwind</span>
+                <span class="stack-pill">Stripe</span>
+                <span class="stack-pill stack-pill-more">+3</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 10: Product Landing Page -->
+          <article class="project-card" onclick="openModal('modal-landing')" tabindex="0" role="button" aria-label="View Product Landing Page project details">
+            <div class="project-card-img-wrap">
+              <img src="ASSETS/IMAGES/proland_landing_page_product.png" alt="Product Landing Page" class="project-card-img" loading="lazy" />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Product Landing Page</h3>
+                <span class="project-type-badge">Web Dev</span>
+              </div>
+              <p class="project-card-desc">A modern responsive landing page built to showcase a product/service with engaging UI sections.</p>
+              <div class="project-stack">
+                <span class="stack-pill">HTML</span>
+                <span class="stack-pill">CSS</span>
+                <span class="stack-pill">JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══════════════════════════ PROJECT MODALS ═══════════════════════════ -->
+
+    <!-- MODAL: Portfolio -->
+    <div id="modal-portfolio" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-portfolio-title">
+      <div class="modal-container">
+        <button class="modal-close" onclick="closeModal('modal-portfolio')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <div class="modal-carousel">
+          <div class="carousel-track" id="carousel-portfolio">
+            <div class="carousel-slide"><img src="ASSETS/IMAGES/portfolio-light.png" alt="Portfolio screenshot 1" /></div>
+            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+          </div>
+          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-portfolio')"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-portfolio')"><i class="fas fa-chevron-right"></i></button>
+          <div class="carousel-dots" id="dots-portfolio"></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-meta">
+            <span class="modal-category-badge">Web Development</span>
+            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2024 — Present</span>
+          </div>
+          <h2 id="modal-portfolio-title" class="modal-title">Portfolio Website</h2>
+          <p class="modal-desc">A fully responsive, modern portfolio website to showcase my skills, experience and projects in a clean, user-friendly way. Designed and developed from scratch with attention to performance and aesthetics.</p>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Tech Stack</h4>
+            <div class="modal-stack">
+              <span class="modal-stack-pill">HTML5</span>
+              <span class="modal-stack-pill">CSS3</span>
+              <span class="modal-stack-pill">JavaScript</span>
+              <span class="modal-stack-pill">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Key Features</h4>
+            <ul class="modal-features">
+              <li>Dark / Light mode with persistent theme preference</li>
+              <li>Responsive layout across all screen sizes</li>
+              <li>Smooth scroll-reveal animations</li>
+              <li>Netlify-powered contact form</li>
+              <li>SEO optimized with Open Graph metadata</li>
+            </ul>
+          </div>
+          <div class="modal-actions">
+            <a href="https://github.com/vector005awolesi/Portfolio" target="_blank" class="modal-btn-code">
+              <i class="fab fa-github"></i> View Code
+            </a>
+            <a href="#" class="modal-btn-live">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- MODAL: Quix AI -->
+    <div id="modal-quix" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-quix-title">
+      <div class="modal-container">
+        <button class="modal-close" onclick="closeModal('modal-quix')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <div class="modal-carousel">
+          <div class="carousel-track" id="carousel-quix">
+            <div class="carousel-slide"><img src="ASSETS/IMAGES/app-preview.png" alt="Quix AI screenshot" /></div>
+            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+          </div>
+          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-quix')"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-quix')"><i class="fas fa-chevron-right"></i></button>
+          <div class="carousel-dots" id="dots-quix"></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-meta">
+            <span class="modal-category-badge">Web Application</span>
+            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2025</span>
+          </div>
+          <h2 id="modal-quix-title" class="modal-title">Quix AI</h2>
+          <p class="modal-desc">An AI-powered study companion that helps students with flashcard generation, quiz tools, and smart revision schedules. Built with a focus on performance and clean UX for educational support.</p>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Tech Stack</h4>
+            <div class="modal-stack">
+              <span class="modal-stack-pill">React</span>
+              <span class="modal-stack-pill">Tailwind CSS</span>
+              <span class="modal-stack-pill">Supabase</span>
+              <span class="modal-stack-pill">TypeScript</span>
+              <span class="modal-stack-pill">OpenAI API</span>
+            </div>
+          </div>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Key Features</h4>
+            <ul class="modal-features">
+              <li>AI-generated flashcards and quizzes from uploaded content</li>
+              <li>Smart spaced repetition revision scheduler</li>
+              <li>User authentication and progress tracking via Supabase</li>
+              <li>Clean, distraction-free study interface</li>
+              <li>Fully responsive for mobile study sessions</li>
+            </ul>
+          </div>
+          <div class="modal-actions">
+            <button class="modal-btn-code disabled-btn" disabled>
+              <i class="fab fa-github"></i> Private Repo
+            </button>
+            <a href="https://quix-ai-buddy.vercel.app/" target="_blank" class="modal-btn-live">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: V9 Technologies -->
+    <div id="modal-v9" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-v9-title">
+      <div class="modal-container">
+        <button class="modal-close" onclick="closeModal('modal-v9')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <div class="modal-carousel">
+          <div class="carousel-track" id="carousel-v9">
+            <div class="carousel-slide"><img src="ASSETS/IMAGES/v9-technologies.png" alt="V9 Technologies screenshot" /></div>
+            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+          </div>
+          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-v9')"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-v9')"><i class="fas fa-chevron-right"></i></button>
+          <div class="carousel-dots" id="dots-v9"></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-meta">
+            <span class="modal-category-badge">Agency Website</span>
+            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2025</span>
+          </div>
+          <h2 id="modal-v9-title" class="modal-title">V9 Technologies</h2>
+          <p class="modal-desc">A sleek, modern web development agency website where clients can explore services and contact developers to build their projects. Designed to project professionalism and convert visitors into leads.</p>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Tech Stack</h4>
+            <div class="modal-stack">
+              <span class="modal-stack-pill">React</span>
+              <span class="modal-stack-pill">Tailwind CSS</span>
+              <span class="modal-stack-pill">Framer Motion</span>
+              <span class="modal-stack-pill">Netlify</span>
+            </div>
+          </div>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Key Features</h4>
+            <ul class="modal-features">
+              <li>Animated hero with Framer Motion scroll effects</li>
+              <li>Services showcase with interactive card hover effects</li>
+              <li>Integrated contact form with email notifications</li>
+              <li>Portfolio gallery with filtering</li>
+              <li>Fully responsive and SEO optimized</li>
+            </ul>
+          </div>
+          <div class="modal-actions">
+            <button class="modal-btn-code disabled-btn" disabled>
+              <i class="fab fa-github"></i> Private Repo
+            </button>
+            <a href="https://v9-technologies.vercel.app/" target="_blank" class="modal-btn-live">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Soft Store NG -->
+    <div id="modal-softstore" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-softstore-title">
+      <div class="modal-container">
+        <button class="modal-close" onclick="closeModal('modal-softstore')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <div class="modal-carousel">
+          <div class="carousel-track" id="carousel-softstore">
+            <div class="carousel-slide"><img src="ASSETS/IMAGES/soft-store.png" alt="Soft Store NG screenshot" /></div>
+            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+          </div>
+          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-softstore')"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-softstore')"><i class="fas fa-chevron-right"></i></button>
+          <div class="carousel-dots" id="dots-softstore"></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-meta">
+            <span class="modal-category-badge">E-Commerce</span>
+            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2025</span>
+          </div>
+          <h2 id="modal-softstore-title" class="modal-title">Soft Store NG</h2>
+          <p class="modal-desc">An e-commerce platform built for the gaming and tech community featuring full product catalogs, shopping cart functionality and seamlessly integrated payment systems for Nigerian users.</p>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Tech Stack</h4>
+            <div class="modal-stack">
+              <span class="modal-stack-pill">React</span>
+              <span class="modal-stack-pill">Tailwind CSS</span>
+              <span class="modal-stack-pill">Supabase</span>
+              <span class="modal-stack-pill">Paystack</span>
+            </div>
+          </div>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Key Features</h4>
+            <ul class="modal-features">
+              <li>Full product catalog with search and category filtering</li>
+              <li>Shopping cart with persistent state management</li>
+              <li>Paystack payment gateway integration</li>
+              <li>Admin dashboard for product and order management</li>
+              <li>Real-time inventory tracking via Supabase</li>
+            </ul>
+          </div>
+          <div class="modal-actions">
+            <button class="modal-btn-code disabled-btn" disabled>
+              <i class="fab fa-github"></i> Private Repo
+            </button>
+            <a href="https://soft-store-ng.vercel.app/" target="_blank" class="modal-btn-live">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: TaxClarity -->
+    <div id="modal-taxclarity" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-taxclarity-title">
+      <div class="modal-container">
+        <button class="modal-close" onclick="closeModal('modal-taxclarity')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <div class="modal-carousel">
+          <div class="carousel-track" id="carousel-taxclarity">
+            <div class="carousel-slide"><img src="ASSETS/IMAGES/taxclarity.png" alt="TaxClarity screenshot" /></div>
+            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+          </div>
+          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-taxclarity')"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-taxclarity')"><i class="fas fa-chevron-right"></i></button>
+          <div class="carousel-dots" id="dots-taxclarity"></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-meta">
+            <span class="modal-category-badge">Web Development</span>
+            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2025</span>
+          </div>
+          <h2 id="modal-taxclarity-title" class="modal-title">TaxClarity</h2>
+          <p class="modal-desc">A civic tech website developed to clarify and enlighten Nigerian citizens on how taxation works — making complex tax information accessible and understandable for everyone.</p>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Tech Stack</h4>
+            <div class="modal-stack">
+              <span class="modal-stack-pill">React</span>
+              <span class="modal-stack-pill">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Key Features</h4>
+            <ul class="modal-features">
+              <li>Interactive tax calculator tool</li>
+              <li>Plain-language explanations of Nigerian tax laws</li>
+              <li>Visual data representations of tax breakdowns</li>
+              <li>Resource library with official FIRS documents</li>
+            </ul>
+          </div>
+          <div class="modal-actions">
+            <a href="https://github.com/Apex-Shippers/Tax-Clarity-NG" target="_blank" class="modal-btn-code">
+              <i class="fab fa-github"></i> View Code
+            </a>
+            <a href="https://tax-clarity-ng-six.vercel.app/" target="_blank" class="modal-btn-live">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Vera Landscaping -->
+    <div id="modal-vera" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-vera-title">
+      <div class="modal-container">
+        <button class="modal-close" onclick="closeModal('modal-vera')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <div class="modal-carousel">
+          <div class="carousel-track" id="carousel-vera">
+            <div class="carousel-slide"><img src="ASSETS/IMAGES/vera.png" alt="Vera Landscaping screenshot" /></div>
+            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+          </div>
+          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-vera')"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-vera')"><i class="fas fa-chevron-right"></i></button>
+          <div class="carousel-dots" id="dots-vera"></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-meta">
+            <span class="modal-category-badge">Web Development</span>
+            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2024</span>
+          </div>
+          <h2 id="modal-vera-title" class="modal-title">Vera Landscaping</h2>
+          <p class="modal-desc">A modern landscaping service website focused on clean design, showcasing lawn care and outdoor maintenance services. Built to help Vera Landscaping attract new clients through a professional online presence.</p>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Tech Stack</h4>
+            <div class="modal-stack">
+              <span class="modal-stack-pill">HTML5</span>
+              <span class="modal-stack-pill">CSS3</span>
+              <span class="modal-stack-pill">JavaScript</span>
+              <span class="modal-stack-pill">Bootstrap</span>
+            </div>
+          </div>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Key Features</h4>
+            <ul class="modal-features">
+              <li>Responsive hero with service highlights</li>
+              <li>Services grid with detailed descriptions</li>
+              <li>Photo gallery of completed landscaping projects</li>
+              <li>Contact form with Google Maps integration</li>
+            </ul>
+          </div>
+          <div class="modal-actions">
+            <a href="https://github.com/vector005awolesi/landscaping" target="_blank" class="modal-btn-code">
+              <i class="fab fa-github"></i> View Code
+            </a>
+            <a href="https://vera-landscaping.netlify.app/" target="_blank" class="modal-btn-live">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Result Processor -->
+    <div id="modal-result" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-result-title">
+      <div class="modal-container">
+        <button class="modal-close" onclick="closeModal('modal-result')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <div class="modal-carousel">
+          <div class="carousel-track" id="carousel-result">
+            <div class="carousel-slide"><img src="ASSETS/IMAGES/result-compiler.png" alt="Result Processor screenshot" /></div>
+            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+          </div>
+          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-result')"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-result')"><i class="fas fa-chevron-right"></i></button>
+          <div class="carousel-dots" id="dots-result"></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-meta">
+            <span class="modal-category-badge">EdTech Tool</span>
+            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2024</span>
+          </div>
+          <h2 id="modal-result-title" class="modal-title">Result Processor (SRMS)</h2>
+          <p class="modal-desc">A school result management system that automatically processes student scores, evaluates academic performance and generates clean, printable report cards. Built to eliminate manual result compilation for schools.</p>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Tech Stack</h4>
+            <div class="modal-stack">
+              <span class="modal-stack-pill">HTML5</span>
+              <span class="modal-stack-pill">CSS3</span>
+              <span class="modal-stack-pill">JavaScript</span>
+            </div>
+          </div>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Key Features</h4>
+            <ul class="modal-features">
+              <li>Automatic grade calculation and performance evaluation</li>
+              <li>Printable PDF report card generation</li>
+              <li>Subject-by-subject breakdown with remarks</li>
+              <li>Supports multiple class levels and grading systems</li>
+            </ul>
+          </div>
+          <div class="modal-actions">
+            <a href="https://github.com/vector005awolesi/RC" target="_blank" class="modal-btn-code">
+              <i class="fab fa-github"></i> View Code
+            </a>
+            <a href="https://vector005awolesi.github.io/RC/" target="_blank" class="modal-btn-live">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: SmartPlay RPS -->
+    <div id="modal-rps" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-rps-title">
+      <div class="modal-container">
+        <button class="modal-close" onclick="closeModal('modal-rps')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <div class="modal-carousel">
+          <div class="carousel-track" id="carousel-rps">
+            <div class="carousel-slide"><img src="ASSETS/IMAGES/rps.png" alt="SmartPlay RPS screenshot" /></div>
+            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+          </div>
+          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-rps')"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-rps')"><i class="fas fa-chevron-right"></i></button>
+          <div class="carousel-dots" id="dots-rps"></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-meta">
+            <span class="modal-category-badge">Game / AI</span>
+            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2024</span>
+          </div>
+          <h2 id="modal-rps-title" class="modal-title">SmartPlay — RPS AI</h2>
+          <p class="modal-desc">An interactive Rock Paper Scissors game featuring a simulated AI opponent that tracks user patterns and adapts its strategy. Features dynamic UI, score tracking and engaging gameplay animations.</p>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Tech Stack</h4>
+            <div class="modal-stack">
+              <span class="modal-stack-pill">HTML5</span>
+              <span class="modal-stack-pill">CSS3</span>
+              <span class="modal-stack-pill">JavaScript</span>
+            </div>
+          </div>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Key Features</h4>
+            <ul class="modal-features">
+              <li>AI opponent with user pattern tracking algorithm</li>
+              <li>Dynamic score tracking and win/loss history</li>
+              <li>Smooth game animations and sound feedback</li>
+              <li>Clean, responsive game interface</li>
+            </ul>
+          </div>
+          <div class="modal-actions">
+            <a href="https://github.com/vector005awolesi/RPS" target="_blank" class="modal-btn-code">
+              <i class="fab fa-github"></i> View Code
+            </a>
+            <a href="https://vector005awolesi.github.io/RPS/" target="_blank" class="modal-btn-live">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: PAYJ Finance -->
+    <div id="modal-payj" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-payj-title">
+      <div class="modal-container">
+        <button class="modal-close" onclick="closeModal('modal-payj')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <div class="modal-carousel">
+          <div class="carousel-track" id="carousel-payj">
+            <div class="carousel-slide"><img src="ASSETS/IMAGES/payj.png" alt="PAYJ Finance screenshot" /></div>
+            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+          </div>
+          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-payj')"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-payj')"><i class="fas fa-chevron-right"></i></button>
+          <div class="carousel-dots" id="dots-payj"></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-meta">
+            <span class="modal-category-badge in-dev">In Development</span>
+            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2025 — Present</span>
+          </div>
+          <h2 id="modal-payj-title" class="modal-title">PAYJ — Finance App</h2>
+          <p class="modal-desc">A fintech-inspired web application concept that simulates modern digital banking. Features a clean dashboard, transaction history, card management and peer-to-peer transfer flows. Currently under active development.</p>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Tech Stack</h4>
+            <div class="modal-stack">
+              <span class="modal-stack-pill">React</span>
+              <span class="modal-stack-pill">TypeScript</span>
+              <span class="modal-stack-pill">Tailwind CSS</span>
+              <span class="modal-stack-pill">Stripe</span>
+              <span class="modal-stack-pill">Node.js</span>
+            </div>
+          </div>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Planned Features</h4>
+            <ul class="modal-features">
+              <li>Real-time balance and transaction dashboard</li>
+              <li>P2P transfers with OTP verification</li>
+              <li>Stripe payment integration for card top-ups</li>
+              <li>Savings goals and spending analytics</li>
+            </ul>
+          </div>
+          <div class="modal-actions">
+            <button class="modal-btn-code disabled-btn" disabled>
+              <i class="fas fa-code"></i> In Development
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: Product Landing Page -->
+    <div id="modal-landing" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-landing-title">
+      <div class="modal-container">
+        <button class="modal-close" onclick="closeModal('modal-landing')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <div class="modal-carousel">
+          <div class="carousel-track" id="carousel-landing">
+            <div class="carousel-slide"><img src="ASSETS/IMAGES/proland_landing_page_product.png" alt="Product Landing Page screenshot" /></div>
+            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+          </div>
+          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-landing')"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-landing')"><i class="fas fa-chevron-right"></i></button>
+          <div class="carousel-dots" id="dots-landing"></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-meta">
+            <span class="modal-category-badge">Web Development</span>
+            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2024</span>
+          </div>
+          <h2 id="modal-landing-title" class="modal-title">Product Landing Page</h2>
+          <p class="modal-desc">A modern, conversion-focused responsive landing page built to showcase a product or service. Features clear value propositions, call-to-action sections and an engaging hero UI designed to drive user engagement.</p>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Tech Stack</h4>
+            <div class="modal-stack">
+              <span class="modal-stack-pill">HTML5</span>
+              <span class="modal-stack-pill">CSS3</span>
+              <span class="modal-stack-pill">JavaScript</span>
+            </div>
+          </div>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Key Features</h4>
+            <ul class="modal-features">
+              <li>Pixel-perfect responsive design across breakpoints</li>
+              <li>Animated hero section with feature highlights</li>
+              <li>Pricing table and comparison section</li>
+              <li>FAQ accordion and testimonials section</li>
+            </ul>
+          </div>
+          <div class="modal-actions">
+            <button class="modal-btn-code disabled-btn" disabled>
+              <i class="fab fa-github"></i> Private Repo
+            </button>
+            <button class="modal-btn-live disabled-btn" disabled>
+              <i class="fas fa-external-link-alt"></i> Coming Soon
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════ TESTIMONIALS SECTION ═══════════════════════════ -->
+    <section id="testimonials" class="section-pad relative">
+      <div class="section-glow-right"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <div class="section-header reveal-up">
+          <span class="section-tag">SOCIAL PROOF</span>
+          <h2 class="section-title">What People <span class="gradient-text bounce-text">Say</span></h2>
+          <p class="section-subtitle">Kind words from clients and collaborators I've had the pleasure of working with</p>
+        </div>
+
+        <div class="testimonials-grid reveal-stagger">
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-text">
+              "Victor delivered our agency website beyond our expectations. His attention to design detail, clean code and fast delivery made the whole process seamless. Highly recommend him for any web project."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6)">
+                <span>SK</span>
+              </div>
+              <div>
+                <p class="testimonial-name">Sarah K.</p>
+                <p class="testimonial-role">Product Manager · TechLaunch NG</p>
+              </div>
+            </div>
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-text">
+              "Working with Victor on the AI model project was a fantastic experience. He's technically sharp, communicates clearly and always brings creative solutions to the table. A true team player and leader."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #10b981, #3b82f6)">
+                <span>DM</span>
+              </div>
+              <div>
+                <p class="testimonial-name">David M.</p>
+                <p class="testimonial-role">AI Researcher · CollabAI Project</p>
+              </div>
+            </div>
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-text">
+              "Victor built our e-commerce store and we saw a 40% increase in user engagement within the first month. He understood our vision perfectly and transformed it into a beautiful, functional platform."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444)">
+                <span>AL</span>
+              </div>
+              <div>
+                <p class="testimonial-name">Amara L.</p>
+                <p class="testimonial-role">Founder · Soft Store NG</p>
+              </div>
+            </div>
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══════════════════════════ CONTACT SECTION ═══════════════════════════ -->
+    <section id="contact" class="section-pad relative">
+      <div class="section-glow-left"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <div class="section-header reveal-up">
+          <span class="section-tag">LET'S TALK</span>
+          <h2 class="section-title">Get In <span class="gradient-text bounce-text">Touch</span></h2>
+          <p class="section-subtitle">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+        </div>
+
+        <div class="contact-grid reveal-stagger">
+
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <div class="contact-availability">
+              <span class="avail-dot"></span>
+              <div>
+                <p class="avail-title">Available for Work</p>
+                <p class="avail-desc">I'm actively looking for remote jobs and freelance opportunities</p>
+              </div>
+            </div>
+
+            <div class="contact-details">
+              <a href="mailto:awolesivictor7@gmail.com" class="contact-detail-item">
+                <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <p class="contact-detail-label">Email</p>
+                  <p class="contact-detail-value">awolesivictor7@gmail.com</p>
+                </div>
+              </a>
+              <a href="tel:+2348145958722" class="contact-detail-item">
+                <div class="contact-detail-icon"><i class="fas fa-phone"></i></div>
+                <div>
+                  <p class="contact-detail-label">Phone</p>
+                  <p class="contact-detail-value">(+234) 8145958722</p>
+                </div>
+              </a>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon"><i class="fas fa-location-dot"></i></div>
+                <div>
+                  <p class="contact-detail-label">Location</p>
+                  <p class="contact-detail-value">Lagos State, Nigeria</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <p class="contact-socials-label">Find me on</p>
+              <div class="flex gap-3">
+                <a href="https://github.com/vector005awolesi" target="_blank" class="social-icon-btn" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/awolesi-victor-236435362" target="_blank" class="social-icon-btn" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://x.com/awolesi_victor" target="_blank" class="social-icon-btn" aria-label="X / Twitter">
+                  <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://facebook.com/awolesi.victor" target="_blank" class="social-icon-btn" aria-label="Facebook">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrap">
+            <form name="contact" method="post" data-netlify="true" class="contact-form" id="contact-form">
+              <input type="hidden" name="form-name" value="contact" />
+
+              <div class="form-group">
+                <label for="name-input" class="form-label">Your Name</label>
+                <div class="form-input-wrap">
+                  <i class="fas fa-user form-input-icon"></i>
+                  <input type="text" id="name-input" name="Name" placeholder="John Doe" class="form-input" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email-input" class="form-label">Email Address</label>
+                <div class="form-input-wrap">
+                  <i class="fas fa-envelope form-input-icon"></i>
+                  <input type="email" id="email-input" name="Email" placeholder="john@example.com" class="form-input" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject-input" class="form-label">Subject</label>
+                <div class="form-input-wrap">
+                  <i class="fas fa-tag form-input-icon"></i>
+                  <input type="text" id="subject-input" name="Subject" placeholder="Project Inquiry" class="form-input" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message-input" class="form-label">Message</label>
+                <textarea id="message-input" name="Content" placeholder="Tell me about your project..." class="form-textarea" required rows="5"></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary w-full justify-center" id="submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+    <footer class="footer">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="footer-inner">
+          <a href="#hero" class="font-mono text-blue-400 font-semibold text-sm tracking-widest hover:text-blue-300 transition-colors">
+            &lt;AV /&gt;
+          </a>
+          <p class="footer-copy">
+            Awolesi Victor — Fullstack Developer &amp; Software Engineer
+          </p>
+          <p class="footer-year">
+            &copy; <span id="copyright-year"></span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Font Awesome Icons Script -->
     <script src="https://cdn.jsdelivr.net/gh/vector005awolesi/Portfolio@main/ASSETS/javascript/icons.js"></script>
+    <!-- Main JS -->
     <script src="ASSETS/javascript/index.js"></script>
-    <!-- Custom animations handled by index.js -->
+    <!-- Animated Grid Canvas -->
+    <script src="ASSETS/javascript/grid-canvas.js"></script>
   </body>
 </html>
