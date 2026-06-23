@@ -1,6 +1,7 @@
 /* ============================================================
-   HERO ANIMATED GRID — Canvas-based interactive background
-   Only active in dark mode. Mouse-reactive glow at grid nodes.
+   HERO PREMIUM GRID — Canvas-based sleek background
+   Palette-aware: #3498DB lines on dark, subtle navy on light
+   Mobile: static grid (performance). Desktop: animated + mouse glow.
    ============================================================ */
 
 (function () {
@@ -15,37 +16,34 @@
   let mouse = { x: -9999, y: -9999 };
   let isActive = true;
   let isDark = true;
+  let isMobile = window.matchMedia('(max-width: 768px)').matches;
+  let isTouch = window.matchMedia('(pointer: coarse)').matches;
 
-  // ── Config ──
-  const GRID_SIZE = 48;
-  const NODE_RADIUS = 1.2;
-  const GLOW_RADIUS = 180;
-  const LINE_ALPHA_BASE = 0.04;
-  const LINE_ALPHA_GLOW = 0.18;
-  const NODE_ALPHA_BASE = 0.06;
-  const NODE_ALPHA_GLOW = 0.55;
-  const PARTICLE_COUNT = 28;
-  const WAVE_SPEED = 0.0006;
+  const GRID_SIZE = isMobile ? 48 : 64;
+  const MAJOR_EVERY = 4;
+  const GLOW_RADIUS = isMobile ? 140 : 220;
+  const NODE_RADIUS = 0.9;
+  const WAVE_SPEED = 0.0004;
 
-  // ── Particles ──
-  let particles = [];
+  let time = 0;
 
-  function createParticles() {
-    particles = [];
-    for (let i = 0; i < PARTICLE_COUNT; i++) {
-      particles.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        radius: Math.random() * 1.5 + 0.5,
-        alpha: Math.random() * 0.3 + 0.1,
-        phase: Math.random() * Math.PI * 2,
-      });
+  function getColors() {
+    if (isDark) {
+      return {
+        line: '52, 152, 219',
+        major: '52, 152, 219',
+        node: '52, 152, 219',
+        vignette: '26, 37, 48',
+      };
     }
+    return {
+      line: '44, 62, 80',
+      major: '52, 152, 219',
+      node: '52, 152, 219',
+      vignette: '236, 240, 241',
+    };
   }
 
-  // ── Resize ──
   function resize() {
     const hero = document.getElementById('hero');
     if (!hero) return;
@@ -58,18 +56,101 @@
     canvas.style.width = width + 'px';
     canvas.style.height = height + 'px';
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    createParticles();
   }
 
-  // ── Distance helper ──
   function dist(x1, y1, x2, y2) {
     const dx = x1 - x2;
     const dy = y1 - y2;
     return Math.sqrt(dx * dx + dy * dy);
   }
 
-  // ── Draw ──
-  let time = 0;
+  function drawVignette(colors) {
+    const cx = width / 2;
+    const cy = height / 2;
+    const radius = Math.max(width, height) * 0.8;
+    const gradient = ctx.createRadialGradient(cx, cy, radius * 0.15, cx, cy, radius);
+    gradient.addColorStop(0, `rgba(${colors.vignette}, 0)`);
+    gradient.addColorStop(1, `rgba(${colors.vignette}, ${isDark ? 0.35 : 0.22})`);
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, width, height);
+  }
+
+  function getAlphas() {
+    return {
+      minor: isDark ? 0.045 : 0.038,
+      major: isDark ? 0.10 : 0.075,
+      glow: isDark ? 0.24 : 0.17,
+      nodeBase: isDark ? 0.065 : 0.05,
+      nodeGlow: isDark ? 0.48 : 0.36,
+    };
+  }
+
+  function drawGrid(colors) {
+    const alphas = getAlphas();
+    const cols = Math.ceil(width / GRID_SIZE) + 1;
+    const rows = Math.ceil(height / GRID_SIZE) + 1;
+
+    for (let i = 0; i <= cols; i++) {
+      const x = i * GRID_SIZE;
+      const isMajor = i % MAJOR_EVERY === 0;
+      const dxMouse = Math.abs(x - mouse.x);
+      const proximity = isTouch ? 0 : Math.max(0, 1 - dxMouse / GLOW_RADIUS);
+      const baseAlpha = isMajor ? alphas.major : alphas.minor;
+      const alpha = baseAlpha + (alphas.glow - baseAlpha) * proximity * proximity;
+      const rgb = isMajor ? colors.major : colors.line;
+
+      ctx.beginPath();
+      ctx.moveTo(x + 0.5, 0);
+      ctx.lineTo(x + 0.5, height);
+      ctx.strokeStyle = `rgba(${rgb}, ${alpha})`;
+      ctx.lineWidth = isMajor ? 0.65 : 0.4;
+      ctx.stroke();
+    }
+
+    for (let j = 0; j <= rows; j++) {
+      const y = j * GRID_SIZE;
+      const isMajor = j % MAJOR_EVERY === 0;
+      const dyMouse = Math.abs(y - mouse.y);
+      const proximity = isTouch ? 0 : Math.max(0, 1 - dyMouse / GLOW_RADIUS);
+      const baseAlpha = isMajor ? alphas.major : alphas.minor;
+      const alpha = baseAlpha + (alphas.glow - baseAlpha) * proximity * proximity;
+      const rgb = isMajor ? colors.major : colors.line;
+
+      ctx.beginPath();
+      ctx.moveTo(0, y + 0.5);
+      ctx.lineTo(width, y + 0.5);
+      ctx.strokeStyle = `rgba(${rgb}, ${alpha})`;
+      ctx.lineWidth = isMajor ? 0.65 : 0.4;
+      ctx.stroke();
+    }
+
+    for (let i = 0; i <= cols; i += MAJOR_EVERY) {
+      for (let j = 0; j <= rows; j += MAJOR_EVERY) {
+        const x = i * GRID_SIZE;
+        const y = j * GRID_SIZE;
+        const d = dist(x, y, mouse.x, mouse.y);
+        const proximity = isTouch ? 0 : Math.max(0, 1 - d / GLOW_RADIUS);
+        const wave = isMobile ? 0 : Math.sin(time * 1000 + i * 0.3 + j * 0.3) * 0.015;
+        const alpha = alphas.nodeBase + wave + (alphas.nodeGlow - alphas.nodeBase) * proximity * proximity;
+
+        if (alpha > 0.025) {
+          ctx.beginPath();
+          ctx.arc(x, y, NODE_RADIUS + proximity * 1.5, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${colors.node}, ${alpha})`;
+          ctx.fill();
+        }
+      }
+    }
+
+    if (!isTouch && mouse.x > 0 && mouse.y > 0) {
+      const gradient = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, GLOW_RADIUS);
+      gradient.addColorStop(0, `rgba(${colors.major}, ${isDark ? 0.05 : 0.045})`);
+      gradient.addColorStop(0.5, `rgba(${colors.major}, ${isDark ? 0.018 : 0.015})`);
+      gradient.addColorStop(1, `rgba(${colors.major}, 0)`);
+      ctx.fillStyle = gradient;
+      ctx.fillRect(mouse.x - GLOW_RADIUS, mouse.y - GLOW_RADIUS, GLOW_RADIUS * 2, GLOW_RADIUS * 2);
+    }
+  }
 
   function draw() {
     if (!isActive) {
@@ -77,109 +158,21 @@
       return;
     }
 
-    const color = isDark ? '138, 180, 248' : '26, 115, 232';
-
+    const colors = getColors();
     time += WAVE_SPEED;
     ctx.clearRect(0, 0, width, height);
 
-    const cols = Math.ceil(width / GRID_SIZE) + 1;
-    const rows = Math.ceil(height / GRID_SIZE) + 1;
+    /* Vignette under grid so lines stay visible in dark mode */
+    drawVignette(colors);
+    drawGrid(colors);
 
-    // Draw grid lines
-    for (let i = 0; i <= cols; i++) {
-      const x = i * GRID_SIZE;
-      // Check if any point along this vertical line is near mouse
-      const dxMouse = Math.abs(x - mouse.x);
-      const proximityV = Math.max(0, 1 - dxMouse / GLOW_RADIUS);
-      const alpha = LINE_ALPHA_BASE + (LINE_ALPHA_GLOW - LINE_ALPHA_BASE) * proximityV;
-
-      ctx.beginPath();
-      ctx.moveTo(x, 0);
-      ctx.lineTo(x, height);
-      ctx.strokeStyle = `rgba(${color}, ${alpha})`;
-      ctx.lineWidth = 0.5;
-      ctx.stroke();
+    if (!isMobile) {
+      animId = requestAnimationFrame(draw);
+    } else {
+      animId = null;
     }
-
-    for (let j = 0; j <= rows; j++) {
-      const y = j * GRID_SIZE;
-      const dyMouse = Math.abs(y - mouse.y);
-      const proximityH = Math.max(0, 1 - dyMouse / GLOW_RADIUS);
-      const alpha = LINE_ALPHA_BASE + (LINE_ALPHA_GLOW - LINE_ALPHA_BASE) * proximityH;
-
-      ctx.beginPath();
-      ctx.moveTo(0, y);
-      ctx.lineTo(width, y);
-      ctx.strokeStyle = `rgba(${color}, ${alpha})`;
-      ctx.lineWidth = 0.5;
-      ctx.stroke();
-    }
-
-    // Draw nodes at intersections with glow
-    for (let i = 0; i <= cols; i++) {
-      for (let j = 0; j <= rows; j++) {
-        const x = i * GRID_SIZE;
-        const y = j * GRID_SIZE;
-        const d = dist(x, y, mouse.x, mouse.y);
-        const proximity = Math.max(0, 1 - d / GLOW_RADIUS);
-
-        // Subtle wave animation
-        const wave = Math.sin(time * 1000 + i * 0.4 + j * 0.4) * 0.02;
-        const alpha = NODE_ALPHA_BASE + wave + (NODE_ALPHA_GLOW - NODE_ALPHA_BASE) * proximity * proximity;
-        const radius = NODE_RADIUS + proximity * 2.5;
-
-        if (alpha > 0.02) {
-          ctx.beginPath();
-          ctx.arc(x, y, radius, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(${color}, ${alpha})`;
-          ctx.fill();
-
-          // Extra glow ring for close nodes
-          if (proximity > 0.3) {
-            ctx.beginPath();
-            ctx.arc(x, y, radius + 4 * proximity, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(${color}, ${proximity * 0.12})`;
-            ctx.fill();
-          }
-        }
-      }
-    }
-
-    // Draw particles
-    particles.forEach((p) => {
-      p.x += p.vx;
-      p.y += p.vy;
-      p.phase += 0.01;
-
-      // Wrap around
-      if (p.x < 0) p.x = width;
-      if (p.x > width) p.x = 0;
-      if (p.y < 0) p.y = height;
-      if (p.y > height) p.y = 0;
-
-      const flicker = Math.sin(p.phase) * 0.15 + 0.85;
-      const pDist = dist(p.x, p.y, mouse.x, mouse.y);
-      const pGlow = Math.max(0, 1 - pDist / (GLOW_RADIUS * 1.5));
-
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.radius * flicker, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${color}, ${(p.alpha + pGlow * 0.3) * flicker})`;
-      ctx.fill();
-    });
-
-    // Radial mouse glow overlay
-    if (mouse.x > 0 && mouse.y > 0) {
-      const gradient = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, GLOW_RADIUS);
-      gradient.addColorStop(0, `rgba(${color}, ${isDark ? 0.04 : 0.05})`);
-      gradient.addColorStop(1, `rgba(${color}, 0)`);
-      ctx.fillStyle = gradient;
-      ctx.fillRect(mouse.x - GLOW_RADIUS, mouse.y - GLOW_RADIUS, GLOW_RADIUS * 2, GLOW_RADIUS * 2);
-    }
-
-    animId = requestAnimationFrame(draw);
   }
 
-  // ── Start / Stop ──
   function start() {
     if (animId) return;
     isActive = true;
@@ -195,17 +188,22 @@
     ctx.clearRect(0, 0, width, height);
   }
 
-  // ── Theme awareness ──
   function checkTheme() {
-    const theme = document.documentElement.getAttribute('data-theme');
-    isDark = theme !== 'light';
-    canvas.style.opacity = '1';
+    isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    canvas.style.opacity = isDark ? '1' : '0.85';
+    if (isActive) {
+      if (isMobile) {
+        draw();
+      } else if (!animId) {
+        start();
+      }
+    }
   }
 
-  // ── Events ──
   const hero = document.getElementById('hero');
 
   hero?.addEventListener('mousemove', (e) => {
+    if (isTouch) return;
     const rect = hero.getBoundingClientRect();
     mouse.x = e.clientX - rect.left;
     mouse.y = e.clientY - rect.top;
@@ -216,37 +214,39 @@
     mouse.y = -9999;
   });
 
-  // Debounced resize
   let resizeTimer;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
+      isMobile = window.matchMedia('(max-width: 768px)').matches;
       resize();
+      if (isMobile) {
+        stop();
+        isActive = true;
+        draw();
+      } else if (!animId) {
+        start();
+      }
     }, 150);
   });
 
-  // Pause when tab hidden
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       stop();
-    } else if (isDark) {
+    } else {
       start();
     }
   });
 
-  // Theme change observer
   const observer = new MutationObserver(() => checkTheme());
   observer.observe(document.documentElement, {
     attributes: true,
     attributeFilter: ['data-theme'],
   });
 
-  // ── Init ──
-  // Disable on small screens for performance
-  const isMobile = window.matchMedia('(max-width: 768px)').matches;
-  if (isMobile) {
-    canvas.style.display = 'none';
-    return;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reducedMotion.matches) {
+    canvas.style.opacity = isDark ? '0.45' : '0.35';
   }
 
   resize();

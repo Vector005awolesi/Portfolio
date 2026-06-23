@@ -23,24 +23,30 @@
 
 /* Hero grid in light mode */
 [data-theme="light"] .hero-bg-grid {
-  background-image: radial-gradient(circle, rgba(26, 115, 232, 0.05) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(44, 62, 80, 0.06) 1px, transparent 1px);
 }
 
 [data-theme="light"] .hero-glow-1 {
-  background: radial-gradient(circle, rgba(26, 115, 232, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(52, 152, 219, 0.06) 0%, transparent 70%);
 }
 
 [data-theme="light"] .hero-glow-2 {
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.03) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(44, 62, 80, 0.04) 0%, transparent 70%);
 }
 
-/* Profile avatar in light mode */
-[data-theme="light"] .profile-avatar-glow {
-  background: radial-gradient(circle at center, rgba(26, 115, 232, 0.08) 0%, transparent 70%);
+/* Brand visual in light mode */
+[data-theme="light"] .brand-terminal {
+  box-shadow: var(--shadow-card), 0 0 0 1px rgba(52, 152, 219, 0.08);
 }
 
-[data-theme="light"] .profile-avatar-ring-outer {
-  background: linear-gradient(135deg, rgba(26, 115, 232, 0.22) 0%, rgba(124, 58, 237, 0.1) 100%);
+[data-theme="light"] .mobile-menu-btn-outside {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: var(--border);
+  box-shadow: var(--shadow-card);
+}
+
+[data-theme="light"] .brand-float {
+  background: #ffffff;
 }
 
 /* Stats bar in light mode */
@@ -113,7 +119,7 @@
 
 [data-theme="light"] .project-card:hover {
   border-color: var(--border-hover);
-  box-shadow: 0 12px 32px rgba(26, 115, 232, 0.08);
+  box-shadow: 0 12px 32px rgba(52, 152, 219, 0.10);
 }
 
 [data-theme="light"] .project-card-overlay {
@@ -121,7 +127,7 @@
 }
 
 [data-theme="light"] .project-overlay-cta {
-  background: var(--accent);
+  background: var(--accent-cta);
   color: #ffffff;
 }
 
@@ -164,8 +170,8 @@
 }
 
 [data-theme="light"] .modal-btn-live {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--accent-cta);
+  border-color: var(--accent-cta);
   color: #ffffff;
 }
 
@@ -204,7 +210,7 @@
 [data-theme="light"] .form-textarea:focus {
   background: var(--accent-dim);
   border-color: var(--accent-border);
-  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.12);
 }
 
 [data-theme="light"] .contact-detail-item {

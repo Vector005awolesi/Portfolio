@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initParallax();
   initCountUp();
   initCardTilt();
+  initTypedProfileCode();
 });
 
 // ─────────────────────────── THEME TOGGLE ───────────────────────────
@@ -86,11 +87,10 @@ function initLoadingScreen() {
   };
 
   if (document.readyState === 'complete') {
-    setTimeout(hide, 600);
+    setTimeout(hide, 1400);
   } else {
-    window.addEventListener('load', () => setTimeout(hide, 600));
-    // Fallback — hide after 3s max
-    setTimeout(hide, 3000);
+    window.addEventListener('load', () => setTimeout(hide, 1400));
+    setTimeout(hide, 3500);
   }
 }
 
@@ -537,6 +537,99 @@ function initCardTilt() {
   });
 }
 
+// ─────────────────────────── HERO BRAND LOTTIE ───────────────────────────
+function initTypedProfileCode() {
+  const codeEl = document.getElementById('typed-profile-code');
+  if (!codeEl) return;
+
+  const snippets = [
+    codeEl.dataset.code || codeEl.textContent,
+    "// Current stack\nconst stack = [\n  'React',\n  'Node.js',\n  'TypeScript'\n];",
+    "// Work mode\nconst available = true;\nconst location = 'Lagos, NG';",
+    "// Proof\nconst stats = {\n  years: '2+',\n  projects: '15+'\n};",
+  ];
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reducedMotion) {
+    codeEl.innerHTML = highlightCode(snippets[0]);
+    return;
+  }
+
+  let snippetIndex = 0;
+  let index = 0;
+  let deleting = false;
+  codeEl.innerHTML = '';
+
+  const typeNext = () => {
+    const source = snippets[snippetIndex];
+    codeEl.innerHTML = highlightCode(source.slice(0, index));
+
+    if (!deleting && codeEl.scrollHeight > codeEl.clientHeight && index > 0) {
+      deleting = true;
+      window.setTimeout(typeNext, 700);
+      return;
+    }
+
+    if (!deleting && index < source.length) {
+      index += 1;
+      const char = source[index - 1] || '';
+      const delay = char === '\n' ? 120 : char === ' ' ? 16 : 28;
+      window.setTimeout(typeNext, delay);
+      return;
+    }
+
+    if (!deleting) {
+      const shouldReset = codeEl.scrollHeight > codeEl.clientHeight || index >= source.length;
+      deleting = shouldReset;
+      window.setTimeout(typeNext, shouldReset ? 1300 : 120);
+      return;
+    }
+
+    if (index > 0) {
+      index = Math.max(0, index - 2);
+      window.setTimeout(typeNext, 16);
+      return;
+    }
+
+    deleting = false;
+    snippetIndex = (snippetIndex + 1) % snippets.length;
+    window.setTimeout(typeNext, 250);
+  };
+
+  function highlightCode(code) {
+    let escaped = code
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+
+    const tokens = [];
+    const stash = (html) => {
+      const key = `@@TOKEN_${tokens.length}@@`;
+      tokens.push(html);
+      return key;
+    };
+
+    escaped = escaped
+      .replace(/(\/\/.*)$/gm, (match) => stash(`<span class="code-comment">${match}</span>`))
+      .replace(/'([^']*)'/g, (match) => stash(`<span class="code-string">${match}</span>`))
+      .replace(/\b(const|let|true|false)\b/g, '<span class="code-keyword">$1</span>')
+      .replace(/\b(\d+\+?)\b/g, '<span class="code-num">$1</span>')
+      .replace(/^(\s*)([a-zA-Z_$][\w$]*)(?=:)/gm, '$1<span class="code-key">$2</span>')
+      .replace(/\b(victor|stack|available|location|stats)\b/g, '<span class="code-var">$1</span>');
+
+    return escaped.replace(/@@TOKEN_(\d+)@@/g, (_, id) => tokens[Number(id)]);
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries.some((entry) => entry.isIntersecting)) {
+      typeNext();
+      observer.disconnect();
+    }
+  }, { threshold: 0.4 });
+
+  observer.observe(codeEl);
+}
+
 // ─────────────────────────── HERO REVEALS ───────────────────────────
 function triggerHeroReveals() {
   document.querySelectorAll('.hero-reveal').forEach((el) => {
@@ -545,5 +638,3 @@ function triggerHeroReveals() {
 }
 
 // (Logo typing animation function removed per user request)
-
-

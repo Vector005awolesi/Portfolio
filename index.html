@@ -15,30 +15,51 @@
     <meta name="author" content="Awolesi Victor" />
     <meta name="robots" content="index, follow" />
     <meta property="og:title" content="Awolesi Victor — Fullstack Developer" />
-    <meta property="og:description" content="Professional portfolio of Awolesi Victor, Fullstack Developer in Lagos, Nigeria." />
+    <meta
+      property="og:description"
+      content="Professional portfolio of Awolesi Victor, Fullstack Developer in Lagos, Nigeria."
+    />
     <meta property="og:image" content="ASSETS/IMAGES/profile-main.png" />
-    <meta property="og:url" content="https://vector005awolesi.github.io/Portfolio/" />
+    <meta
+      property="og:url"
+      content="https://vector005awolesi.github.io/Portfolio/"
+    />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Awolesi Victor — Fullstack Developer" />
-    <meta name="twitter:description" content="Explore projects and skills of Awolesi Victor, a Fullstack Developer in Lagos, Nigeria." />
+    <meta
+      name="twitter:description"
+      content="Explore projects and skills of Awolesi Victor, a Fullstack Developer in Lagos, Nigeria."
+    />
     <meta name="twitter:image" content="ASSETS/IMAGES/profile-main.png" />
 
-    <title>Awolesi Victor — Fullstack Developer & Software Engineer | Lagos, Nigeria</title>
+    <title>
+      Awolesi Victor — Fullstack Developer & Software Engineer | Lagos, Nigeria
+    </title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vector005awolesi/Portfolio@main/ASSETS/styles/icon.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/vector005awolesi/Portfolio@main/ASSETS/styles/icon.css"
+    />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="ASSETS/IMAGES/favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="ASSETS/IMAGES/favicon.ico"
+      type="image/x-icon"
+    />
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="ASSETS/styles/style.css" />
@@ -46,40 +67,40 @@
     <script>
       // Tailwind config mapping to custom variables for dynamic themes
       tailwind.config = {
-        darkMode: ['selector', '[data-theme="dark"]'],
+        darkMode: ["selector", '[data-theme="dark"]'],
         theme: {
           extend: {
             fontFamily: {
-              inter: ['Inter', 'sans-serif'],
-              outfit: ['Outfit', 'sans-serif'],
-              mono: ['JetBrains Mono', 'monospace'],
+              inter: ["Inter", "sans-serif"],
+              outfit: ["Outfit", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
             },
             colors: {
               navy: {
-                950: 'var(--bg-base)',
-                900: 'var(--bg-surface)',
-                800: 'var(--bg-card)',
-                700: 'var(--bg-card-hover)',
-                600: 'var(--bg-elevated)',
-                500: 'var(--accent-dim)',
+                950: "var(--bg-base)",
+                900: "var(--bg-surface)",
+                800: "var(--bg-card)",
+                700: "var(--bg-card-hover)",
+                600: "var(--bg-elevated)",
+                500: "var(--accent-dim)",
               },
               slate: {
-                50: 'var(--text-primary)',
-                100: 'var(--text-primary)',
-                200: 'var(--text-primary)',
-                300: 'var(--text-secondary)',
-                400: 'var(--text-secondary)',
-                500: 'var(--text-muted)',
-                600: 'var(--text-muted)',
-                700: 'var(--text-muted)',
-                800: 'var(--text-muted)',
-                900: 'var(--text-primary)',
+                50: "var(--text-primary)",
+                100: "var(--text-primary)",
+                200: "var(--text-primary)",
+                300: "var(--text-secondary)",
+                400: "var(--text-secondary)",
+                500: "var(--text-muted)",
+                600: "var(--text-muted)",
+                700: "var(--text-muted)",
+                800: "var(--text-muted)",
+                900: "var(--text-primary)",
               },
               blue: {
-                400: 'var(--accent-light)',
-                500: 'var(--accent)',
-                600: 'var(--accent-solid)',
-                glow: 'var(--accent-dim)',
+                400: "var(--accent-light)",
+                500: "var(--accent)",
+                600: "var(--accent-solid)",
+                glow: "var(--accent-dim)",
               },
             },
           },
@@ -88,160 +109,315 @@
     </script>
   </head>
 
-  <body class="font-inter bg-navy-950 text-slate-100 min-h-screen overflow-x-hidden transition-colors duration-300" id="body">
-
+  <body
+    class="font-inter bg-navy-950 text-slate-100 min-h-screen overflow-x-hidden transition-colors duration-300"
+    id="body"
+  >
     <!-- ═══════════════════════════ LOADING SCREEN ═══════════════════════════ -->
     <div id="loadingContainer">
-      <div class="loader-ring"></div>
-      <p class="loader-text font-mono">Initializing<span class="loader-dots"></span></p>
+      <div class="loader-scene" aria-hidden="true">
+        <div class="loader-cube-3d">
+          <div class="loader-cube-face loader-face-front">
+            <div class="loader-fluid-track">
+              <div class="loader-fluid-fill"></div>
+              <div class="loader-fluid-wave"></div>
+            </div>
+          </div>
+          <div class="loader-cube-face loader-face-back"></div>
+          <div class="loader-cube-face loader-face-right"></div>
+          <div class="loader-cube-face loader-face-left"></div>
+          <div class="loader-cube-face loader-face-top"></div>
+          <div class="loader-cube-face loader-face-bottom"></div>
+        </div>
+      </div>
+      <p class="loader-text font-mono">
+        Initializing<span class="loader-dots"></span>
+      </p>
     </div>
 
     <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
-    <nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl z-50 rounded-full navbar-glass">
-      <div class="px-6 flex items-center justify-between h-14">
-        <!-- Logo -->
-        <a href="#hero" class="font-outfit text-blue-400 font-bold text-sm tracking-widest hover:text-blue-300 transition-colors logo-cursor">
-          &lt;AV /&gt;
-        </a>
-
-        <!-- Desktop Nav Links -->
-        <ul class="hidden md:flex items-center gap-1 nav-pill">
-          <li><a href="#hero" class="nav-link">About</a></li>
-          <li><a href="#tools" class="nav-link">Tools</a></li>
-          <li><a href="#career" class="nav-link">Career</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-
-        <!-- Right Controls -->
-        <div class="flex items-center gap-3">
-          <!-- Theme Toggle -->
-          <button id="theme-btn" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle light/dark mode">
-            <i class="fas fa-sharp fa-moon" id="theme-icon"></i>
-          </button>
-          
-          <!-- Hire Me CTA -->
-          <a href="#contact" class="hidden sm:inline-flex nav-hire-btn">
-            Hire Me <i class="fas fa-arrow-right text-[10px]"></i>
+    <div
+      class="navbar-shell fixed top-4 left-1/2 -translate-x-1/2 w-[94%] max-w-5xl z-50 flex items-start gap-2.5"
+    >
+      <nav id="navbar" class="navbar-glass flex-1 min-w-0 rounded-full">
+        <div
+          class="navbar-inner px-4 sm:px-6 flex items-center justify-between h-14 gap-2"
+        >
+          <!-- Logo -->
+          <a
+            href="#hero"
+            class="font-outfit text-blue-400 font-bold text-sm tracking-widest hover:text-blue-300 transition-colors logo-cursor shrink-0"
+          >
+            &lt;AV /&gt;
           </a>
 
-          <!-- Mobile menu button -->
-          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full text-slate-400 hover:text-blue-400 hover:bg-white/5 transition-all" aria-label="Open menu">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
-      </div>
+          <!-- Desktop Nav Links -->
+          <ul class="hidden md:flex items-center gap-1 nav-pill">
+            <li><a href="#hero" class="nav-link">About</a></li>
+            <li><a href="#tools" class="nav-link">Tools</a></li>
+            <li><a href="#career" class="nav-link">Career</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
 
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden mobile-menu-wrapper">
-        <div class="mobile-menu-inner">
-          <div class="px-6 py-4 space-y-2 border-t border-white/5">
-            <a href="#hero" class="mobile-nav-link" onclick="closeMobileMenu()">About</a>
-            <a href="#tools" class="mobile-nav-link" onclick="closeMobileMenu()">Tools</a>
-            <a href="#career" class="mobile-nav-link" onclick="closeMobileMenu()">Career</a>
-            <a href="#projects" class="mobile-nav-link" onclick="closeMobileMenu()">Projects</a>
-            <a href="#testimonials" class="mobile-nav-link" onclick="closeMobileMenu()">Testimonials</a>
-            <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
-            <a href="#contact" class="mobile-nav-link text-blue-400 font-semibold" onclick="closeMobileMenu()">Hire Me <i class="fas fa-arrow-right text-[10px] ml-1"></i></a>
+          <!-- Actions: Hire Me always visible + theme -->
+          <div class="navbar-actions flex items-center gap-2 shrink-0">
+            <a href="#contact" class="nav-hire-btn">
+              <span class="nav-hire-label">Hire Me</span>
+              <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+            <button
+              id="theme-btn"
+              class="theme-toggle-btn"
+              aria-label="Toggle theme"
+              title="Toggle light/dark mode"
+            >
+              <i class="fas fa-sharp fa-moon" id="theme-icon"></i>
+            </button>
+            <button
+              id="mobile-menu-btn"
+              class="mobile-menu-btn-outside md:hidden"
+              aria-label="Open menu"
+              aria-expanded="false"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
           </div>
         </div>
-      </div>
-    </nav>
+
+        <!-- Mobile Menu (dropdown inside pill) -->
+        <div id="mobile-menu" class="md:hidden mobile-menu-wrapper">
+          <div class="mobile-menu-inner">
+            <div class="px-6 py-4 space-y-2 border-t border-white/5">
+              <a
+                href="#hero"
+                class="mobile-nav-link"
+                onclick="closeMobileMenu()"
+                >About</a
+              >
+              <a
+                href="#tools"
+                class="mobile-nav-link"
+                onclick="closeMobileMenu()"
+                >Tools</a
+              >
+              <a
+                href="#career"
+                class="mobile-nav-link"
+                onclick="closeMobileMenu()"
+                >Career</a
+              >
+              <a
+                href="#projects"
+                class="mobile-nav-link"
+                onclick="closeMobileMenu()"
+                >Projects</a
+              >
+              <a
+                href="#testimonials"
+                class="mobile-nav-link"
+                onclick="closeMobileMenu()"
+                >Testimonials</a
+              >
+              <a
+                href="#contact"
+                class="mobile-nav-link"
+                onclick="closeMobileMenu()"
+                >Contact</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile menu toggle — outside the navbar pill -->
+    </div>
 
     <!-- ═══════════════════════════ HERO SECTION ═══════════════════════════ -->
-    <section id="hero" class="min-h-screen pt-24 pb-12 flex items-center relative overflow-hidden">
-      <!-- Animated Canvas Grid (dark mode only) -->
+    <section
+      id="hero"
+      class="min-h-screen pt-24 pb-12 flex items-start lg:items-center relative overflow-hidden"
+    >
+      <!-- Animated Canvas Grid -->
       <canvas id="hero-grid-canvas" class="hero-canvas"></canvas>
       <!-- Background grid + glow -->
       <div class="hero-bg-grid"></div>
       <div class="hero-glow-1"></div>
       <div class="hero-glow-2"></div>
 
-      <div class="hero-content max-w-6xl mx-auto px-4 sm:px-6 w-full py-8 lg:py-16">
-        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-
-          <!-- Left: Text Content -->
-          <div class="flex-1 text-center lg:text-left">
-            <div class="hero-reveal inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--accent-dim)] border border-[var(--accent-border)] mb-6" style="transition-delay: 100ms;">
-              <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-              <span class="font-mono text-xs text-blue-400 tracking-wider">Available for work</span>
+      <div
+        class="hero-content max-w-6xl mx-auto px-4 sm:px-6 w-full py-8 lg:py-16"
+      >
+        <div class="hero-layout">
+          <!-- Text Content — first on mobile, left on desktop -->
+          <div class="hero-text-col">
+            <div
+              class="hero-reveal hero-status-pill"
+              style="transition-delay: 100ms"
+            >
+              <span class="hero-status-dot"></span>
+              <span class="font-mono text-xs text-blue-400 tracking-wider"
+                >Available for work</span
+              >
             </div>
 
-            <h1 class="hero-reveal text-4xl sm:text-5xl lg:text-6xl font-bold font-outfit leading-tight mb-4 text-slate-100" style="transition-delay: 200ms;">
+            <p
+              class="hero-reveal hero-eyebrow font-mono text-xs text-slate-500 tracking-widest uppercase mb-2"
+              style="transition-delay: 180ms"
+            >
+              Fullstack Developer · Lagos, NG
+            </p>
+
+            <h1
+              class="hero-reveal hero-headline font-outfit font-bold text-slate-100"
+              style="transition-delay: 220ms"
+            >
               Hey, I'm
-              <span class="block gradient-text mt-1 font-outfit bounce-text">Awolesi Victor</span>
+              <span class="block gradient-text mt-1 font-outfit bounce-text"
+                >Awolesi Victor</span
+              >
             </h1>
 
-            <p class="hero-reveal text-lg sm:text-xl text-slate-400 font-medium mb-2" style="transition-delay: 300ms;">
+            <p
+              class="hero-reveal hero-role text-lg sm:text-xl text-slate-400 font-medium mb-3"
+              style="transition-delay: 300ms"
+            >
               Fullstack Developer &amp; Software Engineer
             </p>
 
-            <p class="hero-reveal text-slate-400 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed" style="transition-delay: 400ms;">
-              With over <strong class="text-slate-200">2+ years</strong> of experience building dynamic web applications and software.
-              CEO at <strong class="text-blue-400">INFINET Inc</strong>. I specialize in crafting end-to-end solutions that are fast,
-              accessible, and built to scale. Based in Lagos, Nigeria.
+            <p
+              class="hero-reveal hero-desc text-slate-400 mb-8 leading-relaxed"
+              style="transition-delay: 380ms"
+            >
+              With over <strong class="text-slate-200">2+ years</strong> of
+              experience building dynamic web applications and software. CEO at
+              <strong class="text-blue-400">INFINET Inc</strong>. I craft
+              end-to-end solutions that are fast, accessible, and built to
+              scale.
             </p>
 
-            <div class="hero-reveal flex flex-wrap gap-3 justify-center lg:justify-start" style="transition-delay: 500ms;">
+            <div
+              class="hero-reveal hero-cta-row"
+              style="transition-delay: 460ms"
+            >
               <a href="#contact" class="btn-primary">
                 <i class="fas fa-paper-plane"></i> Get In Touch
               </a>
-              <button class="btn-secondary" onclick="window.open('#', '_blank')">
-                <!-- TODO: Add resume PDF link -->
+              <button
+                class="btn-secondary"
+                onclick="window.open('#', '_blank')"
+              >
                 <i class="fas fa-download"></i> My Resume
               </button>
             </div>
 
-            <!-- Social Links -->
-            <div class="hero-reveal flex items-center gap-3 mt-8 justify-center lg:justify-start" style="transition-delay: 600ms;">
+            <div
+              class="hero-reveal hero-social-row"
+              style="transition-delay: 540ms"
+            >
               <span class="text-xs text-slate-500 font-mono">FOLLOW ME</span>
-              <div class="h-px w-8 bg-slate-700"></div>
+              <div class="hero-social-divider"></div>
               <div class="flex gap-2">
-                <a href="https://github.com/vector005awolesi" target="_blank" class="social-icon-btn" aria-label="GitHub">
+                <a
+                  href="https://github.com/vector005awolesi"
+                  target="_blank"
+                  class="social-icon-btn"
+                  aria-label="GitHub"
+                >
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/awolesi-victor-236435362" target="_blank" class="social-icon-btn" aria-label="LinkedIn">
+                <a
+                  href="https://linkedin.com/in/awolesi-victor-236435362"
+                  target="_blank"
+                  class="social-icon-btn"
+                  aria-label="LinkedIn"
+                >
                   <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://x.com/awolesi_victor" target="_blank" class="social-icon-btn" aria-label="X / Twitter">
+                <a
+                  href="https://x.com/awolesi_victor"
+                  target="_blank"
+                  class="social-icon-btn"
+                  aria-label="X / Twitter"
+                >
                   <i class="fab fa-x-twitter"></i>
                 </a>
-                <a href="https://facebook.com/awolesi.victor" target="_blank" class="social-icon-btn" aria-label="Facebook">
+                <a
+                  href="https://facebook.com/awolesi.victor"
+                  target="_blank"
+                  class="social-icon-btn"
+                  aria-label="Facebook"
+                >
                   <i class="fab fa-facebook"></i>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Right: Profile Image -->
-          <div class="flex-shrink-0 hero-reveal" style="transition-delay: 350ms;">
-            <div class="profile-avatar-container">
-              <div class="profile-avatar-glow"></div>
-              <div class="profile-avatar-ring-outer">
-                <div class="profile-avatar-ring-inner">
-                  <img
-                    src="ASSETS/IMAGES/profile-main.png"
-                    alt="Awolesi Victor — Fullstack Developer from Lagos, Nigeria"
-                    class="profile-avatar-img"
-                  />
+          <!-- Brand Visual — below text on mobile, right on desktop -->
+          <div
+            class="hero-brand-visual hero-reveal"
+            style="transition-delay: 350ms"
+            role="img"
+            aria-label="Developer brand visual with coding animation, AV monogram, and React, Node.js, TypeScript stack"
+          >
+            <div class="brand-visual-glow"></div>
+            <div class="brand-visual-frame">
+              <div class="brand-terminal">
+                <div class="brand-terminal-header">
+                  <span class="brand-dot brand-dot-red"></span>
+                  <span class="brand-dot brand-dot-yellow"></span>
+                  <span class="brand-dot brand-dot-green"></span>
+                  <span class="brand-terminal-url">awolesi.dev</span>
+                  <div class="brand-code-signal" aria-hidden="true">
+                    <span class="signal-line"></span>
+                    <span class="signal-line"></span>
+                    <span class="signal-line"></span>
+                  </div>
+                </div>
+                <div class="brand-terminal-body">
+                  <div class="brand-monogram">&lt;AV /&gt;</div>
+                  <pre
+                    class="brand-code"
+                  ><code id="typed-profile-code" data-code="// Victor at a glance
+const victor = {
+  name: 'Awolesi Victor',
+  role: 'Fullstack Developer',
+  focus: 'Web apps'
+};">// Victor at a glance
+const victor = {
+  name: 'Awolesi Victor',
+  role: 'Fullstack Developer'
+};</code><span class="brand-cursor"></span></pre>
                 </div>
               </div>
-              <!-- Stat chips overlapping avatar container -->
-              <div class="profile-avatar-badge profile-avatar-badge-1">
-                <span class="badge-num">2+</span>
-                <span class="badge-lbl">Years Exp.</span>
+              <!-- <div class="brand-float brand-float-1"><i class="fab fa-react"></i> React</div> -->
+              <div class="brand-float brand-float-2">
+                <i class="fab fa-node-js"></i> Node.js
               </div>
-              <div class="profile-avatar-badge profile-avatar-badge-2">
-                <span class="badge-num">20+</span>
-                <span class="badge-lbl">Projects</span>
+              <div class="brand-float brand-float-3">
+                <i class="fab fa-js"></i> TypeScript
               </div>
+            </div>
+            <div class="brand-stat-badge brand-stat-badge-1">
+              <span class="badge-num">2+</span>
+              <span class="badge-lbl">Years Exp.</span>
+            </div>
+            <div
+              class="brand-stat-badge top-[10px] right-[-50px] brand-stat-badge-2"
+            >
+              <span class="badge-num">15+</span>
+              <span class="badge-lbl">Projects</span>
             </div>
           </div>
         </div>
 
         <!-- Stats Bar -->
-        <div class="stats-bar mt-16 hero-reveal" style="transition-delay: 700ms;">
+        <div
+          class="stats-bar hero-stats-bar mt-12 lg:mt-16 hero-reveal"
+          style="transition-delay: 620ms"
+        >
           <div class="stat-item">
             <span class="stat-num">2+</span>
             <span class="stat-label">Years of Experience</span>
@@ -269,19 +445,22 @@
     <section id="tools" class="section-pad relative">
       <div class="section-glow-left"></div>
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-
         <div class="section-header reveal-up">
           <span class="section-tag">MY ARSENAL</span>
-          <h2 class="section-title">Tools I <span class="gradient-text bounce-text">Work With</span></h2>
-          <p class="section-subtitle">The technologies and tools I use to build end-to-end digital products</p>
+          <h2 class="section-title">
+            Tools I <span class="gradient-text bounce-text">Work With</span>
+          </h2>
+          <p class="section-subtitle">
+            The technologies and tools I use to build end-to-end digital
+            products
+          </p>
         </div>
 
         <!-- Tech Tools Grid -->
         <div class="tools-grid reveal-stagger">
-
           <div class="tool-card group" data-tool="HTML5">
             <div class="tool-icon-wrap">
-              <i class="fab fa-html5 tool-icon" style="color:#e34c26"></i>
+              <i class="fab fa-html5 tool-icon" style="color: #e34c26"></i>
             </div>
             <span class="tool-name">HTML5</span>
             <span class="tool-category">Markup</span>
@@ -289,7 +468,7 @@
 
           <div class="tool-card group" data-tool="CSS3">
             <div class="tool-icon-wrap">
-              <i class="fab fa-css3-alt tool-icon" style="color:#264de4"></i>
+              <i class="fab fa-css3-alt tool-icon" style="color: #264de4"></i>
             </div>
             <span class="tool-name">CSS3</span>
             <span class="tool-category">Styling</span>
@@ -297,7 +476,7 @@
 
           <div class="tool-card group" data-tool="JavaScript">
             <div class="tool-icon-wrap">
-              <i class="fab fa-js tool-icon" style="color:#f7df1e"></i>
+              <i class="fab fa-js tool-icon" style="color: #f7df1e"></i>
             </div>
             <span class="tool-name">JavaScript</span>
             <span class="tool-category">Language</span>
@@ -305,7 +484,11 @@
 
           <div class="tool-card group" data-tool="TypeScript">
             <div class="tool-icon-wrap">
-              <span class="tool-icon font-mono font-bold text-xl" style="color:#3178c6">TS</span>
+              <span
+                class="tool-icon font-mono font-bold text-xl"
+                style="color: #3178c6"
+                >TS</span
+              >
             </div>
             <span class="tool-name">TypeScript</span>
             <span class="tool-category">Language</span>
@@ -313,7 +496,7 @@
 
           <div class="tool-card group" data-tool="React">
             <div class="tool-icon-wrap">
-              <i class="fab fa-react tool-icon" style="color:#61dafb"></i>
+              <i class="fab fa-react tool-icon" style="color: #61dafb"></i>
             </div>
             <span class="tool-name">React</span>
             <span class="tool-category">Frontend</span>
@@ -321,7 +504,11 @@
 
           <div class="tool-card group" data-tool="Tailwind CSS">
             <div class="tool-icon-wrap">
-              <span class="tool-icon font-mono font-bold text-xl" style="color:#38bdf8">TW</span>
+              <span
+                class="tool-icon font-mono font-bold text-xl"
+                style="color: #38bdf8"
+                >TW</span
+              >
             </div>
             <span class="tool-name">Tailwind CSS</span>
             <span class="tool-category">Styling</span>
@@ -329,7 +516,7 @@
 
           <div class="tool-card group" data-tool="Node.js">
             <div class="tool-icon-wrap">
-              <i class="fab fa-node-js tool-icon" style="color:#68a063"></i>
+              <i class="fab fa-node-js tool-icon" style="color: #68a063"></i>
             </div>
             <span class="tool-name">Node.js</span>
             <span class="tool-category">Backend</span>
@@ -337,7 +524,11 @@
 
           <div class="tool-card group" data-tool="Express">
             <div class="tool-icon-wrap">
-              <span class="tool-icon font-mono font-bold text-lg" style="color:#ffffff">EX</span>
+              <span
+                class="tool-icon font-mono font-bold text-lg"
+                style="color: #ffffff"
+                >EX</span
+              >
             </div>
             <span class="tool-name">Express</span>
             <span class="tool-category">Backend</span>
@@ -345,7 +536,11 @@
 
           <div class="tool-card group" data-tool="MongoDB">
             <div class="tool-icon-wrap">
-              <span class="tool-icon font-mono font-bold text-xl" style="color:#47a248">MG</span>
+              <span
+                class="tool-icon font-mono font-bold text-xl"
+                style="color: #47a248"
+                >MG</span
+              >
             </div>
             <span class="tool-name">MongoDB</span>
             <span class="tool-category">Database</span>
@@ -353,7 +548,7 @@
 
           <div class="tool-card group" data-tool="SQL">
             <div class="tool-icon-wrap">
-              <i class="fas fa-database tool-icon" style="color:#f29111"></i>
+              <i class="fas fa-database tool-icon" style="color: #f29111"></i>
             </div>
             <span class="tool-name">SQL</span>
             <span class="tool-category">Database</span>
@@ -361,7 +556,11 @@
 
           <div class="tool-card group" data-tool="Supabase">
             <div class="tool-icon-wrap">
-              <span class="tool-icon font-mono font-bold text-xl" style="color:#3ecf8e">SB</span>
+              <span
+                class="tool-icon font-mono font-bold text-xl"
+                style="color: #3ecf8e"
+                >SB</span
+              >
             </div>
             <span class="tool-name">Supabase</span>
             <span class="tool-category">Backend-as-a-Service</span>
@@ -369,7 +568,7 @@
 
           <div class="tool-card group" data-tool="GitHub">
             <div class="tool-icon-wrap">
-              <i class="fab fa-github tool-icon" style="color:#ffffff"></i>
+              <i class="fab fa-github tool-icon" style="color: #ffffff"></i>
             </div>
             <span class="tool-name">GitHub</span>
             <span class="tool-category">Version Control</span>
@@ -377,7 +576,10 @@
         </div>
 
         <!-- Also skilled in badge row -->
-        <div class="flex flex-wrap gap-2 mt-8 justify-center reveal-up" style="animation-delay:0.3s">
+        <div
+          class="flex flex-wrap gap-2 mt-8 justify-center reveal-up"
+          style="animation-delay: 0.3s"
+        >
           <span class="also-badge">UI/UX Design</span>
           <span class="also-badge">SEO Optimization</span>
           <span class="also-badge">REST APIs</span>
@@ -386,21 +588,28 @@
         </div>
 
         <!-- ═══ SOFT SKILLS ═══ -->
-        <div class="mt-20 reveal-up" style="animation-delay:0.1s">
+        <div class="mt-20 reveal-up" style="animation-delay: 0.1s">
           <div class="section-header">
             <span class="section-tag">PEOPLE SKILLS</span>
-            <h2 class="section-title">Soft <span class="gradient-text bounce-text">Skills</span></h2>
-            <p class="section-subtitle">Technical excellence is only half the story — here's how I work with people</p>
+            <h2 class="section-title">
+              Soft <span class="gradient-text bounce-text">Skills</span>
+            </h2>
+            <p class="section-subtitle">
+              Technical excellence is only half the story — here's how I work
+              with people
+            </p>
           </div>
 
           <div class="soft-skills-grid reveal-stagger">
-
             <div class="soft-skill-card">
               <div class="soft-skill-icon-wrap">
                 <i class="fas fa-crown soft-skill-icon"></i>
               </div>
               <h3 class="soft-skill-title">Leadership</h3>
-              <p class="soft-skill-desc">CEO of INFINET Inc. Leading cross-functional teams, setting project vision and driving execution toward shared goals.</p>
+              <p class="soft-skill-desc">
+                CEO of INFINET Inc. Leading cross-functional teams, setting
+                project vision and driving execution toward shared goals.
+              </p>
             </div>
 
             <div class="soft-skill-card">
@@ -408,7 +617,11 @@
                 <i class="fas fa-comments soft-skill-icon"></i>
               </div>
               <h3 class="soft-skill-title">Communication</h3>
-              <p class="soft-skill-desc">Articulating complex technical concepts clearly to both technical and non-technical stakeholders. Active listener and empathetic communicator.</p>
+              <p class="soft-skill-desc">
+                Articulating complex technical concepts clearly to both
+                technical and non-technical stakeholders. Active listener and
+                empathetic communicator.
+              </p>
             </div>
 
             <div class="soft-skill-card">
@@ -416,7 +629,11 @@
                 <i class="fas fa-lightbulb soft-skill-icon"></i>
               </div>
               <h3 class="soft-skill-title">Problem Solving</h3>
-              <p class="soft-skill-desc">Analytical thinker who breaks down complex challenges into manageable pieces and delivers creative, efficient solutions under pressure.</p>
+              <p class="soft-skill-desc">
+                Analytical thinker who breaks down complex challenges into
+                manageable pieces and delivers creative, efficient solutions
+                under pressure.
+              </p>
             </div>
 
             <div class="soft-skill-card">
@@ -424,7 +641,10 @@
                 <i class="fas fa-users soft-skill-icon"></i>
               </div>
               <h3 class="soft-skill-title">Teamwork</h3>
-              <p class="soft-skill-desc">Collaborative team player who thrives in agile environments, contributes meaningfully and uplifts those around me.</p>
+              <p class="soft-skill-desc">
+                Collaborative team player who thrives in agile environments,
+                contributes meaningfully and uplifts those around me.
+              </p>
             </div>
 
             <div class="soft-skill-card">
@@ -432,7 +652,11 @@
                 <i class="fas fa-arrows-rotate soft-skill-icon"></i>
               </div>
               <h3 class="soft-skill-title">Adaptability</h3>
-              <p class="soft-skill-desc">Quick to embrace new technologies, workflows, and requirements. Comfortable navigating ambiguity and pivoting strategies when needed.</p>
+              <p class="soft-skill-desc">
+                Quick to embrace new technologies, workflows, and requirements.
+                Comfortable navigating ambiguity and pivoting strategies when
+                needed.
+              </p>
             </div>
 
             <div class="soft-skill-card">
@@ -440,9 +664,12 @@
                 <i class="fas fa-brain soft-skill-icon"></i>
               </div>
               <h3 class="soft-skill-title">Critical Thinking</h3>
-              <p class="soft-skill-desc">Evaluating options objectively, questioning assumptions and making data-informed decisions that align with both user needs and business goals.</p>
+              <p class="soft-skill-desc">
+                Evaluating options objectively, questioning assumptions and
+                making data-informed decisions that align with both user needs
+                and business goals.
+              </p>
             </div>
-
           </div>
         </div>
       </div>
@@ -452,15 +679,17 @@
     <section id="career" class="section-pad relative">
       <div class="section-glow-right"></div>
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-
         <div class="section-header reveal-up">
           <span class="section-tag">WORK HISTORY</span>
-          <h2 class="section-title">My <span class="gradient-text bounce-text">Experience</span></h2>
-          <p class="section-subtitle">My professional journey and key milestones</p>
+          <h2 class="section-title">
+            My <span class="gradient-text bounce-text">Experience</span>
+          </h2>
+          <p class="section-subtitle">
+            My professional journey and key milestones
+          </p>
         </div>
 
         <div class="timeline reveal-stagger">
-
           <div class="timeline-item">
             <div class="timeline-marker">
               <i class="fas fa-briefcase"></i>
@@ -474,9 +703,10 @@
                 <span class="timeline-badge">JAN 2025 — Present</span>
               </div>
               <p class="timeline-desc">
-                Founded and currently leading INFINET Inc, overseeing project development, strategy and execution.
-                Actively involved in full-stack coding, team coordination and delivering innovative digital solutions
-                for clients across multiple industries.
+                Founded and currently leading INFINET Inc, overseeing project
+                development, strategy and execution. Actively involved in
+                full-stack coding, team coordination and delivering innovative
+                digital solutions for clients across multiple industries.
               </p>
               <div class="flex flex-wrap gap-2 mt-3">
                 <span class="tl-tag">Leadership</span>
@@ -500,8 +730,10 @@
                 <span class="timeline-badge">SEP 2025 — Present</span>
               </div>
               <p class="timeline-desc">
-                Collaborated with a team of developers to design, build and test an AI model. Contributed to the
-                codebase, problem-solving sessions and cross-team communication, advancing the project from concept to prototype.
+                Collaborated with a team of developers to design, build and test
+                an AI model. Contributed to the codebase, problem-solving
+                sessions and cross-team communication, advancing the project
+                from concept to prototype.
               </p>
               <div class="flex flex-wrap gap-2 mt-3">
                 <span class="tl-tag">AI/ML</span>
@@ -519,14 +751,17 @@
               <div class="timeline-header">
                 <div>
                   <h3 class="timeline-title">Fullstack Developer</h3>
-                  <p class="timeline-company">Personal Projects &amp; Freelance</p>
+                  <p class="timeline-company">
+                    Personal Projects &amp; Freelance
+                  </p>
                 </div>
                 <span class="timeline-badge">DEC 2023 — Present</span>
               </div>
               <p class="timeline-desc">
-                Independently developed 15+ projects ranging from e-commerce platforms, fintech apps, educational tools
-                and agency websites. Continuously expanding skill set across the full stack — from pixel-perfect UI to
-                robust backend APIs.
+                Independently developed 15+ projects ranging from e-commerce
+                platforms, fintech apps, educational tools and agency websites.
+                Continuously expanding skill set across the full stack — from
+                pixel-perfect UI to robust backend APIs.
               </p>
               <div class="flex flex-wrap gap-2 mt-3">
                 <span class="tl-tag">React</span>
@@ -536,7 +771,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -545,21 +779,37 @@
     <section id="projects" class="section-pad relative">
       <div class="section-glow-left"></div>
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-
         <div class="section-header reveal-up">
           <span class="section-tag">PORTFOLIO</span>
-          <h2 class="section-title">Featured <span class="gradient-text bounce-text">Projects</span></h2>
-          <p class="section-subtitle">Click any card to explore the full project details, screenshots and links</p>
+          <h2 class="section-title">
+            Featured <span class="gradient-text bounce-text">Projects</span>
+          </h2>
+          <p class="section-subtitle">
+            Click any card to explore the full project details, screenshots and
+            links
+          </p>
         </div>
 
         <div class="projects-grid reveal-stagger">
-
           <!-- PROJECT 1: Portfolio Website -->
-          <article class="project-card" onclick="openModal('modal-portfolio')" tabindex="0" role="button" aria-label="View Portfolio Website project details">
+          <article
+            class="project-card"
+            onclick="openModal('modal-portfolio')"
+            tabindex="0"
+            role="button"
+            aria-label="View Portfolio Website project details"
+          >
             <div class="project-card-img-wrap">
-              <img src="ASSETS/IMAGES/portfolio-light.png" alt="Awolesi Victor Portfolio Website" class="project-card-img" loading="lazy" />
+              <img
+                src="ASSETS/IMAGES/portfolio-p.png"
+                alt="Awolesi Victor Portfolio Website"
+                class="project-card-img"
+                loading="lazy"
+              />
               <div class="project-card-overlay">
-                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
               </div>
             </div>
             <div class="project-card-body">
@@ -567,7 +817,10 @@
                 <h3 class="project-card-title">Portfolio Website</h3>
                 <span class="project-type-badge">Web Dev</span>
               </div>
-              <p class="project-card-desc">A responsive, modern portfolio to showcase skills and projects in a clean, user-friendly way.</p>
+              <p class="project-card-desc">
+                A responsive, modern portfolio to showcase skills and projects
+                in a clean, user-friendly way.
+              </p>
               <div class="project-stack">
                 <span class="stack-pill">HTML</span>
                 <span class="stack-pill">CSS</span>
@@ -578,11 +831,24 @@
           </article>
 
           <!-- PROJECT 2: Quix AI -->
-          <article class="project-card" onclick="openModal('modal-quix')" tabindex="0" role="button" aria-label="View Quix AI project details">
+          <article
+            class="project-card"
+            onclick="openModal('modal-quix')"
+            tabindex="0"
+            role="button"
+            aria-label="View Quix AI project details"
+          >
             <div class="project-card-img-wrap">
-              <img src="ASSETS/IMAGES/app-preview.png" alt="Quix AI study app screenshot" class="project-card-img" loading="lazy" />
+              <img
+                src="ASSETS/IMAGES/app-preview.png"
+                alt="Quix AI study app screenshot"
+                class="project-card-img"
+                loading="lazy"
+              />
               <div class="project-card-overlay">
-                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
               </div>
             </div>
             <div class="project-card-body">
@@ -590,7 +856,10 @@
                 <h3 class="project-card-title">Quix AI</h3>
                 <span class="project-type-badge">Web App</span>
               </div>
-              <p class="project-card-desc">A web app that helps students with AI-powered study tools for educational support.</p>
+              <p class="project-card-desc">
+                A web app that helps students with AI-powered study tools for
+                educational support.
+              </p>
               <div class="project-stack">
                 <span class="stack-pill">React</span>
                 <span class="stack-pill">Tailwind</span>
@@ -600,35 +869,25 @@
             </div>
           </article>
 
-          <!-- PROJECT 3: V9 Technologies -->
-          <article class="project-card" onclick="openModal('modal-v9')" tabindex="0" role="button" aria-label="View V9 Technologies project details">
+          <!-- PROJECT 3: Soft Store NG -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-softstore')"
+            tabindex="0"
+            role="button"
+            aria-label="View Soft Store NG project details"
+          >
             <div class="project-card-img-wrap">
-              <img src="ASSETS/IMAGES/v9-technologies.png" alt="V9 Technologies agency website" class="project-card-img" loading="lazy" />
+              <img
+                src="ASSETS/IMAGES/soft-store.png"
+                alt="Soft Store NG ecommerce website"
+                class="project-card-img"
+                loading="lazy"
+              />
               <div class="project-card-overlay">
-                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
-              </div>
-            </div>
-            <div class="project-card-body">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <h3 class="project-card-title">V9 Technologies</h3>
-                <span class="project-type-badge">Agency Site</span>
-              </div>
-              <p class="project-card-desc">A web development agency website where clients can contact developers to build their projects.</p>
-              <div class="project-stack">
-                <span class="stack-pill">React</span>
-                <span class="stack-pill">Tailwind</span>
-                <span class="stack-pill">Framer</span>
-                <span class="stack-pill stack-pill-more">+3</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- PROJECT 4: Soft Store NG -->
-          <article class="project-card" onclick="openModal('modal-softstore')" tabindex="0" role="button" aria-label="View Soft Store NG project details">
-            <div class="project-card-img-wrap">
-              <img src="ASSETS/IMAGES/soft-store.png" alt="Soft Store NG ecommerce website" class="project-card-img" loading="lazy" />
-              <div class="project-card-overlay">
-                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
               </div>
             </div>
             <div class="project-card-body">
@@ -636,7 +895,10 @@
                 <h3 class="project-card-title">Soft Store NG</h3>
                 <span class="project-type-badge">E-Commerce</span>
               </div>
-              <p class="project-card-desc">An e-commerce platform with product catalogs, shopping cart and integrated payment systems.</p>
+              <p class="project-card-desc">
+                An e-commerce platform with product catalogs, shopping cart and
+                integrated payment systems.
+              </p>
               <div class="project-stack">
                 <span class="stack-pill">React</span>
                 <span class="stack-pill">Tailwind</span>
@@ -646,12 +908,180 @@
             </div>
           </article>
 
-          <!-- PROJECT 5: TaxClarity -->
-          <article class="project-card" onclick="openModal('modal-taxclarity')" tabindex="0" role="button" aria-label="View TaxClarity project details">
+          <!-- PROJECT 4: Bammy Makeover -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-bammy')"
+            tabindex="0"
+            role="button"
+            aria-label="View Bammy Makeover project details"
+          >
             <div class="project-card-img-wrap">
-              <img src="ASSETS/IMAGES/taxclarity.png" alt="TaxClarity website screenshot" class="project-card-img" loading="lazy" />
+              <img
+                src="ASSETS/IMAGES/bammymakeover-hero.png"
+                alt="Bammy Makeover portfolio website"
+                class="project-card-img"
+                loading="lazy"
+              />
               <div class="project-card-overlay">
-                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Bammy Makeover</h3>
+                <span class="project-type-badge">Beauty / Branding</span>
+              </div>
+              <p class="project-card-desc">
+                A polished portfolio website for a makeup artist focused on
+                services, gallery storytelling and a premium visual identity.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Tailwind</span>
+                <span class="stack-pill stack-pill-more">+2</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 5: AETHERIA Estate -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-aetheria')"
+            tabindex="0"
+            role="button"
+            aria-label="View AETHERIA Estate project details"
+          >
+            <div class="project-card-img-wrap">
+              <img
+                src="ASSETS/IMAGES/real-estate.png"
+                alt="AETHERIA Estate real estate website"
+                class="project-card-img"
+                loading="lazy"
+              />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">AETHERIA Estate</h3>
+                <span class="project-type-badge">Real Estate</span>
+              </div>
+              <p class="project-card-desc">
+                A modern real estate experience for a realtor with elevated
+                property showcases, service highlights and high-converting CTAs.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">HTML</span>
+                <span class="stack-pill">CSS</span>
+                <span class="stack-pill">Tailwind</span>
+                <span class="stack-pill">JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 6: Ephraim College -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-ephraim')"
+            tabindex="0"
+            role="button"
+            aria-label="View Ephraim College project details"
+          >
+            <div class="project-card-img-wrap">
+              <img
+                src="ASSETS/IMAGES/ephraim-college-hero.png"
+                alt="Ephraim College school website"
+                class="project-card-img"
+                loading="lazy"
+              />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Ephraim College</h3>
+                <span class="project-type-badge">Education</span>
+              </div>
+              <p class="project-card-desc">
+                A dynamic school website for an international institution with
+                immersive storytelling, campus highlights and admissions flow.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Tailwind</span>
+                <span class="stack-pill">Framer</span>
+                <span class="stack-pill stack-pill-more">+2</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 7: V9 Technologies -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-v9')"
+            tabindex="0"
+            role="button"
+            aria-label="View V9 Technologies project details"
+          >
+            <div class="project-card-img-wrap">
+              <img
+                src="ASSETS/IMAGES/v9-technologies.png"
+                alt="V9 Technologies agency website"
+                class="project-card-img"
+                loading="lazy"
+              />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">V9 Technologies</h3>
+                <span class="project-type-badge">Agency Site</span>
+              </div>
+              <p class="project-card-desc">
+                A web development agency website where clients can contact
+                developers to build their projects.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Tailwind</span>
+                <span class="stack-pill">Framer</span>
+                <span class="stack-pill stack-pill-more">+3</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 8: TaxClarity -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-taxclarity')"
+            tabindex="0"
+            role="button"
+            aria-label="View TaxClarity project details"
+          >
+            <div class="project-card-img-wrap">
+              <img
+                src="ASSETS/IMAGES/taxclarity.png"
+                alt="TaxClarity website screenshot"
+                class="project-card-img"
+                loading="lazy"
+              />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
               </div>
             </div>
             <div class="project-card-body">
@@ -659,7 +1089,10 @@
                 <h3 class="project-card-title">TaxClarity</h3>
                 <span class="project-type-badge">Web Dev</span>
               </div>
-              <p class="project-card-desc">A website developed to clarify and enlighten people on how they are being taxed in Nigeria.</p>
+              <p class="project-card-desc">
+                A website developed to clarify and enlighten people on how they
+                are being taxed in Nigeria.
+              </p>
               <div class="project-stack">
                 <span class="stack-pill">React</span>
                 <span class="stack-pill">Tailwind CSS</span>
@@ -667,12 +1100,25 @@
             </div>
           </article>
 
-          <!-- PROJECT 6: Vera Landscaping -->
-          <article class="project-card" onclick="openModal('modal-vera')" tabindex="0" role="button" aria-label="View Vera Landscaping project details">
+          <!-- PROJECT 9: Vera Landscaping -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-vera')"
+            tabindex="0"
+            role="button"
+            aria-label="View Vera Landscaping project details"
+          >
             <div class="project-card-img-wrap">
-              <img src="ASSETS/IMAGES/vera.png" alt="Vera landscaping website" class="project-card-img" loading="lazy" />
+              <img
+                src="ASSETS/IMAGES/vera.png"
+                alt="Vera landscaping website"
+                class="project-card-img"
+                loading="lazy"
+              />
               <div class="project-card-overlay">
-                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
               </div>
             </div>
             <div class="project-card-body">
@@ -680,7 +1126,10 @@
                 <h3 class="project-card-title">Vera Landscaping</h3>
                 <span class="project-type-badge">Web Dev</span>
               </div>
-              <p class="project-card-desc">A modern landscaping service website focused on clean design, lawn care and outdoor maintenance.</p>
+              <p class="project-card-desc">
+                A modern landscaping service website focused on clean design,
+                lawn care and outdoor maintenance.
+              </p>
               <div class="project-stack">
                 <span class="stack-pill">HTML</span>
                 <span class="stack-pill">CSS</span>
@@ -690,12 +1139,25 @@
             </div>
           </article>
 
-          <!-- PROJECT 7: Result Processor -->
-          <article class="project-card" onclick="openModal('modal-result')" tabindex="0" role="button" aria-label="View Result Processor project details">
+          <!-- PROJECT 10: Result Processor -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-result')"
+            tabindex="0"
+            role="button"
+            aria-label="View Result Processor project details"
+          >
             <div class="project-card-img-wrap">
-              <img src="ASSETS/IMAGES/result-compiler.png" alt="Result Processor web app" class="project-card-img" loading="lazy" />
+              <img
+                src="ASSETS/IMAGES/result-compiler.png"
+                alt="Result Processor web app"
+                class="project-card-img"
+                loading="lazy"
+              />
               <div class="project-card-overlay">
-                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
               </div>
             </div>
             <div class="project-card-body">
@@ -703,7 +1165,10 @@
                 <h3 class="project-card-title">Result Processor</h3>
                 <span class="project-type-badge">EdTech Tool</span>
               </div>
-              <p class="project-card-desc">Automatically processes student scores, evaluates performance and generates printable report cards.</p>
+              <p class="project-card-desc">
+                Automatically processes student scores, evaluates performance
+                and generates printable report cards.
+              </p>
               <div class="project-stack">
                 <span class="stack-pill">HTML</span>
                 <span class="stack-pill">CSS</span>
@@ -711,74 +1176,6 @@
               </div>
             </div>
           </article>
-
-          <!-- PROJECT 8: SmartPlay RPS AI -->
-          <article class="project-card" onclick="openModal('modal-rps')" tabindex="0" role="button" aria-label="View SmartPlay RPS AI project details">
-            <div class="project-card-img-wrap">
-              <img src="ASSETS/IMAGES/rps.png" alt="SmartPlay Rock Paper Scissors AI" class="project-card-img" loading="lazy" />
-              <div class="project-card-overlay">
-                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
-              </div>
-            </div>
-            <div class="project-card-body">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <h3 class="project-card-title">SmartPlay — RPS AI</h3>
-                <span class="project-type-badge">Game / AI</span>
-              </div>
-              <p class="project-card-desc">An interactive RPS game with a simulated AI opponent using logic and user pattern tracking.</p>
-              <div class="project-stack">
-                <span class="stack-pill">HTML</span>
-                <span class="stack-pill">CSS</span>
-                <span class="stack-pill">JavaScript</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- PROJECT 9: PAYJ Finance -->
-          <article class="project-card" onclick="openModal('modal-payj')" tabindex="0" role="button" aria-label="View PAYJ Finance webapp project details">
-            <div class="project-card-img-wrap">
-              <img src="ASSETS/IMAGES/payj.png" alt="PAYJ Finance web application" class="project-card-img" loading="lazy" />
-              <div class="project-card-overlay">
-                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
-              </div>
-            </div>
-            <div class="project-card-body">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <h3 class="project-card-title">PAYJ — Finance App</h3>
-                <span class="project-type-badge in-dev">In Development</span>
-              </div>
-              <p class="project-card-desc">A fintech-inspired web application concept that simulates modern digital banking features.</p>
-              <div class="project-stack">
-                <span class="stack-pill">React</span>
-                <span class="stack-pill">Tailwind</span>
-                <span class="stack-pill">Stripe</span>
-                <span class="stack-pill stack-pill-more">+3</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- PROJECT 10: Product Landing Page -->
-          <article class="project-card" onclick="openModal('modal-landing')" tabindex="0" role="button" aria-label="View Product Landing Page project details">
-            <div class="project-card-img-wrap">
-              <img src="ASSETS/IMAGES/proland_landing_page_product.png" alt="Product Landing Page" class="project-card-img" loading="lazy" />
-              <div class="project-card-overlay">
-                <span class="project-overlay-cta"><i class="fas fa-expand-alt"></i> View Project</span>
-              </div>
-            </div>
-            <div class="project-card-body">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <h3 class="project-card-title">Product Landing Page</h3>
-                <span class="project-type-badge">Web Dev</span>
-              </div>
-              <p class="project-card-desc">A modern responsive landing page built to showcase a product/service with engaging UI sections.</p>
-              <div class="project-stack">
-                <span class="stack-pill">HTML</span>
-                <span class="stack-pill">CSS</span>
-                <span class="stack-pill">JavaScript</span>
-              </div>
-            </div>
-          </article>
-
         </div>
       </div>
     </section>
@@ -788,25 +1185,65 @@
     <!-- ═══════════════════════════ PROJECT MODALS ═══════════════════════════ -->
 
     <!-- MODAL: Portfolio -->
-    <div id="modal-portfolio" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-portfolio-title">
+    <div
+      id="modal-portfolio"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-portfolio-title"
+    >
       <div class="modal-container">
-        <button class="modal-close" onclick="closeModal('modal-portfolio')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-portfolio')"
+          aria-label="Close modal"
+        >
+          <i class="fas fa-times"></i>
+        </button>
         <div class="modal-carousel">
           <div class="carousel-track" id="carousel-portfolio">
-            <div class="carousel-slide"><img src="ASSETS/IMAGES/portfolio-light.png" alt="Portfolio screenshot 1" /></div>
-            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/portfolio-l.png"
+                alt="Portfolio screenshot 1"
+              />
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/portfolio-p.png"
+                alt="Portfolio screenshot 2"
+              />
+            </div>
           </div>
-          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-portfolio')"><i class="fas fa-chevron-left"></i></button>
-          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-portfolio')"><i class="fas fa-chevron-right"></i></button>
+          <button
+            class="carousel-btn carousel-prev"
+            onclick="carouselPrev('carousel-portfolio')"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            class="carousel-btn carousel-next"
+            onclick="carouselNext('carousel-portfolio')"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
           <div class="carousel-dots" id="dots-portfolio"></div>
         </div>
         <div class="modal-body">
           <div class="modal-meta">
             <span class="modal-category-badge">Web Development</span>
-            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2024 — Present</span>
+            <span class="modal-period"
+              ><i class="fas fa-calendar-alt"></i> 2024 — Present</span
+            >
           </div>
-          <h2 id="modal-portfolio-title" class="modal-title">Portfolio Website</h2>
-          <p class="modal-desc">A fully responsive, modern portfolio website to showcase my skills, experience and projects in a clean, user-friendly way. Designed and developed from scratch with attention to performance and aesthetics.</p>
+          <h2 id="modal-portfolio-title" class="modal-title">
+            Portfolio Website
+          </h2>
+          <p class="modal-desc">
+            A fully responsive, modern portfolio website to showcase my skills,
+            experience and projects in a clean, user-friendly way. Designed and
+            developed from scratch with attention to performance and aesthetics.
+          </p>
           <div class="modal-section">
             <h4 class="modal-section-label">Tech Stack</h4>
             <div class="modal-stack">
@@ -827,7 +1264,11 @@
             </ul>
           </div>
           <div class="modal-actions">
-            <a href="https://github.com/vector005awolesi/Portfolio" target="_blank" class="modal-btn-code">
+            <a
+              href="https://github.com/vector005awolesi/Portfolio"
+              target="_blank"
+              class="modal-btn-code"
+            >
               <i class="fab fa-github"></i> View Code
             </a>
             <a href="#" class="modal-btn-live">
@@ -839,25 +1280,81 @@
     </div>
 
     <!-- MODAL: Quix AI -->
-    <div id="modal-quix" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-quix-title">
+    <div
+      id="modal-quix"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-quix-title"
+    >
       <div class="modal-container">
-        <button class="modal-close" onclick="closeModal('modal-quix')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-quix')"
+          aria-label="Close modal"
+        >
+          <i class="fas fa-times"></i>
+        </button>
         <div class="modal-carousel">
           <div class="carousel-track" id="carousel-quix">
-            <div class="carousel-slide"><img src="ASSETS/IMAGES/app-preview.png" alt="Quix AI screenshot" /></div>
-            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/app-preview.png"
+                alt="Quix AI screenshot"
+              />
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/quix-dashboard.png"
+                alt="Quix AI screenshot 2"
+              />
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/dash-quix.png"
+                alt="Quix AI screenshot 3"
+              />
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/quix-study.png"
+                alt="Quix AI screenshot 4"
+              />
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/final-quiz.png"
+                alt="Quix AI screenshot 2"
+              />
+            </div>
           </div>
-          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-quix')"><i class="fas fa-chevron-left"></i></button>
-          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-quix')"><i class="fas fa-chevron-right"></i></button>
+          <button
+            class="carousel-btn carousel-prev"
+            onclick="carouselPrev('carousel-quix')"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            class="carousel-btn carousel-next"
+            onclick="carouselNext('carousel-quix')"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
           <div class="carousel-dots" id="dots-quix"></div>
         </div>
         <div class="modal-body">
           <div class="modal-meta">
             <span class="modal-category-badge">Web Application</span>
-            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2025</span>
+            <span class="modal-period"
+              ><i class="fas fa-calendar-alt"></i> 2025</span
+            >
           </div>
           <h2 id="modal-quix-title" class="modal-title">Quix AI</h2>
-          <p class="modal-desc">An AI-powered study companion that helps students with flashcard generation, quiz tools, and smart revision schedules. Built with a focus on performance and clean UX for educational support.</p>
+          <p class="modal-desc">
+            An AI-powered study companion that helps students with flashcard
+            generation, quiz tools, and smart revision schedules. Built with a
+            focus on performance and clean UX for educational support.
+          </p>
           <div class="modal-section">
             <h4 class="modal-section-label">Tech Stack</h4>
             <div class="modal-stack">
@@ -882,7 +1379,11 @@
             <button class="modal-btn-code disabled-btn" disabled>
               <i class="fab fa-github"></i> Private Repo
             </button>
-            <a href="https://quix-ai-buddy.vercel.app/" target="_blank" class="modal-btn-live">
+            <a
+              href="https://quix-ai-buddy.vercel.app/"
+              target="_blank"
+              class="modal-btn-live"
+            >
               <i class="fas fa-external-link-alt"></i> Live Demo
             </a>
           </div>
@@ -891,25 +1392,61 @@
     </div>
 
     <!-- MODAL: V9 Technologies -->
-    <div id="modal-v9" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-v9-title">
+    <div
+      id="modal-v9"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-v9-title"
+    >
       <div class="modal-container">
-        <button class="modal-close" onclick="closeModal('modal-v9')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-v9')"
+          aria-label="Close modal"
+        >
+          <i class="fas fa-times"></i>
+        </button>
         <div class="modal-carousel">
           <div class="carousel-track" id="carousel-v9">
-            <div class="carousel-slide"><img src="ASSETS/IMAGES/v9-technologies.png" alt="V9 Technologies screenshot" /></div>
-            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/v9-technologies.png"
+                alt="V9 Technologies screenshot"
+              />
+            </div>
+            <div class="carousel-slide carousel-placeholder">
+              <i class="fas fa-images"></i
+              ><span>More screenshots coming soon</span>
+            </div>
           </div>
-          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-v9')"><i class="fas fa-chevron-left"></i></button>
-          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-v9')"><i class="fas fa-chevron-right"></i></button>
+          <button
+            class="carousel-btn carousel-prev"
+            onclick="carouselPrev('carousel-v9')"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            class="carousel-btn carousel-next"
+            onclick="carouselNext('carousel-v9')"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
           <div class="carousel-dots" id="dots-v9"></div>
         </div>
         <div class="modal-body">
           <div class="modal-meta">
             <span class="modal-category-badge">Agency Website</span>
-            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2025</span>
+            <span class="modal-period"
+              ><i class="fas fa-calendar-alt"></i> 2025</span
+            >
           </div>
           <h2 id="modal-v9-title" class="modal-title">V9 Technologies</h2>
-          <p class="modal-desc">A sleek, modern web development agency website where clients can explore services and contact developers to build their projects. Designed to project professionalism and convert visitors into leads.</p>
+          <p class="modal-desc">
+            A sleek, modern web development agency website where clients can
+            explore services and contact developers to build their projects.
+            Designed to project professionalism and convert visitors into leads.
+          </p>
           <div class="modal-section">
             <h4 class="modal-section-label">Tech Stack</h4>
             <div class="modal-stack">
@@ -933,7 +1470,11 @@
             <button class="modal-btn-code disabled-btn" disabled>
               <i class="fab fa-github"></i> Private Repo
             </button>
-            <a href="https://v9-technologies.vercel.app/" target="_blank" class="modal-btn-live">
+            <a
+              href="https://v9-technologies.vercel.app/"
+              target="_blank"
+              class="modal-btn-live"
+            >
               <i class="fas fa-external-link-alt"></i> Live Demo
             </a>
           </div>
@@ -942,25 +1483,61 @@
     </div>
 
     <!-- MODAL: Soft Store NG -->
-    <div id="modal-softstore" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-softstore-title">
+    <div
+      id="modal-softstore"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-softstore-title"
+    >
       <div class="modal-container">
-        <button class="modal-close" onclick="closeModal('modal-softstore')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-softstore')"
+          aria-label="Close modal"
+        >
+          <i class="fas fa-times"></i>
+        </button>
         <div class="modal-carousel">
           <div class="carousel-track" id="carousel-softstore">
-            <div class="carousel-slide"><img src="ASSETS/IMAGES/soft-store.png" alt="Soft Store NG screenshot" /></div>
-            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/soft-store.png"
+                alt="Soft Store NG screenshot"
+              />
+            </div>
+            <div class="carousel-slide carousel-placeholder">
+              <i class="fas fa-images"></i
+              ><span>More screenshots coming soon</span>
+            </div>
           </div>
-          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-softstore')"><i class="fas fa-chevron-left"></i></button>
-          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-softstore')"><i class="fas fa-chevron-right"></i></button>
+          <button
+            class="carousel-btn carousel-prev"
+            onclick="carouselPrev('carousel-softstore')"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            class="carousel-btn carousel-next"
+            onclick="carouselNext('carousel-softstore')"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
           <div class="carousel-dots" id="dots-softstore"></div>
         </div>
         <div class="modal-body">
           <div class="modal-meta">
             <span class="modal-category-badge">E-Commerce</span>
-            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2025</span>
+            <span class="modal-period"
+              ><i class="fas fa-calendar-alt"></i> 2025</span
+            >
           </div>
           <h2 id="modal-softstore-title" class="modal-title">Soft Store NG</h2>
-          <p class="modal-desc">An e-commerce platform built for the gaming and tech community featuring full product catalogs, shopping cart functionality and seamlessly integrated payment systems for Nigerian users.</p>
+          <p class="modal-desc">
+            An e-commerce platform built for the gaming and tech community
+            featuring full product catalogs, shopping cart functionality and
+            seamlessly integrated payment systems for Nigerian users.
+          </p>
           <div class="modal-section">
             <h4 class="modal-section-label">Tech Stack</h4>
             <div class="modal-stack">
@@ -984,7 +1561,11 @@
             <button class="modal-btn-code disabled-btn" disabled>
               <i class="fab fa-github"></i> Private Repo
             </button>
-            <a href="https://soft-store-ng.vercel.app/" target="_blank" class="modal-btn-live">
+            <a
+              href="https://soft-store-ng.vercel.app/"
+              target="_blank"
+              class="modal-btn-live"
+            >
               <i class="fas fa-external-link-alt"></i> Live Demo
             </a>
           </div>
@@ -993,25 +1574,61 @@
     </div>
 
     <!-- MODAL: TaxClarity -->
-    <div id="modal-taxclarity" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-taxclarity-title">
+    <div
+      id="modal-taxclarity"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-taxclarity-title"
+    >
       <div class="modal-container">
-        <button class="modal-close" onclick="closeModal('modal-taxclarity')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-taxclarity')"
+          aria-label="Close modal"
+        >
+          <i class="fas fa-times"></i>
+        </button>
         <div class="modal-carousel">
           <div class="carousel-track" id="carousel-taxclarity">
-            <div class="carousel-slide"><img src="ASSETS/IMAGES/taxclarity.png" alt="TaxClarity screenshot" /></div>
-            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/taxclarity.png"
+                alt="TaxClarity screenshot"
+              />
+            </div>
+            <div class="carousel-slide carousel-placeholder">
+              <i class="fas fa-images"></i
+              ><span>More screenshots coming soon</span>
+            </div>
           </div>
-          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-taxclarity')"><i class="fas fa-chevron-left"></i></button>
-          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-taxclarity')"><i class="fas fa-chevron-right"></i></button>
+          <button
+            class="carousel-btn carousel-prev"
+            onclick="carouselPrev('carousel-taxclarity')"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            class="carousel-btn carousel-next"
+            onclick="carouselNext('carousel-taxclarity')"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
           <div class="carousel-dots" id="dots-taxclarity"></div>
         </div>
         <div class="modal-body">
           <div class="modal-meta">
             <span class="modal-category-badge">Web Development</span>
-            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2025</span>
+            <span class="modal-period"
+              ><i class="fas fa-calendar-alt"></i> 2025</span
+            >
           </div>
           <h2 id="modal-taxclarity-title" class="modal-title">TaxClarity</h2>
-          <p class="modal-desc">A civic tech website developed to clarify and enlighten Nigerian citizens on how taxation works — making complex tax information accessible and understandable for everyone.</p>
+          <p class="modal-desc">
+            A civic tech website developed to clarify and enlighten Nigerian
+            citizens on how taxation works — making complex tax information
+            accessible and understandable for everyone.
+          </p>
           <div class="modal-section">
             <h4 class="modal-section-label">Tech Stack</h4>
             <div class="modal-stack">
@@ -1029,10 +1646,18 @@
             </ul>
           </div>
           <div class="modal-actions">
-            <a href="https://github.com/Apex-Shippers/Tax-Clarity-NG" target="_blank" class="modal-btn-code">
+            <a
+              href="https://github.com/Apex-Shippers/Tax-Clarity-NG"
+              target="_blank"
+              class="modal-btn-code"
+            >
               <i class="fab fa-github"></i> View Code
             </a>
-            <a href="https://tax-clarity-ng-six.vercel.app/" target="_blank" class="modal-btn-live">
+            <a
+              href="https://tax-clarity-ng-six.vercel.app/"
+              target="_blank"
+              class="modal-btn-live"
+            >
               <i class="fas fa-external-link-alt"></i> Live Demo
             </a>
           </div>
@@ -1041,25 +1666,62 @@
     </div>
 
     <!-- MODAL: Vera Landscaping -->
-    <div id="modal-vera" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-vera-title">
+    <div
+      id="modal-vera"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-vera-title"
+    >
       <div class="modal-container">
-        <button class="modal-close" onclick="closeModal('modal-vera')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-vera')"
+          aria-label="Close modal"
+        >
+          <i class="fas fa-times"></i>
+        </button>
         <div class="modal-carousel">
           <div class="carousel-track" id="carousel-vera">
-            <div class="carousel-slide"><img src="ASSETS/IMAGES/vera.png" alt="Vera Landscaping screenshot" /></div>
-            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/vera.png"
+                alt="Vera Landscaping screenshot"
+              />
+            </div>
+            <div class="carousel-slide carousel-placeholder">
+              <i class="fas fa-images"></i
+              ><span>More screenshots coming soon</span>
+            </div>
           </div>
-          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-vera')"><i class="fas fa-chevron-left"></i></button>
-          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-vera')"><i class="fas fa-chevron-right"></i></button>
+          <button
+            class="carousel-btn carousel-prev"
+            onclick="carouselPrev('carousel-vera')"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            class="carousel-btn carousel-next"
+            onclick="carouselNext('carousel-vera')"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
           <div class="carousel-dots" id="dots-vera"></div>
         </div>
         <div class="modal-body">
           <div class="modal-meta">
             <span class="modal-category-badge">Web Development</span>
-            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2024</span>
+            <span class="modal-period"
+              ><i class="fas fa-calendar-alt"></i> 2024</span
+            >
           </div>
           <h2 id="modal-vera-title" class="modal-title">Vera Landscaping</h2>
-          <p class="modal-desc">A modern landscaping service website focused on clean design, showcasing lawn care and outdoor maintenance services. Built to help Vera Landscaping attract new clients through a professional online presence.</p>
+          <p class="modal-desc">
+            A modern landscaping service website focused on clean design,
+            showcasing lawn care and outdoor maintenance services. Built to help
+            Vera Landscaping attract new clients through a professional online
+            presence.
+          </p>
           <div class="modal-section">
             <h4 class="modal-section-label">Tech Stack</h4>
             <div class="modal-stack">
@@ -1079,10 +1741,18 @@
             </ul>
           </div>
           <div class="modal-actions">
-            <a href="https://github.com/vector005awolesi/landscaping" target="_blank" class="modal-btn-code">
+            <a
+              href="https://github.com/vector005awolesi/landscaping"
+              target="_blank"
+              class="modal-btn-code"
+            >
               <i class="fab fa-github"></i> View Code
             </a>
-            <a href="https://vera-landscaping.netlify.app/" target="_blank" class="modal-btn-live">
+            <a
+              href="https://vera-landscaping.netlify.app/"
+              target="_blank"
+              class="modal-btn-live"
+            >
               <i class="fas fa-external-link-alt"></i> Live Demo
             </a>
           </div>
@@ -1091,25 +1761,64 @@
     </div>
 
     <!-- MODAL: Result Processor -->
-    <div id="modal-result" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-result-title">
+    <div
+      id="modal-result"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-result-title"
+    >
       <div class="modal-container">
-        <button class="modal-close" onclick="closeModal('modal-result')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-result')"
+          aria-label="Close modal"
+        >
+          <i class="fas fa-times"></i>
+        </button>
         <div class="modal-carousel">
           <div class="carousel-track" id="carousel-result">
-            <div class="carousel-slide"><img src="ASSETS/IMAGES/result-compiler.png" alt="Result Processor screenshot" /></div>
-            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/result-compiler.png"
+                alt="Result Processor screenshot"
+              />
+            </div>
+            <div class="carousel-slide carousel-placeholder">
+              <i class="fas fa-images"></i
+              ><span>More screenshots coming soon</span>
+            </div>
           </div>
-          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-result')"><i class="fas fa-chevron-left"></i></button>
-          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-result')"><i class="fas fa-chevron-right"></i></button>
+          <button
+            class="carousel-btn carousel-prev"
+            onclick="carouselPrev('carousel-result')"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            class="carousel-btn carousel-next"
+            onclick="carouselNext('carousel-result')"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
           <div class="carousel-dots" id="dots-result"></div>
         </div>
         <div class="modal-body">
           <div class="modal-meta">
             <span class="modal-category-badge">EdTech Tool</span>
-            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2024</span>
+            <span class="modal-period"
+              ><i class="fas fa-calendar-alt"></i> 2024</span
+            >
           </div>
-          <h2 id="modal-result-title" class="modal-title">Result Processor (SRMS)</h2>
-          <p class="modal-desc">A school result management system that automatically processes student scores, evaluates academic performance and generates clean, printable report cards. Built to eliminate manual result compilation for schools.</p>
+          <h2 id="modal-result-title" class="modal-title">
+            Result Processor (SRMS)
+          </h2>
+          <p class="modal-desc">
+            A school result management system that automatically processes
+            student scores, evaluates academic performance and generates clean,
+            printable report cards. Built to eliminate manual result compilation
+            for schools.
+          </p>
           <div class="modal-section">
             <h4 class="modal-section-label">Tech Stack</h4>
             <div class="modal-stack">
@@ -1128,10 +1837,18 @@
             </ul>
           </div>
           <div class="modal-actions">
-            <a href="https://github.com/vector005awolesi/RC" target="_blank" class="modal-btn-code">
+            <a
+              href="https://github.com/vector005awolesi/RC"
+              target="_blank"
+              class="modal-btn-code"
+            >
               <i class="fab fa-github"></i> View Code
             </a>
-            <a href="https://vector005awolesi.github.io/RC/" target="_blank" class="modal-btn-live">
+            <a
+              href="https://vector005awolesi.github.io/RC/"
+              target="_blank"
+              class="modal-btn-live"
+            >
               <i class="fas fa-external-link-alt"></i> Live Demo
             </a>
           </div>
@@ -1139,143 +1856,182 @@
       </div>
     </div>
 
-    <!-- MODAL: SmartPlay RPS -->
-    <div id="modal-rps" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-rps-title">
+    <!-- MODAL: Bammy Makeover -->
+    <div
+      id="modal-bammy"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-bammy-title"
+    >
       <div class="modal-container">
-        <button class="modal-close" onclick="closeModal('modal-rps')" aria-label="Close modal"><i class="fas fa-times"></i></button>
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-bammy')"
+          aria-label="Close modal"
+        >
+          <i class="fas fa-times"></i>
+        </button>
         <div class="modal-carousel">
-          <div class="carousel-track" id="carousel-rps">
-            <div class="carousel-slide"><img src="ASSETS/IMAGES/rps.png" alt="SmartPlay RPS screenshot" /></div>
-            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
-          </div>
-          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-rps')"><i class="fas fa-chevron-left"></i></button>
-          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-rps')"><i class="fas fa-chevron-right"></i></button>
-          <div class="carousel-dots" id="dots-rps"></div>
-        </div>
-        <div class="modal-body">
-          <div class="modal-meta">
-            <span class="modal-category-badge">Game / AI</span>
-            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2024</span>
-          </div>
-          <h2 id="modal-rps-title" class="modal-title">SmartPlay — RPS AI</h2>
-          <p class="modal-desc">An interactive Rock Paper Scissors game featuring a simulated AI opponent that tracks user patterns and adapts its strategy. Features dynamic UI, score tracking and engaging gameplay animations.</p>
-          <div class="modal-section">
-            <h4 class="modal-section-label">Tech Stack</h4>
-            <div class="modal-stack">
-              <span class="modal-stack-pill">HTML5</span>
-              <span class="modal-stack-pill">CSS3</span>
-              <span class="modal-stack-pill">JavaScript</span>
+          <div class="carousel-track" id="carousel-bammy">
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/bammymakeover-hero.png"
+                alt="Bammy Makeover screenshot"
+              />
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/bammymakeover-about.png"
+                alt="Bammy Makeover about section"
+              />
             </div>
           </div>
-          <div class="modal-section">
-            <h4 class="modal-section-label">Key Features</h4>
-            <ul class="modal-features">
-              <li>AI opponent with user pattern tracking algorithm</li>
-              <li>Dynamic score tracking and win/loss history</li>
-              <li>Smooth game animations and sound feedback</li>
-              <li>Clean, responsive game interface</li>
-            </ul>
-          </div>
-          <div class="modal-actions">
-            <a href="https://github.com/vector005awolesi/RPS" target="_blank" class="modal-btn-code">
-              <i class="fab fa-github"></i> View Code
-            </a>
-            <a href="https://vector005awolesi.github.io/RPS/" target="_blank" class="modal-btn-live">
-              <i class="fas fa-external-link-alt"></i> Live Demo
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MODAL: PAYJ Finance -->
-    <div id="modal-payj" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-payj-title">
-      <div class="modal-container">
-        <button class="modal-close" onclick="closeModal('modal-payj')" aria-label="Close modal"><i class="fas fa-times"></i></button>
-        <div class="modal-carousel">
-          <div class="carousel-track" id="carousel-payj">
-            <div class="carousel-slide"><img src="ASSETS/IMAGES/payj.png" alt="PAYJ Finance screenshot" /></div>
-            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
-          </div>
-          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-payj')"><i class="fas fa-chevron-left"></i></button>
-          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-payj')"><i class="fas fa-chevron-right"></i></button>
-          <div class="carousel-dots" id="dots-payj"></div>
+          <button
+            class="carousel-btn carousel-prev"
+            onclick="carouselPrev('carousel-bammy')"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            class="carousel-btn carousel-next"
+            onclick="carouselNext('carousel-bammy')"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="carousel-dots" id="dots-bammy"></div>
         </div>
         <div class="modal-body">
           <div class="modal-meta">
-            <span class="modal-category-badge in-dev">In Development</span>
-            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2025 — Present</span>
+            <span class="modal-category-badge">Beauty / Branding</span>
+            <span class="modal-period"
+              ><i class="fas fa-calendar-alt"></i> 2025</span
+            >
           </div>
-          <h2 id="modal-payj-title" class="modal-title">PAYJ — Finance App</h2>
-          <p class="modal-desc">A fintech-inspired web application concept that simulates modern digital banking. Features a clean dashboard, transaction history, card management and peer-to-peer transfer flows. Currently under active development.</p>
+          <h2 id="modal-bammy-title" class="modal-title">Bammy Makeover</h2>
+          <p class="modal-desc">
+            A polished portfolio website for a makeup artist that highlights
+            services, beauty work and a refined brand story with a premium,
+            mobile-friendly experience.
+          </p>
           <div class="modal-section">
             <h4 class="modal-section-label">Tech Stack</h4>
             <div class="modal-stack">
               <span class="modal-stack-pill">React</span>
-              <span class="modal-stack-pill">TypeScript</span>
               <span class="modal-stack-pill">Tailwind CSS</span>
-              <span class="modal-stack-pill">Stripe</span>
-              <span class="modal-stack-pill">Node.js</span>
-            </div>
-          </div>
-          <div class="modal-section">
-            <h4 class="modal-section-label">Planned Features</h4>
-            <ul class="modal-features">
-              <li>Real-time balance and transaction dashboard</li>
-              <li>P2P transfers with OTP verification</li>
-              <li>Stripe payment integration for card top-ups</li>
-              <li>Savings goals and spending analytics</li>
-            </ul>
-          </div>
-          <div class="modal-actions">
-            <button class="modal-btn-code disabled-btn" disabled>
-              <i class="fas fa-code"></i> In Development
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MODAL: Product Landing Page -->
-    <div id="modal-landing" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-landing-title">
-      <div class="modal-container">
-        <button class="modal-close" onclick="closeModal('modal-landing')" aria-label="Close modal"><i class="fas fa-times"></i></button>
-        <div class="modal-carousel">
-          <div class="carousel-track" id="carousel-landing">
-            <div class="carousel-slide"><img src="ASSETS/IMAGES/proland_landing_page_product.png" alt="Product Landing Page screenshot" /></div>
-            <div class="carousel-slide carousel-placeholder"><i class="fas fa-images"></i><span>More screenshots coming soon</span></div>
-          </div>
-          <button class="carousel-btn carousel-prev" onclick="carouselPrev('carousel-landing')"><i class="fas fa-chevron-left"></i></button>
-          <button class="carousel-btn carousel-next" onclick="carouselNext('carousel-landing')"><i class="fas fa-chevron-right"></i></button>
-          <div class="carousel-dots" id="dots-landing"></div>
-        </div>
-        <div class="modal-body">
-          <div class="modal-meta">
-            <span class="modal-category-badge">Web Development</span>
-            <span class="modal-period"><i class="fas fa-calendar-alt"></i> 2024</span>
-          </div>
-          <h2 id="modal-landing-title" class="modal-title">Product Landing Page</h2>
-          <p class="modal-desc">A modern, conversion-focused responsive landing page built to showcase a product or service. Features clear value propositions, call-to-action sections and an engaging hero UI designed to drive user engagement.</p>
-          <div class="modal-section">
-            <h4 class="modal-section-label">Tech Stack</h4>
-            <div class="modal-stack">
-              <span class="modal-stack-pill">HTML5</span>
-              <span class="modal-stack-pill">CSS3</span>
               <span class="modal-stack-pill">JavaScript</span>
             </div>
           </div>
           <div class="modal-section">
             <h4 class="modal-section-label">Key Features</h4>
             <ul class="modal-features">
-              <li>Pixel-perfect responsive design across breakpoints</li>
-              <li>Animated hero section with feature highlights</li>
-              <li>Pricing table and comparison section</li>
-              <li>FAQ accordion and testimonials section</li>
+              <li>Portfolio-first storytelling for beauty services</li>
+              <li>Responsive gallery and about sections</li>
+              <li>Clean presentation for bookings and inquiries</li>
+              <li>Elegant visual system aligned to the brand</li>
             </ul>
           </div>
           <div class="modal-actions">
             <button class="modal-btn-code disabled-btn" disabled>
-              <i class="fab fa-github"></i> Private Repo
+              <i class="fas fa-lock"></i> Private Project
+            </button>
+            <a
+              href="https://bammymakeover.com"
+              target="_blank"
+              class="modal-btn-live"
+            >
+              <i class="fas fa-external-link-alt"></i> View Live
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: AETHERIA Estate -->
+    <div
+      id="modal-aetheria"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-aetheria-title"
+    >
+      <div class="modal-container">
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-aetheria')"
+          aria-label="Close modal"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-carousel">
+          <div class="carousel-track" id="carousel-aetheria">
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/real-estate.png"
+                alt="AETHERIA Estate screenshot"
+              />
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/realestate.png"
+                alt="AETHERIA Estate interiors showcase"
+              />
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/realstate.png"
+                alt="AETHERIA Estate property highlights"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-btn carousel-prev"
+            onclick="carouselPrev('carousel-aetheria')"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            class="carousel-btn carousel-next"
+            onclick="carouselNext('carousel-aetheria')"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="carousel-dots" id="dots-aetheria"></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-meta">
+            <span class="modal-category-badge">Real Estate</span>
+            <span class="modal-period"
+              ><i class="fas fa-calendar-alt"></i> 2025</span
+            >
+          </div>
+          <h2 id="modal-aetheria-title" class="modal-title">AETHERIA Estate</h2>
+          <p class="modal-desc">
+            A refined real estate website for a realtor, built to present
+            premium property listings and generate leads through a calm,
+            modern user experience.
+          </p>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Tech Stack</h4>
+            <div class="modal-stack">
+              <span class="modal-stack-pill">HTML5</span>
+              <span class="modal-stack-pill">CSS3</span>
+              <span class="modal-stack-pill">Tailwind CSS</span>
+              <span class="modal-stack-pill">JavaScript</span>
+            </div>
+          </div>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Key Features</h4>
+            <ul class="modal-features">
+              <li>Elegant hero and property showcase sections</li>
+              <li>Responsive service and listing layouts</li>
+              <li>Lead-focused contact and appointment CTAs</li>
+              <li>Premium visual design for property marketing</li>
+            </ul>
+          </div>
+          <div class="modal-actions">
+            <button class="modal-btn-code disabled-btn" disabled>
+              <i class="fas fa-lock"></i> Private Project
             </button>
             <button class="modal-btn-live disabled-btn" disabled>
               <i class="fas fa-external-link-alt"></i> Coming Soon
@@ -1285,26 +2041,131 @@
       </div>
     </div>
 
+    <!-- MODAL: Ephraim College -->
+    <div
+      id="modal-ephraim"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-ephraim-title"
+    >
+      <div class="modal-container">
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-ephraim')"
+          aria-label="Close modal"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-carousel">
+          <div class="carousel-track" id="carousel-ephraim">
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/ephraim-college-hero.png"
+                alt="Ephraim College hero screenshot"
+              />
+            </div>
+            <div class="carousel-slide">
+              <img src="ASSETS/IMAGES/ephraim.png" alt="Ephraim College overview" />
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="ASSETS/IMAGES/ephraim-school.png"
+                alt="Ephraim College school showcase"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-btn carousel-prev"
+            onclick="carouselPrev('carousel-ephraim')"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            class="carousel-btn carousel-next"
+            onclick="carouselNext('carousel-ephraim')"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="carousel-dots" id="dots-ephraim"></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-meta">
+            <span class="modal-category-badge">Education / School</span>
+            <span class="modal-period"
+              ><i class="fas fa-calendar-alt"></i> 2025</span
+            >
+          </div>
+          <h2 id="modal-ephraim-title" class="modal-title">Ephraim College</h2>
+          <p class="modal-desc">
+            A vibrant school website for an international institution, designed
+            to present academics, campus life and admissions in a polished,
+            engaging format.
+          </p>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Tech Stack</h4>
+            <div class="modal-stack">
+              <span class="modal-stack-pill">React</span>
+              <span class="modal-stack-pill">Tailwind CSS</span>
+              <span class="modal-stack-pill">Framer Motion</span>
+              <span class="modal-stack-pill">+2</span>
+            </div>
+          </div>
+          <div class="modal-section">
+            <h4 class="modal-section-label">Key Features</h4>
+            <ul class="modal-features">
+              <li>Animated, immersive school experience</li>
+              <li>Admissions and academic storytelling sections</li>
+              <li>Modern responsive layout for all devices</li>
+              <li>Community-centered content presentation</li>
+            </ul>
+          </div>
+          <div class="modal-actions">
+            <button class="modal-btn-code disabled-btn" disabled>
+              <i class="fas fa-lock"></i> Private Project
+            </button>
+            <a
+              href="https://ephraim-school.vercel.app"
+              target="_blank"
+              class="modal-btn-live"
+            >
+              <i class="fas fa-external-link-alt"></i> View Live
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- ═══════════════════════════ TESTIMONIALS SECTION ═══════════════════════════ -->
     <section id="testimonials" class="section-pad relative">
       <div class="section-glow-right"></div>
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-
         <div class="section-header reveal-up">
           <span class="section-tag">SOCIAL PROOF</span>
-          <h2 class="section-title">What People <span class="gradient-text bounce-text">Say</span></h2>
-          <p class="section-subtitle">Kind words from clients and collaborators I've had the pleasure of working with</p>
+          <h2 class="section-title">
+            What People <span class="gradient-text bounce-text">Say</span>
+          </h2>
+          <p class="section-subtitle">
+            Kind words from clients and collaborators I've had the pleasure of
+            working with
+          </p>
         </div>
 
         <div class="testimonials-grid reveal-stagger">
-
           <div class="testimonial-card">
-            <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="testimonial-quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
             <p class="testimonial-text">
-              "Victor delivered our agency website beyond our expectations. His attention to design detail, clean code and fast delivery made the whole process seamless. Highly recommend him for any web project."
+              "Victor delivered our agency website beyond our expectations. His
+              attention to design detail, clean code and fast delivery made the
+              whole process seamless. Highly recommend him for any web project."
             </p>
             <div class="testimonial-author">
-              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6)">
+              <div
+                class="testimonial-avatar"
+                style="background: linear-gradient(135deg, #3498db, #2c3e50)"
+              >
                 <span>SK</span>
               </div>
               <div>
@@ -1313,36 +2174,56 @@
               </div>
             </div>
             <div class="testimonial-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
             </div>
           </div>
 
           <div class="testimonial-card">
-            <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="testimonial-quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
             <p class="testimonial-text">
-              "Working with Victor on the AI model project was a fantastic experience. He's technically sharp, communicates clearly and always brings creative solutions to the table. A true team player and leader."
+              "Victor built my portfolio and it truly captured my brand as a
+              makeup artist. It was exactly what I wanted, delivered very
+              quickly, and I was kept in the loop throughout the whole process.
+              Overall, it helped level up my business."
             </p>
             <div class="testimonial-author">
-              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #10b981, #3b82f6)">
-                <span>DM</span>
+              <div
+                class="testimonial-avatar"
+                style="background: linear-gradient(135deg, #3498db, #2980b9)"
+              >
+                <span>BM</span>
               </div>
               <div>
-                <p class="testimonial-name">David M.</p>
-                <p class="testimonial-role">AI Researcher · CollabAI Project</p>
+                <p class="testimonial-name">Bammy S.</p>
+                <p class="testimonial-role">Makeup Artist · Bammy Makeover</p>
               </div>
             </div>
             <div class="testimonial-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
             </div>
           </div>
 
           <div class="testimonial-card">
-            <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="testimonial-quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
             <p class="testimonial-text">
-              "Victor built our e-commerce store and we saw a 40% increase in user engagement within the first month. He understood our vision perfectly and transformed it into a beautiful, functional platform."
+              "Victor built our e-commerce store and we saw a 40% increase in
+              user engagement within the first month. He understood our vision
+              perfectly and transformed it into a beautiful, functional
+              platform."
             </p>
             <div class="testimonial-author">
-              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444)">
+              <div
+                class="testimonial-avatar"
+                style="background: linear-gradient(135deg, #e74c3c, #3498db)"
+              >
                 <span>AL</span>
               </div>
               <div>
@@ -1351,10 +2232,11 @@
               </div>
             </div>
             <div class="testimonial-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -1365,42 +2247,57 @@
     <section id="contact" class="section-pad relative">
       <div class="section-glow-left"></div>
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-
         <div class="section-header reveal-up">
           <span class="section-tag">LET'S TALK</span>
-          <h2 class="section-title">Get In <span class="gradient-text bounce-text">Touch</span></h2>
-          <p class="section-subtitle">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+          <h2 class="section-title">
+            Get In <span class="gradient-text bounce-text">Touch</span>
+          </h2>
+          <p class="section-subtitle">
+            Have a project in mind or want to collaborate? I'd love to hear from
+            you.
+          </p>
         </div>
 
         <div class="contact-grid reveal-stagger">
-
           <!-- Contact Info -->
           <div class="contact-info">
             <div class="contact-availability">
               <span class="avail-dot"></span>
               <div>
                 <p class="avail-title">Available for Work</p>
-                <p class="avail-desc">I'm actively looking for remote jobs and freelance opportunities</p>
+                <p class="avail-desc">
+                  I'm actively looking for remote jobs and freelance
+                  opportunities
+                </p>
               </div>
             </div>
 
             <div class="contact-details">
-              <a href="mailto:awolesivictor7@gmail.com" class="contact-detail-item">
-                <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+              <a
+                href="mailto:awolesivictor7@gmail.com"
+                class="contact-detail-item"
+              >
+                <div class="contact-detail-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
                 <div>
                   <p class="contact-detail-label">Email</p>
                   <p class="contact-detail-value">awolesivictor7@gmail.com</p>
                 </div>
               </a>
               <a href="tel:+2348145958722" class="contact-detail-item">
-                <div class="contact-detail-icon"><i class="fas fa-phone"></i></div>
+                <div class="contact-detail-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
                 <div>
                   <p class="contact-detail-label">Phone</p>
                   <p class="contact-detail-value">(+234) 8145958722</p>
                 </div>
               </a>
               <div class="contact-detail-item">
-                <div class="contact-detail-icon"><i class="fas fa-location-dot"></i></div>
+                <div class="contact-detail-icon">
+                  <i class="fas fa-location-dot"></i>
+                </div>
                 <div>
                   <p class="contact-detail-label">Location</p>
                   <p class="contact-detail-value">Lagos State, Nigeria</p>
@@ -1411,16 +2308,36 @@
             <div class="contact-socials">
               <p class="contact-socials-label">Find me on</p>
               <div class="flex gap-3">
-                <a href="https://github.com/vector005awolesi" target="_blank" class="social-icon-btn" aria-label="GitHub">
+                <a
+                  href="https://github.com/vector005awolesi"
+                  target="_blank"
+                  class="social-icon-btn"
+                  aria-label="GitHub"
+                >
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/awolesi-victor-236435362" target="_blank" class="social-icon-btn" aria-label="LinkedIn">
+                <a
+                  href="https://linkedin.com/in/awolesi-victor-236435362"
+                  target="_blank"
+                  class="social-icon-btn"
+                  aria-label="LinkedIn"
+                >
                   <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://x.com/awolesi_victor" target="_blank" class="social-icon-btn" aria-label="X / Twitter">
+                <a
+                  href="https://x.com/awolesi_victor"
+                  target="_blank"
+                  class="social-icon-btn"
+                  aria-label="X / Twitter"
+                >
                   <i class="fab fa-x-twitter"></i>
                 </a>
-                <a href="https://facebook.com/awolesi.victor" target="_blank" class="social-icon-btn" aria-label="Facebook">
+                <a
+                  href="https://facebook.com/awolesi.victor"
+                  target="_blank"
+                  class="social-icon-btn"
+                  aria-label="Facebook"
+                >
                   <i class="fab fa-facebook"></i>
                 </a>
               </div>
@@ -1429,22 +2346,44 @@
 
           <!-- Contact Form -->
           <div class="contact-form-wrap">
-            <form name="contact" method="post" data-netlify="true" class="contact-form" id="contact-form">
+            <form
+              name="contact"
+              method="post"
+              data-netlify="true"
+              class="contact-form"
+              id="contact-form"
+            >
               <input type="hidden" name="form-name" value="contact" />
 
               <div class="form-group">
                 <label for="name-input" class="form-label">Your Name</label>
                 <div class="form-input-wrap">
                   <i class="fas fa-user form-input-icon"></i>
-                  <input type="text" id="name-input" name="Name" placeholder="John Doe" class="form-input" required />
+                  <input
+                    type="text"
+                    id="name-input"
+                    name="Name"
+                    placeholder="John Doe"
+                    class="form-input"
+                    required
+                  />
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="email-input" class="form-label">Email Address</label>
+                <label for="email-input" class="form-label"
+                  >Email Address</label
+                >
                 <div class="form-input-wrap">
                   <i class="fas fa-envelope form-input-icon"></i>
-                  <input type="email" id="email-input" name="Email" placeholder="john@example.com" class="form-input" required />
+                  <input
+                    type="email"
+                    id="email-input"
+                    name="Email"
+                    placeholder="john@example.com"
+                    class="form-input"
+                    required
+                  />
                 </div>
               </div>
 
@@ -1452,22 +2391,38 @@
                 <label for="subject-input" class="form-label">Subject</label>
                 <div class="form-input-wrap">
                   <i class="fas fa-tag form-input-icon"></i>
-                  <input type="text" id="subject-input" name="Subject" placeholder="Project Inquiry" class="form-input" />
+                  <input
+                    type="text"
+                    id="subject-input"
+                    name="Subject"
+                    placeholder="Project Inquiry"
+                    class="form-input"
+                  />
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="message-input" class="form-label">Message</label>
-                <textarea id="message-input" name="Content" placeholder="Tell me about your project..." class="form-textarea" required rows="5"></textarea>
+                <textarea
+                  id="message-input"
+                  name="Content"
+                  placeholder="Tell me about your project..."
+                  class="form-textarea"
+                  required
+                  rows="5"
+                ></textarea>
               </div>
 
-              <button type="submit" class="btn-primary w-full justify-center" id="submit-btn">
+              <button
+                type="submit"
+                class="btn-primary w-full justify-center"
+                id="submit-btn"
+              >
                 <i class="fas fa-paper-plane"></i>
                 Send Message
               </button>
             </form>
           </div>
-
         </div>
       </div>
     </section>
@@ -1476,15 +2431,16 @@
     <footer class="footer">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="footer-inner">
-          <a href="#hero" class="font-mono text-blue-400 font-semibold text-sm tracking-widest hover:text-blue-300 transition-colors">
+          <a
+            href="#hero"
+            class="font-mono text-blue-400 font-semibold text-sm tracking-widest hover:text-blue-300 transition-colors"
+          >
             &lt;AV /&gt;
           </a>
           <p class="footer-copy">
             Awolesi Victor — Fullstack Developer &amp; Software Engineer
           </p>
-          <p class="footer-year">
-            &copy; <span id="copyright-year"></span>
-          </p>
+          <p class="footer-year">&copy; <span id="copyright-year"></span></p>
         </div>
       </div>
     </footer>
