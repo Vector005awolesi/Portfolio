@@ -1496,104 +1496,11 @@ h1, h2, h3, h4, h5, h6,
   border: 1px solid var(--border);
 }
 
-/* ─────────────────────────── HERO CAPABILITY PILLS ─────────────────────────── */
-.hero-capabilities {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.75rem;
-}
-
-.hero-capability-pill {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  color: var(--text-secondary);
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  padding: 0.3rem 0.7rem;
-  border-radius: 0.4rem;
-}
-
 /* ─────────────────────────── PROJECTS SECTION ─────────────────────────── */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.25rem;
-}
-
-/* Featured Work — larger, richer cards leading the section */
-.featured-projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 3.5rem;
-}
-
-.project-card.featured .project-card-img-wrap {
-  aspect-ratio: 16/10;
-}
-
-.project-card.featured .project-card-body {
-  padding: 1.5rem 1.5rem 1.65rem;
-}
-
-.project-card.featured .project-card-title {
-  font-size: 1.15rem;
-}
-
-.project-card.featured .project-card-desc {
-  font-size: 0.88rem;
-  line-height: 1.65;
-  margin-bottom: 1rem;
-}
-
-.more-work-header {
-  text-align: left;
-  margin-bottom: 1.5rem;
-}
-
-.more-work-title {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.25rem;
-}
-
-.more-work-subtitle {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-.projects-cta-row {
-  text-align: center;
-  margin-top: 3rem;
-}
-
-.projects-cta-text {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-}
-
-.projects-cta-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: var(--accent-light);
-  font-weight: 600;
-  margin-left: 0.4rem;
-  transition: var(--transition-fast);
-}
-
-.projects-cta-link:hover {
-  color: var(--accent);
-  gap: 0.6rem;
-}
-
-[data-theme="light"] .projects-cta-link {
-  color: var(--accent);
 }
 
 .project-card {
@@ -2537,9 +2444,6 @@ a.contact-detail-item:hover {
   .timeline-marker { width: 40px; height: 40px; font-size: 0.85rem; }
 
   .projects-grid { grid-template-columns: 1fr; }
-  .featured-projects-grid { grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 2.5rem; }
-  .more-work-header { text-align: center; }
-  .hero-capabilities { margin-bottom: 1.5rem; }
 
   .modal-body { padding: 1.25rem; }
   .modal-title { font-size: 1.25rem; }

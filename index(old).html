@@ -154,10 +154,10 @@
           <!-- Desktop Nav Links -->
           <ul class="hidden md:flex items-center gap-1 nav-pill">
             <li><a href="#hero" class="nav-link">About</a></li>
-            <li><a href="#projects" class="nav-link">Work</a></li>
-            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-            <li><a href="#tools" class="nav-link">Skills</a></li>
+            <li><a href="#tools" class="nav-link">Tools</a></li>
             <li><a href="#career" class="nav-link">Career</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
 
@@ -197,28 +197,28 @@
                 >About</a
               >
               <a
-                href="#projects"
-                class="mobile-nav-link"
-                onclick="closeMobileMenu()"
-                >Work</a
-              >
-              <a
-                href="#testimonials"
-                class="mobile-nav-link"
-                onclick="closeMobileMenu()"
-                >Testimonials</a
-              >
-              <a
                 href="#tools"
                 class="mobile-nav-link"
                 onclick="closeMobileMenu()"
-                >Skills</a
+                >Tools</a
               >
               <a
                 href="#career"
                 class="mobile-nav-link"
                 onclick="closeMobileMenu()"
                 >Career</a
+              >
+              <a
+                href="#projects"
+                class="mobile-nav-link"
+                onclick="closeMobileMenu()"
+                >Projects</a
+              >
+              <a
+                href="#testimonials"
+                class="mobile-nav-link"
+                onclick="closeMobileMenu()"
+                >Testimonials</a
               >
               <a
                 href="#contact"
@@ -287,25 +287,15 @@
             </p>
 
             <p
-              class="hero-reveal hero-desc text-slate-400 mb-5 leading-relaxed"
+              class="hero-reveal hero-desc text-slate-400 mb-8 leading-relaxed"
               style="transition-delay: 380ms"
             >
-              I design and build websites, web apps and dashboards for
-              founders and teams — from first line of code to a live product.
-              Over <strong class="text-slate-200">2+ years</strong> in the
-              stack, CEO at <strong class="text-blue-400">INFINET Inc</strong>,
-              and 15+ shipped projects behind me.
+              With over <strong class="text-slate-200">2+ years</strong> of
+              experience building dynamic web applications and software. CEO at
+              <strong class="text-blue-400">INFINET Inc</strong>. I craft
+              end-to-end solutions that are fast, accessible, and built to
+              scale.
             </p>
-
-            <div
-              class="hero-reveal hero-capabilities"
-              style="transition-delay: 420ms"
-            >
-              <span class="hero-capability-pill">Business websites</span>
-              <span class="hero-capability-pill">Web apps</span>
-              <span class="hero-capability-pill">E-commerce</span>
-              <span class="hero-capability-pill">Dashboards &amp; tools</span>
-            </div>
 
             <div
               class="hero-reveal hero-cta-row"
@@ -451,546 +441,6 @@ const victor = {
       </div>
     </section>
 
-    <div class="section-divider"></div>
-    <section id="projects" class="section-pad relative">
-      <div class="section-glow-left"></div>
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="section-header reveal-up">
-          <span class="section-tag">SELECTED WORK</span>
-          <h2 class="section-title">
-            Things I've <span class="gradient-text bounce-text">Built</span>
-          </h2>
-          <p class="section-subtitle">
-            A few projects that show how I take a business problem from
-            first idea to a live product. Click any card for the full case
-            study.
-          </p>
-        </div>
-
-        <!-- ═══ FEATURED WORK ═══ -->
-        <div class="featured-projects-grid reveal-stagger">
-          <!-- FEATURED 1: Bammy Makeover -->
-          <article
-            class="project-card featured"
-            onclick="openModal('modal-bammy')"
-            tabindex="0"
-            role="button"
-            aria-label="View Bammy Makeover project details"
-          >
-            <div class="project-card-img-wrap">
-              <img
-                src="ASSETS/IMAGES/bammymakeover-hero.png"
-                alt="Bammy Makeover portfolio website"
-                class="project-card-img"
-                loading="lazy"
-              />
-              <div class="project-card-overlay">
-                <span class="project-overlay-cta"
-                  ><i class="fas fa-expand-alt"></i> View Case Study</span
-                >
-              </div>
-            </div>
-            <div class="project-card-body">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <h3 class="project-card-title">Bammy Makeover</h3>
-                <span class="project-type-badge">Beauty / Branding</span>
-              </div>
-              <p class="project-card-desc">
-                A makeup artist needed a site that felt as premium as her
-                work. I built a portfolio centered on gallery storytelling
-                and a booking-ready service layout, so new clients trust her
-                before they even message.
-              </p>
-              <div class="project-stack">
-                <span class="stack-pill">React</span>
-                <span class="stack-pill">Tailwind</span>
-                <span class="stack-pill stack-pill-more">+2</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- FEATURED 2: AETHERIA Estate -->
-          <article
-            class="project-card featured"
-            onclick="openModal('modal-aetheria')"
-            tabindex="0"
-            role="button"
-            aria-label="View AETHERIA Estate project details"
-          >
-            <div class="project-card-img-wrap">
-              <img
-                src="ASSETS/IMAGES/real-estate.png"
-                alt="AETHERIA Estate real estate website"
-                class="project-card-img"
-                loading="lazy"
-              />
-              <div class="project-card-overlay">
-                <span class="project-overlay-cta"
-                  ><i class="fas fa-expand-alt"></i> View Case Study</span
-                >
-              </div>
-            </div>
-            <div class="project-card-body">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <h3 class="project-card-title">AETHERIA Estate</h3>
-                <span class="project-type-badge">Real Estate</span>
-              </div>
-              <p class="project-card-desc">
-                A realtor needed listings that actually convert browsers into
-                leads. I designed elevated property showcases and clear
-                calls-to-action across the whole buying journey.
-              </p>
-              <div class="project-stack">
-                <span class="stack-pill">HTML</span>
-                <span class="stack-pill">CSS</span>
-                <span class="stack-pill">Tailwind</span>
-                <span class="stack-pill">JavaScript</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- FEATURED 3: Ephraim College -->
-          <article
-            class="project-card featured"
-            onclick="openModal('modal-ephraim')"
-            tabindex="0"
-            role="button"
-            aria-label="View Ephraim College project details"
-          >
-            <div class="project-card-img-wrap">
-              <img
-                src="ASSETS/IMAGES/ephraim-college-hero.png"
-                alt="Ephraim College school website"
-                class="project-card-img"
-                loading="lazy"
-              />
-              <div class="project-card-overlay">
-                <span class="project-overlay-cta"
-                  ><i class="fas fa-expand-alt"></i> View Case Study</span
-                >
-              </div>
-            </div>
-            <div class="project-card-body">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <h3 class="project-card-title">Ephraim College</h3>
-                <span class="project-type-badge">Education</span>
-              </div>
-              <p class="project-card-desc">
-                An international school wanted its campus and culture to come
-                through online, not just an admissions form. I built
-                immersive storytelling around campus life with a clear
-                admissions flow.
-              </p>
-              <div class="project-stack">
-                <span class="stack-pill">React</span>
-                <span class="stack-pill">Tailwind</span>
-                <span class="stack-pill">Framer</span>
-                <span class="stack-pill stack-pill-more">+2</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- FEATURED 4: Soft Store NG -->
-          <article
-            class="project-card featured"
-            onclick="openModal('modal-softstore')"
-            tabindex="0"
-            role="button"
-            aria-label="View Soft Store NG project details"
-          >
-            <div class="project-card-img-wrap">
-              <img
-                src="ASSETS/IMAGES/soft-store.png"
-                alt="Soft Store NG ecommerce website"
-                class="project-card-img"
-                loading="lazy"
-              />
-              <div class="project-card-overlay">
-                <span class="project-overlay-cta"
-                  ><i class="fas fa-expand-alt"></i> View Case Study</span
-                >
-              </div>
-            </div>
-            <div class="project-card-body">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <h3 class="project-card-title">Soft Store NG</h3>
-                <span class="project-type-badge">E-Commerce</span>
-              </div>
-              <p class="project-card-desc">
-                An online retailer needed a store that could actually take
-                orders and payment end to end. I built the full catalog,
-                cart and checkout flow on a platform they can keep growing.
-              </p>
-              <div class="project-stack">
-                <span class="stack-pill">React</span>
-                <span class="stack-pill">Tailwind</span>
-                <span class="stack-pill">Supabase</span>
-                <span class="stack-pill stack-pill-more">+3</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <!-- ═══ MORE WORK ═══ -->
-        <div class="more-work-header reveal-up">
-          <h3 class="more-work-title">More Work</h3>
-          <p class="more-work-subtitle">
-            Additional projects across web apps, tooling and agency sites
-          </p>
-        </div>
-
-        <div class="projects-grid reveal-stagger">
-          <!-- Quix AI -->
-          <article
-            class="project-card"
-            onclick="openModal('modal-quix')"
-            tabindex="0"
-            role="button"
-            aria-label="View Quix AI project details"
-          >
-            <div class="project-card-img-wrap">
-              <img
-                src="ASSETS/IMAGES/app-preview.png"
-                alt="Quix AI study app screenshot"
-                class="project-card-img"
-                loading="lazy"
-              />
-              <div class="project-card-overlay">
-                <span class="project-overlay-cta"
-                  ><i class="fas fa-expand-alt"></i> View Project</span
-                >
-              </div>
-            </div>
-            <div class="project-card-body">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <h3 class="project-card-title">Quix AI</h3>
-                <span class="project-type-badge">Web App</span>
-              </div>
-              <p class="project-card-desc">
-                A web app that helps students with AI-powered study tools for
-                educational support.
-              </p>
-              <div class="project-stack">
-                <span class="stack-pill">React</span>
-                <span class="stack-pill">Tailwind</span>
-                <span class="stack-pill">Supabase</span>
-                <span class="stack-pill stack-pill-more">+5</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- V9 Technologies -->
-          <article
-            class="project-card"
-            onclick="openModal('modal-v9')"
-            tabindex="0"
-            role="button"
-            aria-label="View V9 Technologies project details"
-          >
-            <div class="project-card-img-wrap">
-              <img
-                src="ASSETS/IMAGES/v9-technologies.png"
-                alt="V9 Technologies agency website"
-                class="project-card-img"
-                loading="lazy"
-              />
-              <div class="project-card-overlay">
-                <span class="project-overlay-cta"
-                  ><i class="fas fa-expand-alt"></i> View Project</span
-                >
-              </div>
-            </div>
-            <div class="project-card-body">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <h3 class="project-card-title">V9 Technologies</h3>
-                <span class="project-type-badge">Agency Site</span>
-              </div>
-              <p class="project-card-desc">
-                A web development agency website where clients can contact
-                developers to build their projects.
-              </p>
-              <div class="project-stack">
-                <span class="stack-pill">React</span>
-                <span class="stack-pill">Tailwind</span>
-                <span class="stack-pill">Framer</span>
-                <span class="stack-pill stack-pill-more">+3</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- TaxClarity -->
-          <article
-            class="project-card"
-            onclick="openModal('modal-taxclarity')"
-            tabindex="0"
-            role="button"
-            aria-label="View TaxClarity project details"
-          >
-            <div class="project-card-img-wrap">
-              <img
-                src="ASSETS/IMAGES/taxclarity.png"
-                alt="TaxClarity website screenshot"
-                class="project-card-img"
-                loading="lazy"
-              />
-              <div class="project-card-overlay">
-                <span class="project-overlay-cta"
-                  ><i class="fas fa-expand-alt"></i> View Project</span
-                >
-              </div>
-            </div>
-            <div class="project-card-body">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <h3 class="project-card-title">TaxClarity</h3>
-                <span class="project-type-badge">Web Dev</span>
-              </div>
-              <p class="project-card-desc">
-                A website developed to clarify and enlighten people on how
-                they are being taxed in Nigeria.
-              </p>
-              <div class="project-stack">
-                <span class="stack-pill">React</span>
-                <span class="stack-pill">Tailwind CSS</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Vera Landscaping -->
-          <article
-            class="project-card"
-            onclick="openModal('modal-vera')"
-            tabindex="0"
-            role="button"
-            aria-label="View Vera Landscaping project details"
-          >
-            <div class="project-card-img-wrap">
-              <img
-                src="ASSETS/IMAGES/vera.png"
-                alt="Vera landscaping website"
-                class="project-card-img"
-                loading="lazy"
-              />
-              <div class="project-card-overlay">
-                <span class="project-overlay-cta"
-                  ><i class="fas fa-expand-alt"></i> View Project</span
-                >
-              </div>
-            </div>
-            <div class="project-card-body">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <h3 class="project-card-title">Vera Landscaping</h3>
-                <span class="project-type-badge">Web Dev</span>
-              </div>
-              <p class="project-card-desc">
-                A modern landscaping service website focused on clean design,
-                lawn care and outdoor maintenance.
-              </p>
-              <div class="project-stack">
-                <span class="stack-pill">HTML</span>
-                <span class="stack-pill">CSS</span>
-                <span class="stack-pill">JavaScript</span>
-                <span class="stack-pill stack-pill-more">+2</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Result Processor -->
-          <article
-            class="project-card"
-            onclick="openModal('modal-result')"
-            tabindex="0"
-            role="button"
-            aria-label="View Result Processor project details"
-          >
-            <div class="project-card-img-wrap">
-              <img
-                src="ASSETS/IMAGES/result-compiler.png"
-                alt="Result Processor web app"
-                class="project-card-img"
-                loading="lazy"
-              />
-              <div class="project-card-overlay">
-                <span class="project-overlay-cta"
-                  ><i class="fas fa-expand-alt"></i> View Project</span
-                >
-              </div>
-            </div>
-            <div class="project-card-body">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <h3 class="project-card-title">Result Processor</h3>
-                <span class="project-type-badge">EdTech Tool</span>
-              </div>
-              <p class="project-card-desc">
-                Automatically processes student scores, evaluates performance
-                and generates printable report cards.
-              </p>
-              <div class="project-stack">
-                <span class="stack-pill">HTML</span>
-                <span class="stack-pill">CSS</span>
-                <span class="stack-pill">JavaScript</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Portfolio Website -->
-          <article
-            class="project-card"
-            onclick="openModal('modal-portfolio')"
-            tabindex="0"
-            role="button"
-            aria-label="View Portfolio Website project details"
-          >
-            <div class="project-card-img-wrap">
-              <img
-                src="ASSETS/IMAGES/portfolio-p.png"
-                alt="Awolesi Victor Portfolio Website"
-                class="project-card-img"
-                loading="lazy"
-              />
-              <div class="project-card-overlay">
-                <span class="project-overlay-cta"
-                  ><i class="fas fa-expand-alt"></i> View Project</span
-                >
-              </div>
-            </div>
-            <div class="project-card-body">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <h3 class="project-card-title">Portfolio Website</h3>
-                <span class="project-type-badge">Web Dev</span>
-              </div>
-              <p class="project-card-desc">
-                This portfolio — a responsive, modern site to showcase
-                skills and projects in a clean, user-friendly way.
-              </p>
-              <div class="project-stack">
-                <span class="stack-pill">HTML</span>
-                <span class="stack-pill">CSS</span>
-                <span class="stack-pill">JavaScript</span>
-                <span class="stack-pill">Tailwind</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <!-- Mid-page conversion nudge -->
-        <div class="projects-cta-row reveal-up">
-          <p class="projects-cta-text">
-            Have a project in mind?
-            <a href="#contact" class="projects-cta-link"
-              >Let's talk <i class="fas fa-arrow-right"></i
-            ></a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-    <!-- ═══════════════════════════ TESTIMONIALS SECTION ═══════════════════════════ -->
-    <section id="testimonials" class="section-pad relative">
-      <div class="section-glow-right"></div>
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="section-header reveal-up">
-          <span class="section-tag">WHY CLIENTS TRUST ME</span>
-          <h2 class="section-title">
-            What People <span class="gradient-text bounce-text">Say</span>
-          </h2>
-          <p class="section-subtitle">
-            Kind words from clients and collaborators I've had the pleasure of
-            working with
-          </p>
-        </div>
-
-        <div class="testimonials-grid reveal-stagger">
-          <div class="testimonial-card">
-            <div class="testimonial-quote-icon">
-              <i class="fas fa-quote-left"></i>
-            </div>
-            <p class="testimonial-text">
-              "Victor delivered our agency website beyond our expectations. His
-              attention to design detail, clean code and fast delivery made the
-              whole process seamless. Highly recommend him for any web project."
-            </p>
-            <div class="testimonial-author">
-              <div
-                class="testimonial-avatar"
-                style="background: linear-gradient(135deg, #3498db, #2c3e50)"
-              >
-                <span>SK</span>
-              </div>
-              <div>
-                <p class="testimonial-name">Sarah K.</p>
-                <p class="testimonial-role">Product Manager · TechLaunch NG</p>
-              </div>
-            </div>
-            <div class="testimonial-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-quote-icon">
-              <i class="fas fa-quote-left"></i>
-            </div>
-            <p class="testimonial-text">
-              "Victor built my portfolio and it truly captured my brand as a
-              makeup artist. It was exactly what I wanted, delivered very
-              quickly, and I was kept in the loop throughout the whole process.
-              Overall, it helped level up my business."
-            </p>
-            <div class="testimonial-author">
-              <div
-                class="testimonial-avatar"
-                style="background: linear-gradient(135deg, #3498db, #2980b9)"
-              >
-                <span>BM</span>
-              </div>
-              <div>
-                <p class="testimonial-name">Bammy S.</p>
-                <p class="testimonial-role">Makeup Artist · Bammy Makeover</p>
-              </div>
-            </div>
-            <div class="testimonial-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-quote-icon">
-              <i class="fas fa-quote-left"></i>
-            </div>
-            <p class="testimonial-text">
-              "Victor built our e-commerce store and we saw a 40% increase in
-              user engagement within the first month. He understood our vision
-              perfectly and transformed it into a beautiful, functional
-              platform."
-            </p>
-            <div class="testimonial-author">
-              <div
-                class="testimonial-avatar"
-                style="background: linear-gradient(135deg, #e74c3c, #3498db)"
-              >
-                <span>AL</span>
-              </div>
-              <div>
-                <p class="testimonial-name">Amara L.</p>
-                <p class="testimonial-role">Founder · Soft Store NG</p>
-              </div>
-            </div>
-            <div class="testimonial-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
     <!-- ═══════════════════════════ TOOLS SECTION ═══════════════════════════ -->
     <section id="tools" class="section-pad relative">
       <div class="section-glow-left"></div>
@@ -1324,6 +774,414 @@ const victor = {
         </div>
       </div>
     </section>
+
+    <div class="section-divider"></div>
+    <section id="projects" class="section-pad relative">
+      <div class="section-glow-left"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="section-header reveal-up">
+          <span class="section-tag">PORTFOLIO</span>
+          <h2 class="section-title">
+            Featured <span class="gradient-text bounce-text">Projects</span>
+          </h2>
+          <p class="section-subtitle">
+            Click any card to explore the full project details, screenshots and
+            links
+          </p>
+        </div>
+
+        <div class="projects-grid reveal-stagger">
+          <!-- PROJECT 1: Portfolio Website -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-portfolio')"
+            tabindex="0"
+            role="button"
+            aria-label="View Portfolio Website project details"
+          >
+            <div class="project-card-img-wrap">
+              <img
+                src="ASSETS/IMAGES/portfolio-p.png"
+                alt="Awolesi Victor Portfolio Website"
+                class="project-card-img"
+                loading="lazy"
+              />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Portfolio Website</h3>
+                <span class="project-type-badge">Web Dev</span>
+              </div>
+              <p class="project-card-desc">
+                A responsive, modern portfolio to showcase skills and projects
+                in a clean, user-friendly way.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">HTML</span>
+                <span class="stack-pill">CSS</span>
+                <span class="stack-pill">JavaScript</span>
+                <span class="stack-pill">Tailwind</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Quix AI -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-quix')"
+            tabindex="0"
+            role="button"
+            aria-label="View Quix AI project details"
+          >
+            <div class="project-card-img-wrap">
+              <img
+                src="ASSETS/IMAGES/app-preview.png"
+                alt="Quix AI study app screenshot"
+                class="project-card-img"
+                loading="lazy"
+              />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Quix AI</h3>
+                <span class="project-type-badge">Web App</span>
+              </div>
+              <p class="project-card-desc">
+                A web app that helps students with AI-powered study tools for
+                educational support.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Tailwind</span>
+                <span class="stack-pill">Supabase</span>
+                <span class="stack-pill stack-pill-more">+5</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Soft Store NG -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-softstore')"
+            tabindex="0"
+            role="button"
+            aria-label="View Soft Store NG project details"
+          >
+            <div class="project-card-img-wrap">
+              <img
+                src="ASSETS/IMAGES/soft-store.png"
+                alt="Soft Store NG ecommerce website"
+                class="project-card-img"
+                loading="lazy"
+              />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Soft Store NG</h3>
+                <span class="project-type-badge">E-Commerce</span>
+              </div>
+              <p class="project-card-desc">
+                An e-commerce platform with product catalogs, shopping cart and
+                integrated payment systems.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Tailwind</span>
+                <span class="stack-pill">Supabase</span>
+                <span class="stack-pill stack-pill-more">+3</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: Bammy Makeover -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-bammy')"
+            tabindex="0"
+            role="button"
+            aria-label="View Bammy Makeover project details"
+          >
+            <div class="project-card-img-wrap">
+              <img
+                src="ASSETS/IMAGES/bammymakeover-hero.png"
+                alt="Bammy Makeover portfolio website"
+                class="project-card-img"
+                loading="lazy"
+              />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Bammy Makeover</h3>
+                <span class="project-type-badge">Beauty / Branding</span>
+              </div>
+              <p class="project-card-desc">
+                A polished portfolio website for a makeup artist focused on
+                services, gallery storytelling and a premium visual identity.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Tailwind</span>
+                <span class="stack-pill stack-pill-more">+2</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 5: AETHERIA Estate -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-aetheria')"
+            tabindex="0"
+            role="button"
+            aria-label="View AETHERIA Estate project details"
+          >
+            <div class="project-card-img-wrap">
+              <img
+                src="ASSETS/IMAGES/real-estate.png"
+                alt="AETHERIA Estate real estate website"
+                class="project-card-img"
+                loading="lazy"
+              />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">AETHERIA Estate</h3>
+                <span class="project-type-badge">Real Estate</span>
+              </div>
+              <p class="project-card-desc">
+                A modern real estate experience for a realtor with elevated
+                property showcases, service highlights and high-converting CTAs.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">HTML</span>
+                <span class="stack-pill">CSS</span>
+                <span class="stack-pill">Tailwind</span>
+                <span class="stack-pill">JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 6: Ephraim College -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-ephraim')"
+            tabindex="0"
+            role="button"
+            aria-label="View Ephraim College project details"
+          >
+            <div class="project-card-img-wrap">
+              <img
+                src="ASSETS/IMAGES/ephraim-college-hero.png"
+                alt="Ephraim College school website"
+                class="project-card-img"
+                loading="lazy"
+              />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Ephraim College</h3>
+                <span class="project-type-badge">Education</span>
+              </div>
+              <p class="project-card-desc">
+                A dynamic school website for an international institution with
+                immersive storytelling, campus highlights and admissions flow.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Tailwind</span>
+                <span class="stack-pill">Framer</span>
+                <span class="stack-pill stack-pill-more">+2</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 7: V9 Technologies -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-v9')"
+            tabindex="0"
+            role="button"
+            aria-label="View V9 Technologies project details"
+          >
+            <div class="project-card-img-wrap">
+              <img
+                src="ASSETS/IMAGES/v9-technologies.png"
+                alt="V9 Technologies agency website"
+                class="project-card-img"
+                loading="lazy"
+              />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">V9 Technologies</h3>
+                <span class="project-type-badge">Agency Site</span>
+              </div>
+              <p class="project-card-desc">
+                A web development agency website where clients can contact
+                developers to build their projects.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Tailwind</span>
+                <span class="stack-pill">Framer</span>
+                <span class="stack-pill stack-pill-more">+3</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 8: TaxClarity -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-taxclarity')"
+            tabindex="0"
+            role="button"
+            aria-label="View TaxClarity project details"
+          >
+            <div class="project-card-img-wrap">
+              <img
+                src="ASSETS/IMAGES/taxclarity.png"
+                alt="TaxClarity website screenshot"
+                class="project-card-img"
+                loading="lazy"
+              />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">TaxClarity</h3>
+                <span class="project-type-badge">Web Dev</span>
+              </div>
+              <p class="project-card-desc">
+                A website developed to clarify and enlighten people on how they
+                are being taxed in Nigeria.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Tailwind CSS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 9: Vera Landscaping -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-vera')"
+            tabindex="0"
+            role="button"
+            aria-label="View Vera Landscaping project details"
+          >
+            <div class="project-card-img-wrap">
+              <img
+                src="ASSETS/IMAGES/vera.png"
+                alt="Vera landscaping website"
+                class="project-card-img"
+                loading="lazy"
+              />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Vera Landscaping</h3>
+                <span class="project-type-badge">Web Dev</span>
+              </div>
+              <p class="project-card-desc">
+                A modern landscaping service website focused on clean design,
+                lawn care and outdoor maintenance.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">HTML</span>
+                <span class="stack-pill">CSS</span>
+                <span class="stack-pill">JavaScript</span>
+                <span class="stack-pill stack-pill-more">+2</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 10: Result Processor -->
+          <article
+            class="project-card"
+            onclick="openModal('modal-result')"
+            tabindex="0"
+            role="button"
+            aria-label="View Result Processor project details"
+          >
+            <div class="project-card-img-wrap">
+              <img
+                src="ASSETS/IMAGES/result-compiler.png"
+                alt="Result Processor web app"
+                class="project-card-img"
+                loading="lazy"
+              />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Project</span
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Result Processor</h3>
+                <span class="project-type-badge">EdTech Tool</span>
+              </div>
+              <p class="project-card-desc">
+                Automatically processes student scores, evaluates performance
+                and generates printable report cards.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">HTML</span>
+                <span class="stack-pill">CSS</span>
+                <span class="stack-pill">JavaScript</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
     <!-- ═══════════════════════════ PROJECT MODALS ═══════════════════════════ -->
 
     <!-- MODAL: Portfolio -->
@@ -2278,7 +2136,113 @@ const victor = {
       </div>
     </div>
 
+    <!-- ═══════════════════════════ TESTIMONIALS SECTION ═══════════════════════════ -->
+    <section id="testimonials" class="section-pad relative">
+      <div class="section-glow-right"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="section-header reveal-up">
+          <span class="section-tag">SOCIAL PROOF</span>
+          <h2 class="section-title">
+            What People <span class="gradient-text bounce-text">Say</span>
+          </h2>
+          <p class="section-subtitle">
+            Kind words from clients and collaborators I've had the pleasure of
+            working with
+          </p>
+        </div>
+
+        <div class="testimonials-grid reveal-stagger">
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">
+              "Victor delivered our agency website beyond our expectations. His
+              attention to design detail, clean code and fast delivery made the
+              whole process seamless. Highly recommend him for any web project."
+            </p>
+            <div class="testimonial-author">
+              <div
+                class="testimonial-avatar"
+                style="background: linear-gradient(135deg, #3498db, #2c3e50)"
+              >
+                <span>SK</span>
+              </div>
+              <div>
+                <p class="testimonial-name">Sarah K.</p>
+                <p class="testimonial-role">Product Manager · TechLaunch NG</p>
+              </div>
+            </div>
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">
+              "Victor built my portfolio and it truly captured my brand as a
+              makeup artist. It was exactly what I wanted, delivered very
+              quickly, and I was kept in the loop throughout the whole process.
+              Overall, it helped level up my business."
+            </p>
+            <div class="testimonial-author">
+              <div
+                class="testimonial-avatar"
+                style="background: linear-gradient(135deg, #3498db, #2980b9)"
+              >
+                <span>BM</span>
+              </div>
+              <div>
+                <p class="testimonial-name">Bammy S.</p>
+                <p class="testimonial-role">Makeup Artist · Bammy Makeover</p>
+              </div>
+            </div>
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">
+              "Victor built our e-commerce store and we saw a 40% increase in
+              user engagement within the first month. He understood our vision
+              perfectly and transformed it into a beautiful, functional
+              platform."
+            </p>
+            <div class="testimonial-author">
+              <div
+                class="testimonial-avatar"
+                style="background: linear-gradient(135deg, #e74c3c, #3498db)"
+              >
+                <span>AL</span>
+              </div>
+              <div>
+                <p class="testimonial-name">Amara L.</p>
+                <p class="testimonial-role">Founder · Soft Store NG</p>
+              </div>
+            </div>
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="section-divider"></div>
+
     <!-- ═══════════════════════════ CONTACT SECTION ═══════════════════════════ -->
     <section id="contact" class="section-pad relative">
       <div class="section-glow-left"></div>
