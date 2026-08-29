@@ -2869,3 +2869,95 @@ a.contact-detail-item:hover {
   .loader-fluid-fill,
   .loader-fluid-wave { animation: none; }
 }
+
+/* ─────────────────────────── POLISH: SOCIAL CARDS (CONTACT) ─────────────────────────── */
+.social-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+}
+
+@media (min-width: 640px) {
+  .social-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 0.9rem;
+  min-height: 44px; /* thumb-friendly tap target */
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.social-card > i.fab {
+  font-size: 1.05rem;
+  color: var(--accent-light);
+  flex-shrink: 0;
+}
+
+.social-card:hover {
+  border-color: var(--border-hover);
+  background: var(--accent-dim);
+  transform: translateY(-2px);
+}
+
+[data-theme="light"] .social-card:hover {
+  border-color: var(--accent-border);
+}
+
+/* ─────────────────────────── POLISH: MOBILE NAV DECLUTTER ───────────────────────────
+   On narrow phones the pill holds logo + CTA + theme + burger.
+   Below 420px the CTA collapses to icon-only to avoid overflow. */
+@media (max-width: 420px) {
+  .nav-hire-label {
+    display: none;
+  }
+  .nav-hire-btn {
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+/* Remove tap flash on interactive elements (mobile) */
+a,
+button,
+.project-card,
+.tool-card {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ─────────────────────────── POLISH: ANCHOR SCROLL OFFSET ───────────────────────────
+   Fixed glass navbar must never cover section headers on anchor jumps */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* ─────────────────────────── POLISH: SOLO FEATURED CARD ───────────────────────────
+   A single featured card shouldn't stretch edge-to-edge on big screens.
+   Cap it to a comfortable reading width, centered, with a wider image ratio. */
+.featured-projects-grid.featured-solo {
+  grid-template-columns: minmax(0, 720px);
+  justify-content: center;
+}
+
+.featured-projects-grid.featured-solo .project-card.featured .project-card-img-wrap {
+  aspect-ratio: 21 / 10;
+}
+
+@media (max-width: 768px) {
+  .featured-projects-grid.featured-solo {
+    grid-template-columns: 1fr;
+  }
+  .featured-projects-grid.featured-solo .project-card.featured .project-card-img-wrap {
+    aspect-ratio: 16 / 10;
+  }
+}

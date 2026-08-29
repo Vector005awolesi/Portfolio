@@ -1,4 +1,4 @@
-<!-- WRITTEN BY VICTOR | Redesigned June 2026 — Fullstack Developer Portfolio -->
+﻿<!-- WRITTEN BY VICTOR | Redesigned June 2026 — Fullstack Developer Portfolio -->
 <!doctype html>
 <html lang="en" data-theme="dark">
   <head>
@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Explore the professional portfolio of Awolesi Victor, a Fullstack Developer and Software Engineer based in Lagos, Nigeria. Specializing in JavaScript, TypeScript, React, Node.js, Express, Supabase, MongoDB and modern web development. Available for freelance and remote work."
+      content="The personal portfolio of Awolesi Victor — Fullstack Developer and Founder of BoltFormz, based in Lagos, Nigeria. Explore my projects, the stack I work with and the things I've built."
     />
     <meta
       name="keywords"
-      content="Awolesi Victor, Victor portfolio, fullstack developer, web developer Lagos, JavaScript developer, TypeScript developer, React developer, Node.js developer, Express developer, Supabase developer, MongoDB developer, software engineer Nigeria, freelance web developer, portfolio website"
+      content="Awolesi Victor, Victor portfolio, fullstack developer, software engineer Nigeria, JavaScript developer, TypeScript developer, React developer, Node.js developer, web developer Lagos, personal portfolio, BoltFormz"
     />
     <meta name="author" content="Awolesi Victor" />
     <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Awolesi Victor — Fullstack Developer" />
+    <meta property="og:title" content="Awolesi Victor — Fullstack Developer & Founder" />
     <meta
       property="og:description"
-      content="Professional portfolio of Awolesi Victor, Fullstack Developer in Lagos, Nigeria."
+      content="Get to know Awolesi Victor — Fullstack Developer, Founder of BoltFormz, and the projects he's built."
     />
     <meta property="og:image" content="ASSETS/IMAGES/profile-main.png" />
     <meta
@@ -29,12 +29,12 @@
     <meta name="twitter:title" content="Awolesi Victor — Fullstack Developer" />
     <meta
       name="twitter:description"
-      content="Explore projects and skills of Awolesi Victor, a Fullstack Developer in Lagos, Nigeria."
+      content="Projects, stack and story of Awolesi Victor, a Fullstack Developer in Lagos, Nigeria."
     />
     <meta name="twitter:image" content="ASSETS/IMAGES/profile-main.png" />
 
     <title>
-      Awolesi Victor — Fullstack Developer & Software Engineer | Lagos, Nigeria
+      Awolesi Victor — Fullstack Developer & Founder | Portfolio
     </title>
 
     <!-- Google Fonts -->
@@ -153,19 +153,18 @@
 
           <!-- Desktop Nav Links -->
           <ul class="hidden md:flex items-center gap-1 nav-pill">
-            <li><a href="#hero" class="nav-link">About</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#projects" class="nav-link">Work</a></li>
-            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
             <li><a href="#tools" class="nav-link">Skills</a></li>
-            <li><a href="#career" class="nav-link">Career</a></li>
+            <li><a href="#career" class="nav-link">Experience</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
 
-          <!-- Actions: Hire Me always visible + theme -->
+          <!-- Actions: Say Hello always visible + theme -->
           <div class="navbar-actions flex items-center gap-2 shrink-0">
             <a href="#contact" class="nav-hire-btn">
-              <span class="nav-hire-label">Hire Me</span>
-              <i class="fas fa-arrow-right text-[10px]"></i>
+              <span class="nav-hire-label">Say Hello</span>
+              <i class="fas fa-paper-plane text-[10px]"></i>
             </a>
             <button
               id="theme-btn"
@@ -191,7 +190,7 @@
           <div class="mobile-menu-inner">
             <div class="px-6 py-4 space-y-2 border-t border-white/5">
               <a
-                href="#hero"
+                href="#about"
                 class="mobile-nav-link"
                 onclick="closeMobileMenu()"
                 >About</a
@@ -203,12 +202,6 @@
                 >Work</a
               >
               <a
-                href="#testimonials"
-                class="mobile-nav-link"
-                onclick="closeMobileMenu()"
-                >Testimonials</a
-              >
-              <a
                 href="#tools"
                 class="mobile-nav-link"
                 onclick="closeMobileMenu()"
@@ -218,7 +211,7 @@
                 href="#career"
                 class="mobile-nav-link"
                 onclick="closeMobileMenu()"
-                >Career</a
+                >Experience</a
               >
               <a
                 href="#contact"
@@ -258,7 +251,7 @@
             >
               <span class="hero-status-dot"></span>
               <span class="font-mono text-xs text-blue-400 tracking-wider"
-                >Available for work</span
+                >// building &amp; shipping</span
               >
             </div>
 
@@ -290,48 +283,46 @@
               class="hero-reveal hero-desc text-slate-400 mb-5 leading-relaxed"
               style="transition-delay: 380ms"
             >
-              I design and build websites, web apps and dashboards for
-              founders and teams — from first line of code to a live product.
-              Over <strong class="text-slate-200">2+ years</strong> in the
-              stack, CEO at <strong class="text-blue-400">INFINET Inc</strong>,
-              and 15+ shipped projects behind me.
+              I'm a fullstack developer who enjoys taking ideas from a blank
+              editor to live, working products. Founder of
+              <strong class="text-blue-400">BoltFormz</strong>,
+              <strong class="text-slate-200">2+ years</strong> in the stack, and
+              15+ shipped projects behind me.
             </p>
 
             <div
               class="hero-reveal hero-capabilities"
               style="transition-delay: 420ms"
             >
-              <span class="hero-capability-pill">Business websites</span>
               <span class="hero-capability-pill">Web apps</span>
-              <span class="hero-capability-pill">E-commerce</span>
               <span class="hero-capability-pill">Dashboards &amp; tools</span>
+              <span class="hero-capability-pill">APIs &amp; backends</span>
+              <span class="hero-capability-pill">Landing pages</span>
             </div>
 
             <div
               class="hero-reveal hero-cta-row"
               style="transition-delay: 460ms"
             >
-              <a href="#contact" class="btn-primary">
-                <i class="fas fa-paper-plane"></i> Get In Touch
+              <a href="#projects" class="btn-primary">
+                <i class="fas fa-arrow-down"></i> View My Work
               </a>
-              <button
-                class="btn-secondary"
-                onclick="window.open('#', '_blank')"
-              >
-                <i class="fas fa-download"></i> My Resume
-              </button>
+              <a href="#contact" class="btn-secondary">
+                <i class="fas fa-paper-plane"></i> Say Hello
+              </a>
             </div>
 
             <div
               class="hero-reveal hero-social-row"
               style="transition-delay: 540ms"
             >
-              <span class="text-xs text-slate-500 font-mono">FOLLOW ME</span>
+              <span class="text-xs text-slate-500 font-mono">FIND ME ON</span>
               <div class="hero-social-divider"></div>
               <div class="flex gap-2">
                 <a
                   href="https://github.com/vector005awolesi"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="social-icon-btn"
                   aria-label="GitHub"
                 >
@@ -340,6 +331,7 @@
                 <a
                   href="https://linkedin.com/in/awolesi-victor-236435362"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="social-icon-btn"
                   aria-label="LinkedIn"
                 >
@@ -348,6 +340,7 @@
                 <a
                   href="https://x.com/awolesi_victor"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="social-icon-btn"
                   aria-label="X / Twitter"
                 >
@@ -356,6 +349,7 @@
                 <a
                   href="https://facebook.com/awolesi.victor"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="social-icon-btn"
                   aria-label="Facebook"
                 >
@@ -434,18 +428,109 @@ const victor = {
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
-            <span class="stat-num">20+</span>
-            <span class="stat-label">Websites Designed</span>
+            <span class="stat-num">15+</span>
+            <span class="stat-label">Projects Built</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
-            <span class="stat-num">15+</span>
-            <span class="stat-label">Projects Completed</span>
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Technologies Used</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
-            <span class="stat-num">15+</span>
-            <span class="stat-label">Happy Clients</span>
+            <span class="stat-num">1</span>
+            <span class="stat-label">Company Founded</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+    <section id="about" class="section-pad relative">
+      <div class="section-glow-left"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="section-header reveal-up">
+          <span class="section-tag">WHO I AM</span>
+          <h2 class="section-title">
+            About <span class="gradient-text bounce-text">Me</span>
+          </h2>
+          <p class="section-subtitle">
+            A quick look at who I am, what I do and what I'm about
+          </p>
+        </div>
+
+        <div
+          class="grid lg:grid-cols-5 gap-6 lg:gap-10 items-start reveal-stagger"
+        >
+          <!-- Story -->
+          <div class="lg:col-span-3 space-y-4">
+            <p class="text-slate-300 leading-relaxed">
+              I'm Awolesi Victor — a Fullstack Developer based in Lagos,
+              Nigeria. I spend my time turning ideas into real, working
+              software: clean interfaces on the front, solid logic on the back.
+            </p>
+            <p class="text-slate-400 leading-relaxed">
+              I'm the founder of
+              <strong class="text-blue-400">BoltFormz</strong>, where I get
+              to wear every hat — writing code, shaping product decisions and
+              shipping things end-to-end. What drives me is that moment when a
+              rough idea becomes something people actually use.
+            </p>
+            <p class="text-slate-400 leading-relaxed">
+              When I'm not coding, I'm exploring new tools, breaking things to
+              understand them better, and building side projects that teach me
+              something new.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="hero-capability-pill">Problem solver</span>
+              <span class="hero-capability-pill">Builder at heart</span>
+              <span class="hero-capability-pill">Self-taught</span>
+              <span class="hero-capability-pill">Always learning</span>
+            </div>
+          </div>
+
+          <!-- Quick facts card -->
+          <div class="lg:col-span-2">
+            <div
+              class="bg-navy-800 border border-white/5 rounded-2xl p-6 space-y-5"
+            >
+              <div>
+                <p
+                  class="font-mono text-xs text-slate-500 tracking-widest uppercase mb-1"
+                >
+                  Currently
+                </p>
+                <p class="text-slate-200 font-medium">
+                  Founder &amp; Developer — BoltFormz
+                </p>
+              </div>
+              <div class="border-t border-white/5 pt-4">
+                <p
+                  class="font-mono text-xs text-slate-500 tracking-widest uppercase mb-1"
+                >
+                  Based in
+                </p>
+                <p class="text-slate-200 font-medium">Lagos, Nigeria</p>
+              </div>
+              <div class="border-t border-white/5 pt-4">
+                <p
+                  class="font-mono text-xs text-slate-500 tracking-widest uppercase mb-1"
+                >
+                  Focus
+                </p>
+                <p class="text-slate-200 font-medium">
+                  Fullstack web development
+                </p>
+              </div>
+              <div class="border-t border-white/5 pt-4">
+                <p
+                  class="font-mono text-xs text-slate-500 tracking-widest uppercase mb-1"
+                >
+                  Learning
+                </p>
+                <p class="text-slate-200 font-medium">AI/ML &amp; system design</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -461,13 +546,71 @@ const victor = {
             Things I've <span class="gradient-text bounce-text">Built</span>
           </h2>
           <p class="section-subtitle">
-            A few projects that show how I take a business problem from
-            first idea to a live product. Click any card for the full case
-            study.
+            A mix of my own products and client work. Click any card for
+            details.
           </p>
         </div>
 
-        <!-- ═══ FEATURED WORK ═══ -->
+        <!-- ═══ FEATURED PRODUCT ═══ -->
+        <p
+          class="font-mono text-xs text-slate-500 tracking-widest uppercase reveal-up"
+          style="margin-bottom: 1rem"
+        >
+          Featured Product
+        </p>
+
+        <div
+          class="featured-projects-grid featured-solo reveal-stagger"
+          style="margin-bottom: 2.5rem"
+        >
+          <!-- Quix AI (Featured) -->
+          <article
+            class="project-card featured"
+            onclick="openModal('modal-quix')"
+            tabindex="0"
+            role="button"
+            aria-label="View Quix AI project details"
+          >
+            <div class="project-card-img-wrap">
+              <img
+                src="ASSETS/IMAGES/app-preview.png"
+                alt="Quix AI study app screenshot"
+                class="project-card-img"
+                loading="lazy"
+              />
+              <div class="project-card-overlay">
+                <span class="project-overlay-cta"
+                  ><i class="fas fa-expand-alt"></i> View Case Study</span
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="project-card-title">Quix AI</h3>
+                <span class="project-type-badge">AI Study Product</span>
+              </div>
+              <p class="project-card-desc">
+                An AI-powered study buddy that helps students learn smarter —
+                AI study tools, dashboards and a full Supabase backend.
+              </p>
+              <div class="project-stack">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Tailwind</span>
+                <span class="stack-pill">Supabase</span>
+                <span class="stack-pill stack-pill-more">+5</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- ═══ FREELANCE & CLIENT WORK ═══ -->
+        <div class="more-work-header reveal-up">
+          <h3 class="more-work-title">Freelance &amp; Client Work</h3>
+          <p class="more-work-subtitle">
+            Websites and web apps built for clients
+          </p>
+        </div>
+
         <div class="featured-projects-grid reveal-stagger">
           <!-- FEATURED 1: Bammy Makeover -->
           <article
@@ -631,54 +774,15 @@ const victor = {
           </article>
         </div>
 
-        <!-- ═══ MORE WORK ═══ -->
+        <!-- ═══ MORE CLIENT PROJECTS ═══ -->
         <div class="more-work-header reveal-up">
-          <h3 class="more-work-title">More Work</h3>
+          <h3 class="more-work-title">More Client Projects</h3>
           <p class="more-work-subtitle">
-            Additional projects across web apps, tooling and agency sites
+            Additional client work
           </p>
         </div>
 
         <div class="projects-grid reveal-stagger">
-          <!-- Quix AI -->
-          <article
-            class="project-card"
-            onclick="openModal('modal-quix')"
-            tabindex="0"
-            role="button"
-            aria-label="View Quix AI project details"
-          >
-            <div class="project-card-img-wrap">
-              <img
-                src="ASSETS/IMAGES/app-preview.png"
-                alt="Quix AI study app screenshot"
-                class="project-card-img"
-                loading="lazy"
-              />
-              <div class="project-card-overlay">
-                <span class="project-overlay-cta"
-                  ><i class="fas fa-expand-alt"></i> View Project</span
-                >
-              </div>
-            </div>
-            <div class="project-card-body">
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <h3 class="project-card-title">Quix AI</h3>
-                <span class="project-type-badge">Web App</span>
-              </div>
-              <p class="project-card-desc">
-                A web app that helps students with AI-powered study tools for
-                educational support.
-              </p>
-              <div class="project-stack">
-                <span class="stack-pill">React</span>
-                <span class="stack-pill">Tailwind</span>
-                <span class="stack-pill">Supabase</span>
-                <span class="stack-pill stack-pill-more">+5</span>
-              </div>
-            </div>
-          </article>
-
           <!-- V9 Technologies -->
           <article
             class="project-card"
@@ -794,6 +898,20 @@ const victor = {
             </div>
           </article>
 
+        </div>
+
+        <!-- ═══ PRODUCTS I'VE BUILT ═══ -->
+        <div class="more-work-header reveal-up">
+          <h3 class="more-work-title">Products I've Built</h3>
+          <p class="more-work-subtitle">
+            Self-started tools and apps
+          </p>
+        </div>
+
+        <div
+          class="projects-grid reveal-stagger"
+          style="margin-bottom: 2.5rem"
+        >
           <!-- Result Processor -->
           <article
             class="project-card"
@@ -875,9 +993,9 @@ const victor = {
         <!-- Mid-page conversion nudge -->
         <div class="projects-cta-row reveal-up">
           <p class="projects-cta-text">
-            Have a project in mind?
+            Enjoying what you see?
             <a href="#contact" class="projects-cta-link"
-              >Let's talk <i class="fas fa-arrow-right"></i
+              >Say hello <i class="fas fa-arrow-right"></i
             ></a>
           </p>
         </div>
@@ -1157,7 +1275,7 @@ const victor = {
               </div>
               <h3 class="soft-skill-title">Leadership</h3>
               <p class="soft-skill-desc">
-                CEO of INFINET Inc. Leading cross-functional teams, setting
+                Founder of BoltFormz. Leading cross-functional teams, setting
                 project vision and driving execution toward shared goals.
               </p>
             </div>
@@ -1247,22 +1365,22 @@ const victor = {
             <div class="timeline-card">
               <div class="timeline-header">
                 <div>
-                  <h3 class="timeline-title">CEO &amp; Senior Developer</h3>
-                  <p class="timeline-company">INFINET Inc</p>
+                  <h3 class="timeline-title">Founder &amp; Senior Developer</h3>
+                  <p class="timeline-company">BoltFormz</p>
                 </div>
                 <span class="timeline-badge">JAN 2025 — Present</span>
               </div>
               <p class="timeline-desc">
-                Founded and currently leading INFINET Inc, overseeing project
-                development, strategy and execution. Actively involved in
-                full-stack coding, team coordination and delivering innovative
-                digital solutions for clients across multiple industries.
+                Founded and currently leading BoltFormz, overseeing project
+                development, strategy and execution. Hands-on across the whole
+                stack — from full-stack coding and team coordination to
+                shipping real products end-to-end.
               </p>
               <div class="flex flex-wrap gap-2 mt-3">
                 <span class="tl-tag">Leadership</span>
                 <span class="tl-tag">Fullstack Dev</span>
                 <span class="tl-tag">Strategy</span>
-                <span class="tl-tag">Client Management</span>
+                <span class="tl-tag">Product</span>
               </div>
             </div>
           </div>
@@ -1302,7 +1420,7 @@ const victor = {
                 <div>
                   <h3 class="timeline-title">Fullstack Developer</h3>
                   <p class="timeline-company">
-                    Personal Projects &amp; Freelance
+                    Building &amp; Shipping Projects
                   </p>
                 </div>
                 <span class="timeline-badge">DEC 2023 — Present</span>
@@ -1409,6 +1527,7 @@ const victor = {
             <a
               href="https://github.com/vector005awolesi/Portfolio"
               target="_blank"
+              rel="noopener noreferrer"
               class="modal-btn-code"
             >
               <i class="fab fa-github"></i> View Code
@@ -1524,6 +1643,7 @@ const victor = {
             <a
               href="https://quix-ai-buddy.vercel.app/"
               target="_blank"
+              rel="noopener noreferrer"
               class="modal-btn-live"
             >
               <i class="fas fa-external-link-alt"></i> Live Demo
@@ -1615,6 +1735,7 @@ const victor = {
             <a
               href="https://v9-technologies.vercel.app/"
               target="_blank"
+              rel="noopener noreferrer"
               class="modal-btn-live"
             >
               <i class="fas fa-external-link-alt"></i> Live Demo
@@ -1706,6 +1827,7 @@ const victor = {
             <a
               href="https://soft-store-ng.vercel.app/"
               target="_blank"
+              rel="noopener noreferrer"
               class="modal-btn-live"
             >
               <i class="fas fa-external-link-alt"></i> Live Demo
@@ -1791,6 +1913,7 @@ const victor = {
             <a
               href="https://github.com/Apex-Shippers/Tax-Clarity-NG"
               target="_blank"
+              rel="noopener noreferrer"
               class="modal-btn-code"
             >
               <i class="fab fa-github"></i> View Code
@@ -1798,6 +1921,7 @@ const victor = {
             <a
               href="https://tax-clarity-ng-six.vercel.app/"
               target="_blank"
+              rel="noopener noreferrer"
               class="modal-btn-live"
             >
               <i class="fas fa-external-link-alt"></i> Live Demo
@@ -1886,6 +2010,7 @@ const victor = {
             <a
               href="https://github.com/vector005awolesi/landscaping"
               target="_blank"
+              rel="noopener noreferrer"
               class="modal-btn-code"
             >
               <i class="fab fa-github"></i> View Code
@@ -1893,6 +2018,7 @@ const victor = {
             <a
               href="https://vera-landscaping.netlify.app/"
               target="_blank"
+              rel="noopener noreferrer"
               class="modal-btn-live"
             >
               <i class="fas fa-external-link-alt"></i> Live Demo
@@ -1982,6 +2108,7 @@ const victor = {
             <a
               href="https://github.com/vector005awolesi/RC"
               target="_blank"
+              rel="noopener noreferrer"
               class="modal-btn-code"
             >
               <i class="fab fa-github"></i> View Code
@@ -1989,6 +2116,7 @@ const victor = {
             <a
               href="https://vector005awolesi.github.io/RC/"
               target="_blank"
+              rel="noopener noreferrer"
               class="modal-btn-live"
             >
               <i class="fas fa-external-link-alt"></i> Live Demo
@@ -2080,6 +2208,7 @@ const victor = {
             <a
               href="https://bammymakeover.com"
               target="_blank"
+              rel="noopener noreferrer"
               class="modal-btn-live"
             >
               <i class="fas fa-external-link-alt"></i> View Live
@@ -2269,6 +2398,7 @@ const victor = {
             <a
               href="https://ephraim-school.vercel.app"
               target="_blank"
+              rel="noopener noreferrer"
               class="modal-btn-live"
             >
               <i class="fas fa-external-link-alt"></i> View Live
@@ -2284,26 +2414,29 @@ const victor = {
       <div class="section-glow-left"></div>
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="section-header reveal-up">
-          <span class="section-tag">LET'S TALK</span>
+          <span class="section-tag">SAY HELLO</span>
           <h2 class="section-title">
-            Get In <span class="gradient-text bounce-text">Touch</span>
+            Connect With <span class="gradient-text bounce-text">Me</span>
           </h2>
           <p class="section-subtitle">
-            Have a project in mind or want to collaborate? I'd love to hear from
-            you.
+            Want to talk tech, collaborate on something, or just say hi? My
+            inbox is always open.
           </p>
         </div>
 
-        <div class="contact-grid reveal-stagger">
+        <div
+          class="contact-grid reveal-stagger"
+          style="grid-template-columns: 1fr"
+        >
           <!-- Contact Info -->
           <div class="contact-info">
             <div class="contact-availability">
               <span class="avail-dot"></span>
               <div>
-                <p class="avail-title">Available for Work</p>
+                <p class="avail-title">Let's Connect</p>
                 <p class="avail-desc">
-                  I'm actively looking for remote jobs and freelance
-                  opportunities
+                  The best way to reach me is email — or find me on any of the
+                  platforms below
                 </p>
               </div>
             </div>
@@ -2343,121 +2476,45 @@ const victor = {
 
             <div class="contact-socials">
               <p class="contact-socials-label">Find me on</p>
-              <div class="flex gap-3">
+              <div class="social-cards">
                 <a
                   href="https://github.com/vector005awolesi"
                   target="_blank"
-                  class="social-icon-btn"
-                  aria-label="GitHub"
+                  rel="noopener noreferrer"
+                  class="social-card"
                 >
                   <i class="fab fa-github"></i>
+                  <span>GitHub</span>
                 </a>
                 <a
                   href="https://linkedin.com/in/awolesi-victor-236435362"
                   target="_blank"
-                  class="social-icon-btn"
-                  aria-label="LinkedIn"
+                  rel="noopener noreferrer"
+                  class="social-card"
                 >
                   <i class="fab fa-linkedin"></i>
+                  <span>LinkedIn</span>
                 </a>
                 <a
                   href="https://x.com/awolesi_victor"
                   target="_blank"
-                  class="social-icon-btn"
-                  aria-label="X / Twitter"
+                  rel="noopener noreferrer"
+                  class="social-card"
                 >
                   <i class="fab fa-x-twitter"></i>
+                  <span>X / Twitter</span>
                 </a>
                 <a
                   href="https://facebook.com/awolesi.victor"
                   target="_blank"
-                  class="social-icon-btn"
-                  aria-label="Facebook"
+                  rel="noopener noreferrer"
+                  class="social-card"
                 >
                   <i class="fab fa-facebook"></i>
+                  <span>Facebook</span>
                 </a>
               </div>
             </div>
-          </div>
-
-          <!-- Contact Form -->
-          <div class="contact-form-wrap">
-            <form
-              name="contact"
-              method="post"
-              data-netlify="true"
-              class="contact-form"
-              id="contact-form"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-
-              <div class="form-group">
-                <label for="name-input" class="form-label">Your Name</label>
-                <div class="form-input-wrap">
-                  <i class="fas fa-user form-input-icon"></i>
-                  <input
-                    type="text"
-                    id="name-input"
-                    name="Name"
-                    placeholder="John Doe"
-                    class="form-input"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="email-input" class="form-label"
-                  >Email Address</label
-                >
-                <div class="form-input-wrap">
-                  <i class="fas fa-envelope form-input-icon"></i>
-                  <input
-                    type="email"
-                    id="email-input"
-                    name="Email"
-                    placeholder="john@example.com"
-                    class="form-input"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="subject-input" class="form-label">Subject</label>
-                <div class="form-input-wrap">
-                  <i class="fas fa-tag form-input-icon"></i>
-                  <input
-                    type="text"
-                    id="subject-input"
-                    name="Subject"
-                    placeholder="Project Inquiry"
-                    class="form-input"
-                  />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="message-input" class="form-label">Message</label>
-                <textarea
-                  id="message-input"
-                  name="Content"
-                  placeholder="Tell me about your project..."
-                  class="form-textarea"
-                  required
-                  rows="5"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                class="btn-primary w-full justify-center"
-                id="submit-btn"
-              >
-                <i class="fas fa-paper-plane"></i>
-                Send Message
-              </button>
-            </form>
           </div>
         </div>
       </div>

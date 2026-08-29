@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initModals();
   initCarousels();
   initCopyrightYear();
-  initContactForm();
   initBounceText();
   initCursorGlow();
   initParallax();
@@ -373,37 +372,6 @@ function initCopyrightYear() {
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
-}
-
-// ─────────────────────────── CONTACT FORM ───────────────────────────
-function initContactForm() {
-  const form = document.getElementById('contact-form');
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    let isValid = true;
-    const inputs = form.querySelectorAll('.form-input, .form-textarea');
-
-    inputs.forEach((input) => {
-      if (!input.value.trim()) {
-        isValid = false;
-        input.classList.add('form-input-error');
-        // Remove class after animation ends to allow re-trigger
-        setTimeout(() => input.classList.remove('form-input-error'), 300);
-      }
-    });
-
-    if (!isValid) {
-      e.preventDefault();
-      return;
-    }
-
-    const btn = document.getElementById('submit-btn');
-    if (btn) {
-      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-      btn.disabled = true;
-    }
-  });
 }
 
 // ─────────────────────────── BOUNCE TEXT ───────────────────────────

@@ -59,38 +59,13 @@
   </url>
   <!-- ASSETS/javascript -->
   <url>
-    <loc>https://victorawolesi.netlify.app/ASSETS/javascript/all.js</loc>
-    <lastmod>2025-09-26</lastmod>
-    <priority>0.2</priority>
-  </url>
-  <url>
     <loc>https://victorawolesi.netlify.app/ASSETS/javascript/index.js</loc>
     <lastmod>2025-09-26</lastmod>
     <priority>0.2</priority>
   </url>
   <!-- ASSETS/styles -->
   <url>
-    <loc>https://victorawolesi.netlify.app/ASSETS/styles/all.css</loc>
-    <lastmod>2025-09-26</lastmod>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://victorawolesi.netlify.app/ASSETS/styles/back-up.css</loc>
-    <lastmod>2025-09-26</lastmod>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://victorawolesi.netlify.app/ASSETS/styles/dark.css</loc>
-    <lastmod>2025-09-26</lastmod>
-    <priority>0.2</priority>
-  </url>
-  <url>
     <loc>https://victorawolesi.netlify.app/ASSETS/styles/light.css</loc>
-    <lastmod>2025-09-26</lastmod>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://victorawolesi.netlify.app/ASSETS/styles/responsiveness.css</loc>
     <lastmod>2025-09-26</lastmod>
     <priority>0.2</priority>
   </url>
