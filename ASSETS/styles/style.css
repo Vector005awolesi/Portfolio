@@ -541,25 +541,35 @@ h1, h2, h3, h4, h5, h6,
   overflow: visible;
 }
 
-/* CSS grid fallback — always visible (canvas supplements on desktop) */
+/* ── Backdrop layer 1: diagonal pinstripes — texture, not a grid.
+   Masked with a soft radial so stripes breathe and fade toward the edges,
+   concentrated behind the brand visual. Sits behind content, never on it. */
 #hero::before {
   content: '';
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background-image:
-    linear-gradient(rgba(52, 152, 219, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(52, 152, 219, 0.08) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(ellipse 90% 85% at 50% 45%, black 25%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 90% 85% at 50% 45%, black 25%, transparent 100%);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0px,
+    transparent 25px,
+    rgba(52, 152, 219, 0.05) 25px,
+    rgba(52, 152, 219, 0.05) 26px
+  );
+  mask-image: radial-gradient(ellipse 115% 100% at 62% 40%, black 0%, rgba(0, 0, 0, 0.4) 55%, transparent 92%);
+  -webkit-mask-image: radial-gradient(ellipse 115% 100% at 62% 40%, black 0%, rgba(0, 0, 0, 0.4) 55%, transparent 92%);
 }
 
-[data-theme="light"] #hero::before {
-  background-image:
-    linear-gradient(rgba(44, 62, 80, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(44, 62, 80, 0.07) 1px, transparent 1px);
+/* ── Backdrop layer 2: fine film grain — kills gradient banding, adds depth */
+#hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 /* Hero layout — editorial on mobile, split on desktop */
@@ -585,38 +595,6 @@ h1, h2, h3, h4, h5, h6,
   text-align: left;
   max-width: 36rem;
   position: relative;
-}
-
-/* Left accent rail — mobile editorial cue (F-pattern anchor) */
-.hero-text-col::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.25rem;
-  bottom: 0.25rem;
-  width: 3px;
-  border-radius: 3px;
-  background: linear-gradient(to bottom, var(--accent-cta), var(--accent), transparent);
-  opacity: 0.85;
-}
-
-.hero-text-col > * {
-  padding-left: 1.25rem;
-}
-
-@media (max-width: 767px) {
-  .hero-text-col::before {
-    display: none;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-text-col::before {
-    display: none;
-  }
-  .hero-text-col > * {
-    padding-left: 0;
-  }
 }
 
 .hero-status-pill {
@@ -685,22 +663,7 @@ h1, h2, h3, h4, h5, h6,
   flex-shrink: 0;
 }
 
-/* Subtle noise-grain dot pattern */
-.hero-bg-grid {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(52, 152, 219, 0.06) 1px, transparent 1px);
-  background-size: 32px 32px;
-  pointer-events: none;
-  z-index: 0;
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
-}
-
-[data-theme="light"] .hero-bg-grid {
-  background-image: radial-gradient(circle, rgba(44, 62, 80, 0.06) 1px, transparent 1px);
-}
-
+/* Soft parallax glows — atmospheric depth behind the content */
 .hero-glow-1 {
   position: absolute;
   top: -5%;
@@ -723,6 +686,20 @@ h1, h2, h3, h4, h5, h6,
   max-width: 520px;
   max-height: 520px;
   background: radial-gradient(ellipse at bottom left, rgba(52, 152, 219, 0.06) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Faint warm ember glow — ties the CTA red into the backdrop */
+.hero-glow-3 {
+  position: absolute;
+  top: 26%;
+  left: -8%;
+  width: 40vw;
+  height: 40vw;
+  max-width: 480px;
+  max-height: 480px;
+  background: radial-gradient(ellipse at center, rgba(231, 76, 60, 0.055) 0%, transparent 65%);
   pointer-events: none;
   z-index: 0;
 }
@@ -830,6 +807,9 @@ h1, h2, h3, h4, h5, h6,
   flex-shrink: 0;
   overflow: visible;
   animation: brand-terminal-float 6s ease-in-out infinite;
+  /* Centered at all sub-desktop widths; desktop split overrides below */
+  margin-inline: auto;
+  justify-self: center;
 }
 
 /* Coding Lottie — inside terminal header, always visible */
@@ -2564,19 +2544,7 @@ a.contact-detail-item:hover {
   .btn-primary, .btn-secondary { padding: 0.65rem 1.1rem; font-size: 0.85rem; }
 }
 
-/* ─────────────────────────── HERO CANVAS ─────────────────────────── */
-.hero-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 1;
-  transition: opacity 0.6s ease;
-}
-
-/* Ensure hero content stays above the canvas and background elements */
+/* Ensure hero content stays above the background layers */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -2803,7 +2771,8 @@ a.contact-detail-item:hover {
 
 /* ─────────────────────────── PARALLAX GLOW LAYERS ─────────────────────────── */
 .hero-glow-1,
-.hero-glow-2 {
+.hero-glow-2,
+.hero-glow-3 {
   transition: transform 0.1s linear;
   will-change: transform;
 }
@@ -2854,7 +2823,6 @@ a.contact-detail-item:hover {
 
 /* ─────────────────────────── ACCESSIBILITY: REDUCED MOTION ─────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  .hero-canvas { opacity: 0.5; }
   .cursor-glow { display: none; }
   .tool-card::after { display: none; }
   .testimonial-quote-icon { animation: none; }
