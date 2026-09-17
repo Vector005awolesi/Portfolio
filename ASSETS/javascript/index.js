@@ -514,7 +514,7 @@ function initTypedProfileCode() {
     codeEl.dataset.code || codeEl.textContent,
     "// Current stack\nconst stack = [\n  'React',\n  'Node.js',\n  'TypeScript'\n];",
     "// Work mode\nconst available = true;\nconst location = 'Lagos, NG';",
-    "// Proof\nconst stats = {\n  years: '2+',\n  projects: '15+'\n};",
+    "// Proof\nconst stats = {\n  years: '3+',\n  projects: '15+'\n};",
   ];
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
